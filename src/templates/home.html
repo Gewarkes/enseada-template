@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block first %}
+{% if lang == 'pt' %}<script>try{if(!localStorage.getItem("lang")&&(!document.referrer||document.referrer.indexOf(location.host)<0)){var n=(navigator.language||"").toLowerCase(),g=n.indexOf("es")==0?"es":n.indexOf("de")==0?"de":n.indexOf("en")==0?"en":"";localStorage.setItem("lang",g||"pt");if(g&&!/bot|crawl|spider|slurp/i.test(navigator.userAgent))location.replace("{{ base }}"+g+"/")}}catch(e){}</script>{% endif %}
+{% endblock %}
+{% block preload %}<link rel="preload" as="image" href="{{ img(site.media.hero) }}" imagesrcset="{{ img(site.media.hero, '-xs') }} 480w, {{ img(site.media.hero, '-s') }} 760w, {{ img(site.media.hero) }} 1400w" imagesizes="(max-width:800px) 220vw, 100vw" fetchpriority="high">{% endblock %}
+{% block main %}
+<section class="hero">
+  <div class="hero-media">
+    {{ pic(site.media.hero, '(max-width:800px) 220vw, 100vw', t.heroAlt, '', true) }}
+    {% if site.media.get('heroVideo') %}<video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-video="{{ base }}video/{{ site.media.heroVideo }}" data-video-m="{{ base }}video/{{ site.media.get('heroVideoMobile') or site.media.heroVideo }}"></video>{% endif %}
+    <div class="hero-text"><div class="wrap">
+      <h1>{{ t.heroH }}</h1>
+      <p>{{ t.heroP }}</p>
+    </div></div>
+  </div>
+  <div class="hero-search"><div class="wrap">
+    <form class="search" action="{{ url('imoveis') }}" method="get" data-search
+      data-venda="{{ url('imoveis-venda') }}" data-aluguel="{{ url('imoveis-aluguel') }}" data-terrenos="{{ url('imoveis-terrenos') }}">
+      <div class="tabs" role="radiogroup" aria-label="{{ t.sDeal }}">
+        <label><input type="radio" name="cat" value="venda" checked><span>{{ t.navBuy }}</span></label>
+        <label><input type="radio" name="cat" value="aluguel"><span>{{ t.navRent }}</span></label>
+              </div>
+      <div class="fields">
+        <label class="field f-wide"><span>{{ t.sWhere }}</span>
+          <select name="loc"><option value="">{{ t.sAnyLoc }}</option>{% for x in locs %}<option value="{{ x.slug }}">{{ x.name }}</option>{% endfor %}</select>
+        </label>
+        <label class="field" data-hide-for="terrenos"><span>{{ t.sType }}</span>
+          <select name="type"><option value="">{{ t.sAnyType }}</option><option value="casa">{{ t.tCasa }}</option><option value="apartamento">{{ t.tApto }}</option><option value="terreno">{{ t.tTerreno }}</option></select>
+        </label>
+        <label class="field"><span>{{ t.sMax }}</span>
+          <select name="max" data-max data-sale="500000,1000000,2000000,3000000,5000000" data-rent="3000,5000,10000,20000"><option value="">{{ t.sNoMax }}</option>{% for v in [500000, 1000000, 2000000, 3000000, 5000000] %}<option value="{{ v }}">{{ money(v) }}</option>{% endfor %}</select>
+        </label>
+        <button class="btn btn-primary f-wide" type="submit">{{ t.sBtn }}</button>
+      </div>
+    </form>
+    <ul class="trust">
+      <li>{{ icon('check') }}<span><b>{{ site.stats.sold }}</b> {{ t.trSold }}</span></li>
+      <li>{{ icon('check') }}<span>{{ t.trSince }} <b>{{ year - site.stats.years }}</b></span></li>
+      <li>{{ icon('check') }}<span><b>{{ nf(site.stats.rating, 1) }}</b> {{ t.trRating }}</span></li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>{{ t.featH }}</h2><p>{{ t.featP }}</p></div>
+      <a class="link" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }}) {{ icon('arrow') }}</a>
+    </div>
+    <div class="rail">
+      {% for l in featured %}{{ m.card(l, false, loop.index, '(min-width:1000px) 380px, (min-width:640px) 46vw, 84vw') }}{% endfor %}
+    </div>
+    <div class="sec-more"><a class="btn btn-line btn-block" href="{{ url('imoveis') }}">{{ t.seeAll }} ({{ listings | length }})</a></div>
+  </div>
+</section>
+
+
+
+
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>{{ t.areasH }}</h2><p>{{ t.areasP }}</p></div>
+      <a class="link" href="{{ url('imoveis') }}?mapa=1">{{ t.mapOpen }} {{ icon('arrow') }}</a>
+    </div>
+    <div class="map map-s" data-map="pins"><div class="map-ph">{{ t.mapLoad }}</div></div>
+    <script type="application/json" data-pins>{{ pins | tojson_safe }}</script>
+    <p class="map-note">{{ icon('info') }}<span>{{ t.mapNote }}</span></p>
+    <div class="tiles{% if locs | length == 6 %} six{% endif %}" style="margin-top:20px">
+      {% for x in locs %}
+      <a class="tile" href="{{ url('imoveis') }}?loc={{ x.slug }}">
+        {{ pic(x.img, '(min-width:1100px) 320px, (min-width:800px) 50vw, 90vw', '') }}
+        <div><b>{{ x.name }}</b><span>{{ plural(x.n, 'obj1', 'objN') }}</span></div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-trust" id="seguranca">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="kick">{{ t.trK }}</span><h2>{{ t.trH }}</h2><p>{{ t.trP }}</p></div></div>
+    <div class="tr-grid">
+      {% for i, ic, r in [(1,'shield','verificada'),(2,'doc','imoveis'),(3,'alert','golpes'),(4,'check','comprar' if lang == 'pt' else 'comprar-do-exterior')] %}
+      <a class="tr-card" href="{{ url(r) }}"><span class="tr-ic">{{ icon(ic) }}</span><b>{{ t['trC' ~ i ~ 'h'] }}</b><span>{{ t['trC' ~ i ~ 'p'] }}</span></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-media">{{ pic(site.media.about, '(min-width:900px) 560px, 100vw', t.aboutAlt) }}</div>
+      <div>
+        <h2>{{ t.whyH }}</h2>
+        <p>{{ t.whyP }}</p>
+        <div class="stats">
+          <div><b>{{ site.stats.sold }}</b><span>{{ t.stSold }}</span></div>
+          <div><b>{{ site.stats.years }}</b><span>{{ t.stYears }}</span></div>
+          <div><b>{{ site.stats.countries }}</b><span>{{ t.stCountries }}</span></div>
+          <div><b>{{ nf(site.stats.rating, 1) }}</b><span>{{ t.stRating }} ({{ site.stats.reviews }})</span></div>
+        </div>
+        <div class="seal-badge">
+          <span class="sb-ico">{{ icon('shield') }}</span>
+          <b class="sb-name">{{ site.agent.name }}</b>
+          <span class="sb-role">{{ t.creciLabel }}</span>
+          {% if site.agent.creci %}<span class="sb-num">{{ site.agent.creci }}</span>{% endif %}
+          <a class="sb-link" href="{{ url('verificada') }}">{{ t.slSealW }}</a>
+        </div>
+        <div class="btn-row"><a class="btn btn-primary" href="{{ url('sobre') }}">{{ t.whyBtn }}</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="split rev">
+      <div class="split-media">{{ pic(site.media.sell, '(min-width:900px) 560px, 100vw', '') }}</div>
+      <div>
+        <h2>{{ t.sellH }}</h2>
+        <p>{{ t.sellP }}</p>
+        <ul class="hl" style="margin-top:18px">
+          {% for k in ['sell1', 'sell2', 'sell3'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>{% endfor %}
+        </ul>
+        <div class="btn-row"><a class="btn btn-primary" href="{{ url('vender') }}">{{ t.sellBtn }}</a><a class="btn btn-line" href="{{ wa(t.waSell) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>{{ t.guideH }}</h2><p>{{ t.guideP }}</p></div>
+      <a class="link" href="{{ url('blog') }}">{{ t.guideAll }} {{ icon('arrow') }}</a>
+    </div>
+    <div class="posts">{% for p in posts[:3] %}{{ m.post(p) }}{% endfor %}</div>
+    <div class="sec-more"><a class="btn btn-line btn-block" href="{{ url('blog') }}">{{ t.guideAll }}</a></div>
+  </div>
+</section>
+
+
+<section class="sec sec-soft" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.fqH }}</h2></div></div>
+    {{ m.faq(4) }}
+  </div>
+</section>
+
+
+{{ m.ctaband(t.ctaHG, t.ctaPG, site.media.cta) }}
+{% endblock %}

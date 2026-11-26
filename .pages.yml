@@ -1,0 +1,258 @@
+# Formular für den Makler (Pages CMS, app.pagescms.org): Imóvel oder Artigo hinzufügen -> Formular -> Speichern -> online
+media:
+  input: content/fotos
+  output: /content/fotos
+content:
+  - name: site
+    label: Dados da imobiliária
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: brand, label: Nome curto (logo), type: string, required: true }
+      - { name: brandFull, label: Nome completo, type: string, required: true }
+      - { name: city, label: Cidade, type: string }
+      - { name: state, label: Estado (sigla), type: string }
+      - name: agent
+        label: Corretor(a)
+        type: object
+        fields:
+          - { name: name, label: Nome, type: string }
+          - { name: initials, label: Iniciais, type: string }
+          - { name: photo, label: 'Foto do corretor (vazio = iniciais)', type: image }
+          - { name: creci, label: CRECI, type: string }
+          - { name: langs, label: Idiomas (ex. PT · EN · DE), type: string }
+          - name: role
+            label: Cargo
+            type: object
+            fields:
+              - { name: pt, label: Português, type: string }
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+      - { name: phone, label: Telefone (como aparece), type: string }
+      - { name: wa, label: 'WhatsApp (só números, com 55)', type: string }
+      - { name: email, label: E-mail, type: string }
+      - { name: address, label: Endereço, type: string }
+      - name: hours
+        label: Horário
+        type: object
+        fields:
+          - { name: pt, label: Português, type: string }
+          - { name: en, label: English, type: string }
+          - { name: de, label: Deutsch, type: string }
+      - name: theme
+        label: Aparência do site
+        type: select
+        options:
+          values:
+            - { value: light, label: Claro (fundo claro, faixas escuras) }
+            - { value: dark, label: Escuro (tudo escuro) }
+      - { name: newsletterUrl, label: 'Newsletter: endereço do serviço de envio (vazio = só demonstração)', type: string }
+      - { name: contactUrl, label: 'Formulário de contato: endereço de envio (vazio = só demonstração)', type: string }
+      - { name: demoNote, label: 'Mostrar aviso "modelo de demonstração" no rodapé', type: boolean }
+      - { name: openingHours, label: 'Horário para o Google (ex. Mo-Sa 09:00-18:00)', type: string }
+      - name: geo
+        label: Coordenadas do escritório
+        type: object
+        fields:
+          - { name: lat, label: Latitude, type: number }
+          - { name: lng, label: Longitude, type: number }
+      - { name: gaId, label: 'Google Analytics (ex. G-XXXXXXX; vazio = desligado)', type: string }
+      - { name: rate, label: 'Juros de exemplo da calculadora (% ao ano)', type: number }
+      - { name: buyCosts, label: 'Custos de compra (0.045 = 4,5%)', type: number }
+      - name: media
+        label: Fotos do site
+        type: object
+        fields:
+          - { name: hero, label: Foto de abertura (página inicial), type: image }
+          - { name: heroVideo, label: 'Vídeo de abertura: nome do arquivo em content/video (ex. hero.mp4; vazio = só a foto)', type: string }
+          - { name: heroVideoMobile, label: 'Vídeo de abertura para celular (opcional, ex. hero-m.mp4)', type: string }
+          - { name: about, label: Foto da seção Sobre, type: image }
+          - { name: story, label: Sobre – segunda foto, type: image }
+          - { name: sell, label: Foto da seção Proprietários, type: image }
+          - { name: cta, label: Foto da faixa de contato, type: image }
+      - { name: instagram, label: 'Instagram (endereço completo; vazio = não aparece)', type: string }
+      - { name: brokerUrl, label: 'Link "Área do corretor" no rodapé (vazio = não aparece)', type: string }
+      - name: reviews
+        label: Depoimentos
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Nome, type: string }
+          - name: from
+            label: Quem é (ex. Comprou uma casa em Pipa)
+            type: object
+            fields:
+              - { name: pt, label: Português, type: string }
+              - { name: en, label: English, type: string }
+              - { name: de, label: Deutsch, type: string }
+          - name: text
+            label: Depoimento
+            type: object
+            fields:
+              - { name: pt, label: Português, type: text }
+              - { name: en, label: English, type: text }
+              - { name: de, label: Deutsch, type: text }
+      - name: stats
+        label: Números
+        type: object
+        fields:
+          - { name: sold, label: Imóveis vendidos, type: number }
+          - { name: years, label: Anos de mercado, type: number }
+          - { name: countries, label: Países dos clientes, type: number }
+          - { name: rating, label: Nota média, type: number }
+          - { name: reviews, label: Avaliações, type: number }
+  - name: imoveis
+    label: Imóveis
+    type: collection
+    path: content/imoveis
+    filename: '{primary}.json'
+    format: json
+    view:
+      fields: [name, loc, price, status]
+      primary: name
+      sort: [ordem, name]
+    fields:
+      - { name: name, label: Nome do imóvel, type: string, required: true }
+      - name: deal
+        label: Negócio
+        type: select
+        required: true
+        options:
+          values:
+            - { value: venda, label: Venda }
+            - { value: aluguel, label: Aluguel }
+      - name: type
+        label: Tipo
+        type: select
+        required: true
+        options:
+          values:
+            - { value: casa, label: Casa }
+            - { value: apartamento, label: Apartamento }
+            - { value: terreno, label: Terreno }
+      - { name: ref, label: 'Código do imóvel (ex. EN-1042)', type: string }
+      - { name: date, label: Data do anúncio, type: date }
+      - { name: loc, label: Bairro ou praia, type: string, required: true }
+      - name: title
+        label: Linha de resumo (até 60 letras)
+        type: object
+        fields:
+          - { name: pt, label: Português, type: string }
+          - { name: en, label: English, type: string }
+          - { name: de, label: Deutsch, type: string }
+      - { name: price, label: 'Preço em R$ (aluguel: por mês)', type: number, required: true }
+      - { name: area, label: Área construída (m²), type: number }
+      - { name: lot, label: Terreno (m²), type: number }
+      - { name: beds, label: Quartos, type: number }
+      - { name: suites, label: Suítes, type: number }
+      - { name: baths, label: Banheiros, type: number }
+      - { name: parking, label: Vagas, type: number }
+      - { name: condo, label: 'Condomínio por mês em R$ (0 = não há)', type: number }
+      - { name: iptu, label: IPTU por ano em R$, type: number }
+      - { name: lat, label: 'Latitude aproximada (ex. -6.2290)', type: number }
+      - { name: lng, label: 'Longitude aproximada (ex. -35.0478)', type: number }
+      - { name: video, label: 'Vídeo (link do YouTube; opcional)', type: string }
+      - { name: plan, label: Planta (imagem; opcional), type: image }
+      - { name: year, label: Ano de construção, type: number }
+      - { name: beach, label: Distância da praia (metros), type: number }
+      - name: status
+        label: Situação
+        type: select
+        options:
+          values:
+            - { value: novo, label: Novo }
+            - { value: disponivel, label: Disponível }
+            - { value: reservado, label: Reservado }
+      - { name: feat, label: Destaque na página inicial, type: boolean }
+      - { name: imgs, label: Fotos (a primeira é a capa), type: image, list: true }
+      - name: desc
+        label: Descrição
+        type: object
+        fields:
+          - { name: pt, label: Português, type: text, required: true }
+          - { name: en, label: 'English (vazio = usa o português)', type: text }
+          - { name: de, label: 'Deutsch (vazio = usa o português)', type: text }
+      - name: highlights
+        label: Três destaques (frases curtas)
+        type: object
+        fields:
+          - { name: pt, label: Português, type: string, list: true }
+          - { name: en, label: English, type: string, list: true }
+          - { name: de, label: Deutsch, type: string, list: true }
+      - name: feats
+        label: Características
+        type: select
+        options:
+          multiple: true
+          values:
+            - { value: pool, label: Piscina }
+            - { value: seaview, label: Vista para o mar }
+            - { value: lagoon, label: Vista para a lagoa }
+            - { value: ac, label: Ar-condicionado }
+            - { value: furnished, label: Mobiliada }
+            - { value: garage, label: Garagem }
+            - { value: garden, label: Jardim }
+            - { value: bbq, label: Churrasqueira }
+            - { value: solar, label: Energia solar }
+            - { value: well, label: Poço próprio }
+            - { value: gated, label: Condomínio fechado }
+            - { value: alarm, label: Alarme }
+            - { value: fiber, label: Internet por fibra }
+            - { value: staff, label: Casa de caseiro }
+            - { value: deck, label: Deck }
+            - { value: deed, label: Escritura e matrícula }
+            - { value: paved, label: Rua calçada }
+            - { value: power, label: Energia na rua }
+            - { value: water, label: Água encanada }
+      - name: dist
+        label: Distâncias (ex. 5 min)
+        type: object
+        fields:
+          - { name: beach, label: Praia, type: string }
+          - { name: center, label: Centro, type: string }
+          - { name: airport, label: Aeroporto, type: string }
+      - { name: ordem, label: 'Ordem na lista (1 = primeiro)', type: number }
+  - name: blog
+    label: Blog
+    type: collection
+    path: content/blog
+    filename: '{primary}.json'
+    format: json
+    view:
+      fields: [title.pt, date]
+      primary: title.pt
+      sort: [date]
+    fields:
+      - name: title
+        label: Título
+        type: object
+        fields:
+          - { name: pt, label: Português, type: string, required: true }
+          - { name: en, label: English, type: string }
+          - { name: de, label: Deutsch, type: string }
+      - { name: date, label: Data, type: date, required: true }
+      - { name: updated, label: 'Atualizado em (opcional)', type: date }
+      - { name: author, label: Autor(a), type: string }
+      - { name: img, label: Foto, type: image }
+      - name: cat
+        label: Categoria
+        type: object
+        fields:
+          - { name: pt, label: Português, type: string }
+          - { name: en, label: English, type: string }
+          - { name: de, label: Deutsch, type: string }
+      - name: excerpt
+        label: Resumo (uma ou duas frases)
+        type: object
+        fields:
+          - { name: pt, label: Português, type: text, required: true }
+          - { name: en, label: English, type: text }
+          - { name: de, label: Deutsch, type: text }
+      - name: body
+        label: 'Texto (linha em branco = novo parágrafo; linha começando com ## = subtítulo)'
+        type: object
+        fields:
+          - { name: pt, label: Português, type: text, required: true }
+          - { name: en, label: English, type: text }
+          - { name: de, label: Deutsch, type: text }

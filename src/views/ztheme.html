@@ -1,0 +1,36 @@
+<style>
+/* Dunkles Erscheinungsbild für alle Seiten: Fotos leuchten, helle Schrift auf dunklem Grund, Überschriften in Serifenschrift */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 700;font-display:swap;src:url(cormorant-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 700;font-display:swap;src:url(cormorant-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{color-scheme:light;
+  --ink:#0b100f;--ink-2:#161d1b;--paper:#f6f4ef;--white:#fff;--stone:#ebe8e1;
+  --text:#1d2422;--fg:#101514;--mute:#646b68;--mute-d:#9da6a2;
+  --line:rgba(16,21,20,.13);--line-d:rgba(255,255,255,.15);--edge:rgba(16,21,20,.32);
+  --gold:#94703a;--serif:'Cormorant Garamond',Georgia,'Times New Roman',serif}
+/* dunkle Fassung (content/site.json: theme = dark) und die Abschnitte, die immer dunkel bleiben */
+[data-theme=dark],.hx-story,.hx-band,.hx-cta{
+  --paper:#0d1211;--white:#161d1b;--stone:#1d2523;--text:#e4e1da;--fg:#f4f1ea;--mute:#9da6a2;
+  --line:rgba(255,255,255,.13);--edge:rgba(255,255,255,.45);--gold:#c9a976}
+[data-theme=dark]{color-scheme:dark;--ink:#080c0b;--ink-2:#131a18}
+.hx-band{color:var(--text)}
+body{background:var(--paper);color:var(--text)}
+.h1,.h2,.h2s,h1:not(.hx-t),h2:not(.hx-t){font-family:var(--serif)!important;font-weight:500!important;letter-spacing:-.01em!important}
+[data-theme=dark] .btn{background:var(--fg);color:#0d1211;border-color:var(--fg)}
+[data-theme=dark] .btn:hover{background:var(--gold);border-color:var(--gold);color:#0d1211}
+[data-theme=dark] .btn--line{background:transparent;color:var(--fg);border-color:rgba(255,255,255,.4)}
+[data-theme=dark] .btn--line:hover{background:var(--fg);color:#0d1211;border-color:var(--fg)}
+[data-theme=dark] .btn--light{background:var(--fg);color:#0d1211;border-color:var(--fg)}
+[data-theme=dark] .btn--wa{background:var(--wa);border-color:var(--wa);color:#fff}
+input,select,textarea{color:var(--fg)}
+/* Listen im selben Raster wie die Startseite */
+.pb__name{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.12;letter-spacing:0}
+.pb__loc{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.pb__ph{border-radius:var(--r);overflow:hidden}
+.pb__ph img{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.pb:hover .pb__ph img{transform:scale(1.05)}
+.v-imoveis .grid>.pb:last-child:nth-child(odd){grid-column:auto!important}
+.v-imoveis .grid>.pb .pb__ph,.v-imoveis .grid>.pb:last-child:nth-child(odd) .pb__ph{aspect-ratio:4/3!important}
+@media (min-width:981px){.v-imoveis .grid{grid-template-columns:repeat(3,1fr)!important;gap:48px 28px!important}.v-blog .grid__g{grid-template-columns:repeat(3,1fr)!important;gap:44px 28px!important}}
+.v-imoveis .fb label,.v-imoveis .fb .fl span{font-size:13px}
+.v-imoveis .fb select{font-size:16px}
+</style>

@@ -1,0 +1,80 @@
+{
+ "slug": "apartamento-chapadao",
+ "ref": "EN-1031",
+ "deal": "venda",
+ "type": "apartamento",
+ "name": "Apartamento Chapadão",
+ "title": {
+  "pt": "Apartamento de 2 quartos mobiliado no Chapadão",
+  "en": "Furnished two-bedroom apartment in Chapadão",
+  "es": "Departamento amueblado de 2 dormitorios en Chapadão",
+  "de": "Möblierte 2-Zimmer-Wohnung im Chapadão"
+ },
+ "loc": "Chapadão",
+ "lat": -6.2402,
+ "lng": -35.0428,
+ "price": 890000,
+ "condo": 780,
+ "iptu": 1900,
+ "beds": 2,
+ "suites": 1,
+ "baths": 2,
+ "parking": 1,
+ "area": 96,
+ "lot": 0,
+ "year": 2022,
+ "beach": 600,
+ "status": "disponivel",
+ "date": "2026-10-07",
+ "imgs": [
+  "18",
+  "14",
+  "82"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "pool",
+  "ac",
+  "furnished",
+  "garage",
+  "gated",
+  "fiber"
+ ],
+ "dist": {
+  "beach": "8 min",
+  "center": "6 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "Condomínio de apenas 12 unidades",
+   "Histórico de reservas disponível"
+  ],
+  "en": [
+   "Complex of only 12 units",
+   "Booking history available"
+  ],
+  "es": [
+   "Condominio de solo 12 unidades",
+   "Historial de reservas disponible"
+  ],
+  "de": [
+   "Anlage mit nur 12 Einheiten",
+   "Buchungshistorie verfügbar"
+  ]
+ },
+ "desc": {
+  "pt": "Condomínio pequeno no Chapadão, perto do mirante sobre a Praia do Amor. O acesso é por rua calçada, com portão eletrônico. A varanda da sala dá para a piscina.\n\nMatrícula individual e escritura. A taxa de condomínio inclui água, piscina e jardinagem, e a convenção permite aluguel por temporada. Móveis, eletrodomésticos e enxoval entram na venda.",
+  "en": "A small complex in Chapadão, close to the lookout above Praia do Amor. Access is by a paved road, through an electric gate. The living-room veranda faces the pool.\n\nThe unit has its own registry entry and title deed. The condo fee covers water, pool and gardening, and the bylaws allow vacation rentals. Furniture, appliances and linen are included in the sale.",
+  "es": "Condominio pequeño en Chapadão, cerca del mirador sobre la Praia do Amor. El acceso es por una calle empedrada, con portón eléctrico. El balcón de la sala da a la piscina.\n\nMatrícula individual y escritura. La cuota de condominio incluye agua, piscina y jardinería, y el reglamento permite el alquiler por temporada. Los muebles, los electrodomésticos y la ropa de cama están incluidos en la venta.",
+  "de": "Kleine Anlage im Chapadão, nahe dem Aussichtspunkt über der Praia do Amor. Die Zufahrt führt über eine gepflasterte Straße mit elektrischem Tor. Der Balkon am Wohnzimmer geht zum Pool hinaus.\n\nDie Wohnung hat einen eigenen Grundbuchauszug (Matrícula) und eine Kaufurkunde (Escritura). Das Hausgeld (Condomínio) deckt Wasser, Pool und Gartenpflege, und die Gemeinschaftsordnung (Convenção) erlaubt Ferienvermietung. Möbel, Geräte und Wäsche sind im Verkauf enthalten."
+ },
+ "ordem": 5,
+ "checks": {
+  "matricula": true,
+  "debts": true,
+  "date": "2026-11-10"
+ },
+ "temporada": "sim"
+}

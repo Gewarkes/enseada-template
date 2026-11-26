@@ -1,0 +1,123 @@
+{
+  "brand": "Enseada",
+  "brandFull": "Enseada Imóveis",
+  "city": "Pipa",
+  "state": "RN",
+  "agent": {
+    "name": "Helena Cavalcanti",
+    "initials": "HC",
+    "creci": "CRECI/RN 00000-F",
+    "langs": "PT · EN · DE",
+    "role": {
+      "pt": "Corretora e fundadora",
+      "en": "Real estate agent and founder",
+      "es": "Corredora y fundadora",
+      "de": "Maklerin und Gründerin"
+    },
+    "photo": ""
+  },
+  "phone": "+55 84 99999-0000",
+  "wa": "5584999990000",
+  "email": "contato@enseadaimoveis.com.br",
+  "address": "Av. Baía dos Golfinhos, 000 · Pipa, Tibau do Sul/RN",
+  "hours": {
+    "pt": "Seg. a sáb., das 9h às 18h",
+    "en": "Mon to Sat, 9 am to 6 pm",
+    "es": "Lun a sáb, de 9 a 18 h",
+    "de": "Mo bis Sa, 9 bis 18 Uhr"
+  },
+  "rate": 11.5,
+  "buyCosts": 0.06,
+  "media": {
+    "hero": "hero-video",
+    "about": "70",
+    "story": "71",
+    "sell": "05",
+    "cta": "72"
+  },
+  "stats": {
+    "sold": 212,
+    "years": 14,
+    "countries": 23,
+    "rating": 4.9,
+    "reviews": 128
+  },
+  "newsletterUrl": "",
+  "contactUrl": "",
+  "gaId": "",
+  "demoNote": true,
+  "openingHours": "Mo-Sa 09:00-18:00",
+  "geo": {
+    "lat": -6.2286,
+    "lng": -35.0486
+  },
+  "theme": "light",
+  "locPhotos": {
+    "praia-do-madeiro": "73",
+    "centro-de-pipa": "70",
+    "praia-do-amor": "75",
+    "chapadao": "82",
+    "sibauma": "76",
+    "tibau-do-sul": "72"
+  },
+  "fx": {
+    "date": "2026-11-13",
+    "USD": 0.1767,
+    "EUR": 0.1597
+  },
+  "instagram": "https://www.instagram.com/",
+  "facebook": "https://www.facebook.com/",
+  "youtube": "https://www.youtube.com/",
+  "tiktok": "https://www.tiktok.com/",
+  "brokerUrl": "https://app.pagescms.org/",
+  "reviews": [
+    {
+      "name": "Marta S.",
+      "from": {
+        "pt": "Comprou uma casa na Praia do Madeiro",
+        "en": "Bought a house at Praia do Madeiro",
+        "es": "Compró una casa en Praia do Madeiro",
+        "de": "Hat ein Haus in Praia do Madeiro gekauft"
+      },
+      "text": {
+        "pt": "A matrícula e as contas da casa já estavam conferidas antes da primeira visita. Fechamos a compra a partir de Lisboa, por procuração, e não houve surpresa no cartório.",
+        "en": "The title record and the utility bills had been checked before our first viewing. We completed the purchase from Lisbon by power of attorney, with no surprises at the notary.",
+        "es": "La matrícula y las cuentas de la casa ya estaban verificadas antes de la primera visita. Cerramos la compra desde Lisboa, con poder notarial, y no hubo sorpresas en la notaría.",
+        "de": "Der Grundbuchauszug (Matrícula) und die laufenden Rechnungen des Hauses waren schon vor dem ersten Besuch geprüft. Wir haben den Kauf von Lissabon aus per Vollmacht abgeschlossen, und beim Notar gab es keine Überraschungen."
+      }
+    },
+    {
+      "name": "Jonas & Carla W.",
+      "from": {
+        "pt": "Compraram um terreno em Sibaúma",
+        "en": "Bought a plot in Sibaúma",
+        "es": "Compraron un terreno en Sibaúma",
+        "de": "Haben ein Grundstück in Sibaúma gekauft"
+      },
+      "text": {
+        "pt": "Vimos o terreno primeiro por vídeo e depois no local. Tudo foi explicado em alemão, do CPF ao registro, e os prazos combinados foram cumpridos.",
+        "en": "We saw the plot first by video, then in person. Everything was explained in German, from the CPF to the registration, and every agreed deadline was met.",
+        "es": "Primero vimos el terreno por video y después en el lugar. Todo se explicó en alemán, desde el CPF hasta el registro, y se cumplieron los plazos acordados.",
+        "de": "Wir haben das Grundstück zuerst per Video und dann vor Ort gesehen. Alles wurde auf Deutsch erklärt, von der CPF bis zur Eintragung, und die vereinbarten Fristen wurden eingehalten."
+      }
+    },
+    {
+      "name": "Rafael M.",
+      "from": {
+        "pt": "Proprietário, aluga por temporada",
+        "en": "Owner, rents to vacation guests",
+        "es": "Propietario, alquila por temporada",
+        "de": "Eigentümer, Ferienvermietung"
+      },
+      "text": {
+        "pt": "Moro em São Paulo e a Enseada cuida da casa o ano inteiro. Recebo o relatório no começo de cada mês, com reservas, gastos e fotos da manutenção.",
+        "en": "I live in São Paulo and Enseada looks after the house all year. At the start of each month I get a report with bookings, costs and photos of the maintenance work.",
+        "es": "Vivo en São Paulo y Enseada cuida la casa todo el año. Recibo el informe a principios de cada mes, con reservas, gastos y fotos del mantenimiento.",
+        "de": "Ich wohne in São Paulo, und Enseada kümmert sich das ganze Jahr um das Haus. Den Bericht bekomme ich am Anfang jedes Monats, mit Buchungen, Ausgaben und Fotos der Instandhaltung."
+      }
+    }
+  ],
+  "brandColor": "",
+  "brandShort": "",
+  "uploadUrl": ""
+}

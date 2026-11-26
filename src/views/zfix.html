@@ -1,0 +1,94 @@
+<style>
+/* overrides after review: one-colour headings, map image, proof tile, list grid */
+.v-home .feat em,.v-home .proof em,.v-home .blog em,.v-sobre em,.v-contato em,.v-imovel em,.v-blog em,.v-artigo em,.v-publicar em{color:inherit!important}
+.v-home .hero__still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.v-home .tile--num{background:var(--sea)!important;color:#fff!important}
+.v-home .tile--num .tile__s{color:rgba(255,255,255,.82)!important}
+.v-home .tile--num .tile__big{font-size:clamp(72px,8.4vw,120px)!important;line-height:.9!important;color:#fff!important}
+.v-home .tile__flag{display:none!important}
+.v-imovel .map{display:block!important;position:relative;overflow:hidden;border:0!important;padding:0!important;aspect-ratio:720/400!important;background:var(--stone)}
+.v-imovel .map>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.v-imovel .map__pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:9px 14px;border-radius:12px;font-size:14px;white-space:nowrap}
+.v-imovel .map__pin .ico{width:18px;height:18px;color:#fff}
+.v-imovel .map__pin b{font-size:14px;font-weight:600}
+.v-imovel .map__c{position:absolute;right:6px;bottom:4px;font-size:11px;background:rgba(255,255,255,.85);color:#222;padding:1px 6px}
+.v-imoveis .grid>.pb:last-child:nth-child(odd){grid-column:1/-1}
+.v-imoveis .grid>.pb:last-child:nth-child(odd) .pb__ph{aspect-ratio:1200/520}
+.demo{background:#0a0d0c;color:#8b9390}
+.v-home .hero__h1{line-height:.98!important}
+.v-home .row__ph{opacity:1!important}
+.v-home .rows__h{font-size:clamp(34px,4.6vw,66px)!important;line-height:1.02!important;letter-spacing:-.045em!important}
+.v-sobre .port__in{position:absolute!important;inset:0!important;transform:none!important}
+.v-sobre .band{display:none!important}
+.v-sobre .vals__list{counter-reset:v;gap:0!important}
+.v-sobre .vals__list li{counter-increment:v;grid-template-columns:64px 1fr!important;padding:26px 0;border-top:1px solid var(--line)}
+.v-sobre .vals__ic{background:none!important;width:auto!important;height:auto!important;display:block!important;border-radius:0!important}
+.v-sobre .vals__ic .ico{display:none}
+.v-sobre .vals__ic::before{content:"(0" counter(v) ")";font-size:15px;font-weight:600;color:var(--mute)}
+.v-imovel .ct__g{grid-template-columns:1fr!important;max-width:560px}
+.v-imovel .am{grid-template-columns:1fr 1fr!important;gap:0 48px!important}
+.v-imovel .am li{background:none!important;border-radius:0!important;padding:16px 0!important;min-height:0!important;border-top:1px solid var(--line)}
+.v-imovel .am .ico{display:none}
+.v-imovel .ag__ph,.v-artigo .by__ini{border-radius:50%!important}
+.v-publicar input,.v-publicar select,.v-publicar textarea{border-radius:12px!important}
+.v-publicar .pb-seg{border-radius:999px!important;overflow:hidden}
+.v-publicar .pb-hero{border-radius:var(--r)}
+.v-contato .ct-office figure{border-radius:var(--r)}
+.v-contato .ct-office figure>*:not(img){border-radius:var(--r)!important}
+.v-contato .ct-ph{border-radius:50%!important}
+.v-home .faq{padding:0 0 var(--sec)}
+.v-home .faq__g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+.v-home .faq details{border-top:1px solid var(--line);padding:22px 0}
+.v-home .faq details:last-child{border-bottom:1px solid var(--line)}
+.v-home .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-size:20px;font-weight:600;letter-spacing:-.015em}
+.v-home .faq summary::-webkit-details-marker{display:none}
+.v-home .faq summary::after{content:"+";font-weight:400;color:var(--mute)}
+.v-home .faq details[open] summary::after{content:"–"}
+.v-home .faq p{margin-top:12px;color:var(--mute);max-width:60ch}
+@media (max-width:860px){.v-home .faq__g{grid-template-columns:1fr;gap:28px}.v-imovel .am{grid-template-columns:1fr!important}}
+@media (max-width:1080px){.v-chrome .nv__bar{grid-template-columns:1fr auto auto!important}.v-chrome .nv__right{display:flex!important;gap:2px!important}.v-chrome .nv__right .nv__cta{display:none!important}.v-chrome .nv__right .sw button{min-height:44px;min-width:38px;padding:0 6px}}
+@media (max-width:640px){.v-chrome .nv__right .sw:first-child,.v-chrome .nv__right .nv__sep{display:none!important}.v-chrome .nv__right .sw{font-size:14px}}
+.v-imovel .own{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--white);font-size:14px}
+.v-imovel .own button{background:none;border:0;font-weight:600;text-decoration:underline;text-underline-offset:4px;min-height:44px}
+.v-publicar .art{padding:0 0 var(--sec)}
+.v-publicar .art__box{max-width:760px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:32px;display:grid;gap:20px}
+.v-publicar .art__two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.v-publicar .art textarea[name=body]{min-height:220px}
+.v-publicar .art__err{color:#a12b22;font-size:14px;min-height:1.4em}
+@media (max-width:640px){.v-publicar .art__two{grid-template-columns:1fr}.v-publicar .art__box{padding:20px}}
+</style>
+<script>addDict({
+pt:{fq_h:'Perguntas que ouvimos toda semana',fq1:'Estrangeiro pode comprar imóvel em Pipa?',fq1a:'Pode. É preciso ter CPF e trazer o valor por remessa registrada. Acompanhamos cada etapa até o registro.',fq2:'Quais custos existem além do preço?',fq2a:'ITBI, escritura e registro somam em geral de 4% a 5% do valor. Em área de marinha pode haver laudêmio.',fq3:'Dá para comprar sem viajar ao Brasil?',fq3a:'Sim, por procuração pública. Mostramos o imóvel por vídeo e enviamos os documentos para conferência.',fq4:'Vocês administram o aluguel por temporada?',fq4a:'Sim. Cuidamos do anúncio, da limpeza e da entrega das chaves, com relatório mensal ao proprietário.'},
+en:{fq_h:'Questions we hear every week',fq1:'Can a foreigner buy property in Pipa?',fq1a:'Yes. You need a CPF tax number and a registered transfer. We stay with you at every step until registration.',fq2:'What costs come on top of the price?',fq2a:'Transfer tax, deed and registration usually add 4% to 5%. Federal coastal land may carry an extra fee.',fq3:'Can I buy without travelling to Brazil?',fq3a:'Yes, by public power of attorney. We show the property by video and send the documents for review.',fq4:'Do you manage holiday rentals?',fq4a:'Yes. We handle the listing, cleaning and key handover, with a monthly statement for the owner.'},
+de:{fq_h:'Fragen, die wir jede Woche hören',fq1:'Können Ausländer in Pipa eine Immobilie kaufen?',fq1a:'Ja. Sie brauchen eine brasilianische Steuernummer (CPF) und eine registrierte Überweisung. Wir begleiten jeden Schritt bis zur Eintragung.',fq2:'Welche Kosten kommen zum Kaufpreis hinzu?',fq2a:'Grunderwerbsteuer (ITBI), Urkunde und Eintragung liegen meist bei 4 bis 5 %. Im Küstenstreifen in Bundesbesitz kann eine Zusatzabgabe anfallen.',fq3:'Kann ich kaufen, ohne nach Brasilien zu reisen?',fq3a:'Ja, mit einer notariellen Vollmacht. Wir zeigen das Objekt per Video und schicken die Unterlagen zur Prüfung.',fq4:'Verwalten Sie auch die Ferienvermietung?',fq4a:'Ja. Wir übernehmen Anzeige, Reinigung und Schlüsselübergabe und schicken dem Eigentümer jeden Monat eine Abrechnung.'}});
+
+addDict({
+pt:{ow_t:'Imóvel adicionado por você nesta demonstração.',ow_d:'Excluir imóvel',ow_d2:'Clique de novo para excluir',ar_h:'Adicionar artigo ao blog',ar_p:'Mesmo princípio: preencha, publique e o artigo aparece no blog.',ar_title:'Título',ar_cat:'Rubrica',ar_ex:'Resumo (uma frase)',ar_body:'Texto',ar_hint:'Linha em branco = novo parágrafo. Linha que começa com ## vira subtítulo.',ar_img:'Imagem de capa',ar_go:'Publicar artigo',ar_err:'Preencha título e texto.'},
+en:{ow_t:'Listing added by you in this demo.',ow_d:'Delete listing',ow_d2:'Click again to delete',ar_h:'Add a blog article',ar_p:'Same principle: fill in, publish, and the article appears in the blog.',ar_title:'Title',ar_cat:'Category',ar_ex:'Summary (one sentence)',ar_body:'Text',ar_hint:'Blank line = new paragraph. A line starting with ## becomes a subheading.',ar_img:'Cover image',ar_go:'Publish article',ar_err:'Please fill in title and text.'},
+de:{ow_t:'Dieses Objekt haben Sie in der Demo selbst eingetragen.',ow_d:'Objekt löschen',ow_d2:'Zum Löschen erneut klicken',ar_h:'Blogartikel hinzufügen',ar_p:'Gleiches Prinzip: ausfüllen, veröffentlichen, der Artikel steht im Blog.',ar_title:'Titel',ar_cat:'Rubrik',ar_ex:'Kurzfassung (ein Satz)',ar_body:'Text',ar_hint:'Leerzeile = neuer Absatz. Eine Zeile mit ## am Anfang wird Zwischenüberschrift.',ar_img:'Titelbild',ar_go:'Artikel veröffentlichen',ar_err:'Bitte Titel und Text ausfüllen.'}});
+(function(){
+  const r0=VIEWS.imovel.render,m0=VIEWS.imovel.mount;
+  VIEWS.imovel.render=a=>{const l=bySlug(a),h=r0.call(VIEWS.imovel,a);if(!l||!l.own)return h;const bar=`<div class="wrap"><div class="own"><span>${tr('ow_t')}</span><button type="button" data-own-del="${l.slug}">${tr('ow_d')}</button></div></div>`;const k=h.indexOf('>')+1;return h.slice(0,k)+bar+h.slice(k)};
+  VIEWS.imovel.mount=(root,a)=>{if(m0)m0.call(VIEWS.imovel,root,a);const b=$('[data-own-del]',root);if(b)b.onclick=()=>{if(!b.dataset.sure){b.dataset.sure=1;b.textContent=tr('ow_d2');return}SITE.listings=SITE.listings.filter(x=>x.slug!==b.dataset.ownDel);saveOwn();location.hash='#imoveis'}};
+  const COVERS=['61','62','63','64','65','23','51','47'];
+  const p0=VIEWS.publicar.render,pm0=VIEWS.publicar.mount;
+  VIEWS.publicar.render=a=>{const s=APP.state.art||(APP.state.art={title:'',cat:'',ex:'',body:'',img:'61',err:''}),h=p0.call(VIEWS.publicar,a);
+    const f=`<section class="art"><div class="wide"><h2 class="h2" style="margin-bottom:12px">${tr('ar_h')}</h2><p class="lead mute" style="margin-bottom:32px">${tr('ar_p')}</p>
+<form class="art__box" data-art novalidate>
+<label class="f"><span>${tr('ar_title')} *</span><input name="title" value="${esc(s.title)}"></label>
+<div class="art__two"><label class="f"><span>${tr('ar_cat')}</span><input name="cat" value="${esc(s.cat)}"></label>
+<label class="f"><span>${tr('ar_img')}</span><select name="img">${COVERS.map((k,i)=>`<option value="${k}"${s.img===k?' selected':''}>Foto ${i+1}</option>`).join('')}</select></label></div>
+<label class="f"><span>${tr('ar_ex')}</span><input name="ex" value="${esc(s.ex)}"></label>
+<label class="f"><span>${tr('ar_body')} *</span><textarea name="body">${esc(s.body)}</textarea><span class="mute" style="font-weight:400">${tr('ar_hint')}</span></label>
+<div class="art__err" role="alert">${s.err?tr('ar_err'):''}</div>
+<div><button class="btn btn--lg">${tr('ar_go')}</button></div>
+</form></div></section>`;const k=h.lastIndexOf('</div>');return h.slice(0,k)+f+h.slice(k)};
+  VIEWS.publicar.mount=(root,a)=>{if(pm0)pm0.call(VIEWS.publicar,root,a);const f=$('[data-art]',root),s=APP.state.art;if(!f)return;
+    f.oninput=e=>{if(e.target.name)s[e.target.name]=e.target.value};
+    f.onsubmit=e=>{e.preventDefault();e.stopPropagation();if(!s.title.trim()||!s.body.trim()){s.err=1;$('.art__err',f).textContent=tr('ar_err');return}
+      let slug=s.title.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'artigo',n=2,b=slug;while(SITE.posts.some(p=>p.slug===slug))slug=b+'-'+n++;
+      const body=s.body.split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);
+      SITE.posts.unshift({slug,date:new Date().toISOString().slice(0,10),img:s.img,cat:{pt:s.cat.trim()||'Blog'},title:{pt:s.title.trim()},excerpt:{pt:s.ex.trim()||body[0].replace(/^##\s*/,'').slice(0,140)},body:{pt:body},own:true});
+      saveOwn();APP.state.art=null;location.hash='#artigo-'+slug}};
+})();
+</script>

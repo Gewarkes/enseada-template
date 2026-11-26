@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="wrap">
+  <ol class="crumbs"><li><a href="{{ url('home') }}">{{ t.navHome }}</a></li><li aria-current="page">{{ t.navContact }}</li></ol>
+  <div class="page-head"><h1>{{ t.contactH }}</h1><p>{{ t.contactLead }}</p></div>
+  <div class="contact-grid">
+    <div class="channels cg-a">
+      <a class="channel" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener"><span class="point-ico wa">{{ wa_icon() }}</span><div><b>WhatsApp</b><span>{{ site.phone }} · {{ t.chWa }}</span></div></a>
+      <a class="channel" href="tel:{{ site.phone | replace(' ', '') }}"><span class="point-ico">{{ icon('phone') }}</span><div><b>{{ t.chPhone }}</b><span>{{ site.phone }}</span></div></a>
+      <a class="channel" href="mailto:{{ site.email }}"><span class="point-ico">{{ icon('mail') }}</span><div><b>{{ t.fEmail }}</b><span>{{ site.email }}</span></div></a>
+    </div>
+    <div class="agent cg-f" id="formulario">
+      <h2 style="font-size:1.375rem">{{ t.formH }}</h2>
+      <p class="muted" style="margin-top:-8px;font-size:.9375rem">{{ t.formP }}</p>
+      {{ m.inquiry('', '', 'c', true) }}
+    </div>
+    <div class="cg-b">
+      <ul class="info" style="margin-top:0">
+        <li>{{ icon('pin') }}<span><b>{{ t.office }}</b><br>{{ site.address }}</span></li>
+        <li>{{ icon('clock') }}<span><b>{{ t.hours }}</b><br>{{ L(site.hours) }}</span></li>
+        <li>{{ icon('globe') }}<span><b>{{ t.agentLangs }}</b><br>{{ site.agent.langs }}</span></li>
+        <li>{{ icon('shield') }}<span><b>{{ t.agentLic }}</b><br>{{ site.agent.name }}{% if site.agent.creci %} · {{ site.agent.creci }}{% endif %}</span></li>
+      </ul>
+      <div class="map map-s" style="margin-top:20px" data-map="office" data-lat="{{ site.geo.lat }}" data-lng="{{ site.geo.lng }}"><div class="map-ph">{{ t.mapLoad }}</div></div>
+      <p class="map-note">{{ icon('info') }}<a href="https://www.google.com/maps/search/?api=1&query={{ site.geo.lat }},{{ site.geo.lng }}" target="_blank" rel="noopener" style="text-decoration:underline">{{ t.mapRoute }}</a></p>
+    </div>
+  </div>
+</div>
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.fqH }}</h2></div></div>
+    {{ m.faq(5) }}
+  </div>
+</section>
+{% endblock %}

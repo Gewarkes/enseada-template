@@ -1,0 +1,93 @@
+{
+ "slug": "calculadoras",
+ "nav": {
+  "pt": "Calculadoras",
+  "en": "Calculators",
+  "es": "Calculadoras",
+  "de": "Rechner"
+ },
+ "h1": {
+  "pt": "Calculadoras de custos e de imposto",
+  "en": "Cost and tax calculators",
+  "es": "Calculadoras de costos y de impuestos",
+  "de": "Rechner für Kosten und Steuern"
+ },
+ "lead": {
+  "pt": "Valores de exemplo para você ter uma ideia dos custos.",
+  "en": "Example values to give you an idea of the costs.",
+  "es": "Valores de ejemplo para que tengas una idea de los costos.",
+  "de": "Beispielwerte, damit du die Kosten einschätzen kannst."
+ },
+ "meta": {
+  "pt": "Calculadora de custos de compra e de imposto sobre ganho de capital em imóveis no Brasil.",
+  "en": "Calculators for closing costs and capital gains tax on property in Brazil.",
+  "es": "Calculadora de costos de compra y de impuesto sobre la ganancia de capital en propiedades de Brasil.",
+  "de": "Rechner für Kaufkosten und für die Steuer auf den Gewinn bei Immobilien in Brasilien."
+ },
+ "stand": "17.11.2026",
+ "blocks": [
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Custos de compra",
+    "en": "Closing costs",
+    "es": "Costos de compra",
+    "de": "Kaufkosten"
+   }
+  },
+  {
+   "t": "widget",
+   "x": "buycosts"
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Imposto sobre o ganho (venda futura)",
+    "en": "Capital gains tax (future sale)",
+    "es": "Impuesto sobre la ganancia (venta futura)",
+    "de": "Steuer auf den Gewinn (späterer Verkauf)"
+   }
+  },
+  {
+   "t": "widget",
+   "x": "gains"
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Valores de exemplo. Confirme na prefeitura e no cartório.",
+    "en": "Example values. Confirm with the town hall (prefeitura) and the notary office (cartório).",
+    "es": "Valores de ejemplo. Confírmalos en la municipalidad (prefeitura) y en la notaría (cartório).",
+    "de": "Beispielwerte. Bitte bei der Stadtverwaltung (Prefeitura) und im Notariat (Cartório) bestätigen lassen."
+   }
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Cartório: valor de 2023; a tabela do TJRN é ajustada todo ano. Confirme com o tabelião. Não residente: 15% sobre o ganho até R$ 5 mi (faixas progressivas até 22,5%); sem as isenções de residente. Pergunte a um contador.",
+    "en": "Notary fee: 2023 value; the TJRN table is adjusted every year, so confirm with the notary. Non-residents: 15% on gains up to R$ 5 million (progressive brackets up to 22.5%), without the exemptions available to residents. Ask an accountant.",
+    "es": "Cartório: valor de 2023; la tabla del TJRN se ajusta cada año. Confírmalo con el notario. No residente: 15 % sobre la ganancia hasta R$ 5 millones (tramos progresivos hasta 22,5 %); sin las exenciones de residente. Pregunta a un contador.",
+    "de": "Notarkosten (Cartório): Wert von 2023; die TJRN-Tabelle wird jährlich angepasst, bitte beim Notar bestätigen lassen. Ohne Wohnsitz in Brasilien: 15 % auf den Gewinn bis R$ 5 Mio. (Stufen bis 22,5 %), ohne die Befreiungen für Personen mit Wohnsitz in Brasilien. Frag einen Steuerberater."
+   }
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Cálculo simplificado, sem considerar isenções (residentes podem ter).",
+    "en": "Simplified calculation that ignores exemptions (residents may qualify for some).",
+    "es": "Cálculo simplificado, sin considerar exenciones (los residentes pueden tenerlas).",
+    "de": "Vereinfachte Berechnung, ohne Befreiungen (für Personen mit Wohnsitz in Brasilien kann es Befreiungen geben)."
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Lei 13.259/2016 (ganho de capital)",
+   "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13259.htm"
+  ]
+ ],
+ "icon": "tag"
+}

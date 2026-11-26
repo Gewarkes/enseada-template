@@ -1,0 +1,248 @@
+<style>
+.v-publicar{--pb-err:#a12b22}
+.v-publicar .pb-head{padding:110px 0 0}
+.v-publicar .pb-in{margin-left:13.8%}
+.v-publicar .pb-in .lead{max-width:636px;margin-top:28px;text-wrap:pretty}
+.v-publicar .pb-role{display:inline-flex;align-items:flex-start;gap:10px;margin-top:24px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;font-size:14px;line-height:1.45;max-width:636px}
+.v-publicar .pb-role .ico{color:var(--sea);margin-top:2px}
+.v-publicar .pb-role b{font-weight:600}
+.v-publicar .pb-hero{margin-top:56px;aspect-ratio:1300/320;overflow:hidden;background:var(--stone)}
+.v-publicar .pb-hero img{width:100%;height:100%;object-fit:cover}
+
+.v-publicar .pb-main{padding:100px 0 var(--sec)}
+.v-publicar .pb-grid{display:grid;grid-template-columns:minmax(0,760px) minmax(0,380px);justify-content:space-between;gap:60px;align-items:start}
+.v-publicar .pb-form{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:44px 32px 36px}
+.v-publicar .pb-g{border:0;padding:0;min-width:0;margin:0 0 20px}
+.v-publicar .pb-g + .pb-g{border-top:1px solid var(--line);padding-top:36px;margin-top:36px}
+.v-publicar .pb-g legend{float:left;width:100%;padding:0;font-size:24px;line-height:32px;font-weight:600;letter-spacing:-.015em}
+.v-publicar .pb-hint{clear:both;color:var(--mute);margin:6px 0 24px}
+.v-publicar .pb-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+.v-publicar .pb-row:last-child{margin-bottom:0}
+.v-publicar .pb-row .pb-full{grid-column:1/-1}
+.v-publicar .f{align-content:start}
+.v-publicar .f input,.v-publicar .f select,.v-publicar .f textarea{border-radius:0;border-color:var(--stone)}
+.v-publicar .f input:hover,.v-publicar .f select:hover,.v-publicar .f textarea:hover{border-color:var(--mute-d)}
+.v-publicar .f [aria-invalid="true"]{border-color:var(--pb-err)}
+.v-publicar .pb-err{font-size:14px;font-weight:500;line-height:1.35;color:var(--pb-err)}
+.v-publicar .pb-err:empty{display:none}
+.v-publicar .pb-seg{display:flex;border:1px solid var(--stone);height:50px;background:var(--white)}
+.v-publicar .pb-seg button{flex:1;min-width:0;padding:0 8px;background:none;border:0;font-size:15px;font-weight:600;color:var(--mute);transition:background .2s,color .2s}
+.v-publicar .pb-seg button + button{border-left:1px solid var(--stone)}
+.v-publicar .pb-seg button[aria-pressed="true"]{background:var(--ink);color:var(--white)}
+.v-publicar .pb-lab{font-size:14px;font-weight:600;margin-bottom:8px}
+.v-publicar .pb-other{margin-top:8px}
+.v-publicar .pb-note{font-size:14px;line-height:1.5;color:var(--mute);margin-top:10px}
+.v-publicar .pb-feats{display:flex;flex-wrap:wrap;gap:12px 24px}
+.v-publicar .pb-feats label{display:inline-flex;align-items:center;gap:9px;min-height:26px;font-size:16px;line-height:1.3;cursor:pointer}
+.v-publicar .pb-feats input{width:16px;height:16px;margin:0;accent-color:var(--fg);flex:none}
+.v-publicar .pb-up{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border:1px dashed var(--mute-d);color:var(--mute);font-size:15px;font-weight:500;cursor:pointer;transition:border-color .2s,color .2s}
+.v-publicar .pb-up:hover{border-color:var(--fg);color:var(--text)}
+.v-publicar .pb-up:focus-within{outline:2px solid var(--sea);outline-offset:3px}
+.v-publicar .pb-up input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.v-publicar .pb-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.v-publicar .pb-thumbs:empty{display:none}
+.v-publicar .pb-thumbs img{width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--stone)}
+.v-publicar .pb-fbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:8px;font-size:14px;color:var(--mute)}
+.v-publicar .pb-fbar[hidden]{display:none}
+.v-publicar .pb-fbar button{background:none;border:0;min-height:44px;padding:0;font-weight:600;color:var(--text);text-decoration:underline;text-underline-offset:4px}
+.v-publicar .pb-go{border-top:1px solid var(--line);margin-top:36px;padding-top:32px}
+.v-publicar .pb-go .btn{width:100%;height:54px;font-size:16px}
+.v-publicar .pb-sum{margin-bottom:14px}
+.v-publicar .pb-fine{font-size:14px;line-height:1.5;color:var(--mute);margin-top:14px;text-align:center}
+
+.v-publicar .pb-side{display:grid;gap:25px;align-self:stretch;align-content:start}
+.v-publicar .pb-card{border-radius:var(--r);padding:30px;background:var(--white)}
+.v-publicar .pb-tips{background:var(--ink);color:#eef0ee}
+.v-publicar .pb-card h2{font-size:20px;line-height:1.25;font-weight:600;letter-spacing:-.01em}
+.v-publicar .pb-tips li{display:grid;grid-template-columns:20px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line-d);font-size:15px;line-height:1.45}
+.v-publicar .pb-tips ul{margin-top:16px}
+.v-publicar .pb-tips li:last-child{padding-bottom:0}
+.v-publicar .pb-tips .ico{margin-top:2px;color:var(--mute-d)}
+.v-publicar .pb-who{display:grid;grid-template-columns:22px 1fr;gap:14px}
+.v-publicar .pb-who .ico{width:20px;height:20px;margin-top:3px;color:var(--sea)}
+.v-publicar .pb-who h2{font-size:16px;line-height:1.3}
+.v-publicar .pb-who p{font-size:14px;line-height:1.5;color:var(--mute);margin-top:6px}
+.v-publicar .pb-prev{position:sticky;top:24px}
+.v-publicar .pb-prev > p{font-size:14px;color:var(--mute);margin:4px 0 20px}
+.v-publicar .pb-prev .pb{pointer-events:none}
+.v-publicar .pb-prev .pb__name{overflow-wrap:anywhere}
+
+@media (max-width:1180px){.v-publicar .pb-grid{grid-template-columns:minmax(0,1fr) 340px;gap:40px}}
+@media (max-width:980px){
+  .v-publicar .pb-grid{grid-template-columns:1fr}
+  .v-publicar .pb-prev{position:static}
+}
+@media (max-width:860px){
+  .v-publicar .pb-head{padding-top:48px}
+  .v-publicar .pb-in{margin-left:0}
+  .v-publicar .pb-hero{margin-top:36px;aspect-ratio:16/9}
+  .v-publicar .pb-main{padding-top:56px}
+  .v-publicar .pb-form{padding:32px 20px 28px}
+  .v-publicar .pb-row{grid-template-columns:1fr;gap:20px;margin-bottom:20px}
+  .v-publicar .pb-feats{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+  .v-publicar .pb-feats label{min-height:44px;font-size:15px}
+  .v-publicar .pb-thumbs{grid-template-columns:repeat(3,1fr)}
+  .v-publicar .pb-card{padding:24px 20px}
+}
+</style>
+<script>
+addDict({
+pt:{pb_title:'Adicionar imóvel',pb_h1:'Adicionar imóvel',pb_lead:'Preencha os dados, escolha as fotos e clique em Publicar. O imóvel entra na lista e ganha a própria página na mesma hora.',
+ pb_role_b:'Área do corretor (demonstração).',pb_role:'No site real, esta página só abre depois do login.',pb_alt:'Margem de rio vista do alto',
+ pb_g1:'Oferta e tipo',pb_g1h:'Define em qual lista o imóvel aparece.',pb_deal:'Oferta',pb_type:'Tipo de imóvel',
+ pb_g2:'Dados do imóvel',pb_g2h:'Os campos com * são obrigatórios.',
+ pb_name:'Título *',pb_ph_name:'Casa térrea no Centro de Pipa',pb_loc:'Local *',pb_loc_pick:'Escolha o local',pb_loc_other:'Outro local (digitar)',pb_loc_ph:'Nome da praia ou do bairro',pb_loc_new:'Novo local',
+ pb_price_v:'Preço de venda (R$) *',pb_price_a:'Aluguel por mês (R$) *',pb_area:'Área construída (m²) *',pb_lot:'Área do terreno (m²)',pb_lot_req:'Área do terreno (m²) *',
+ pb_beds:'Quartos',pb_baths:'Banheiros',pb_year:'Ano de construção',pb_beach:'Distância da praia (m)',
+ pb_g3:'Descrição',pb_g3h:'Escreva em português, em duas ou três frases.',pb_desc:'Descrição do imóvel',pb_ph_desc:'O que o imóvel tem, como é o acesso, o que fica perto',
+ pb_tr:'Inglês e alemão: no site real, o texto é traduzido automaticamente e o corretor revisa antes de publicar.',
+ pb_g4:'Características',pb_g4h:'Marque o que o imóvel tem.',pb_g4t:'Marque o que o terreno tem.',
+ pb_g5:'Fotos',pb_g5h:'A primeira foto vira a capa do anúncio.',pb_up:'Escolher fotos',pb_n1:'foto escolhida',pb_n:'fotos escolhidas',pb_rm:'Remover fotos',pb_thumb:'Foto',
+ pb_fnote:'Suas fotos (até 6) aparecem na página do imóvel. Sem fotos, entram imagens de exemplo.',
+ pb_go:'Publicar imóvel',pb_fine:'Teste: aqui o imóvel fica salvo só neste navegador. O corretor usa o mesmo formulário com login; ao publicar, o site é atualizado e o imóvel fica online para todos em cerca de dois minutos.',
+ pb_e_name:'Informe o título do imóvel.',pb_e_loc:'Escolha um local da lista ou digite um novo.',pb_e_price:'Informe o preço em reais, só com números.',pb_e_area:'Informe a área construída em m².',pb_e_lot:'Informe a área do terreno em m².',
+ pb_sum1:'Falta 1 campo. Veja a mensagem em vermelho acima.',pb_sum:'Faltam {n} campos. Veja as mensagens em vermelho acima.',
+ pb_tips:'Três dicas para um bom anúncio',pb_tip1:'Título com tipo e lugar, como “Casa térrea no Centro de Pipa”.',pb_tip2:'Foto de capa na horizontal, tirada de dia.',pb_tip3:'Preço e áreas exatos. São os dados que o cliente compara.',
+ pb_who_t:'Quem vê esta página',pb_who_p:'Só o corretor. Os clientes veem o imóvel pronto, na lista e na página dele.',
+ pb_prev:'Prévia do anúncio',pb_prev_p:'Muda enquanto você preenche.',pb_no_name:'Título do imóvel',pb_no_loc:'Local'},
+en:{pb_title:'Add a listing',pb_h1:'Add a listing',pb_lead:'Fill in the details, choose the photos and click Publish. The property joins the list and gets its own page straight away.',
+ pb_role_b:'Broker area (demo).',pb_role:'On the live site this page opens only after login.',pb_alt:'River bank seen from above',
+ pb_g1:'Offer and type',pb_g1h:'Sets which list the property appears in.',pb_deal:'Offer',pb_type:'Property type',
+ pb_g2:'Property details',pb_g2h:'Fields with * are required.',
+ pb_name:'Title *',pb_ph_name:'Single-storey house in central Pipa',pb_loc:'Location *',pb_loc_pick:'Choose a location',pb_loc_other:'Another location (type it)',pb_loc_ph:'Name of the beach or area',pb_loc_new:'New location',
+ pb_price_v:'Sale price (R$) *',pb_price_a:'Rent per month (R$) *',pb_area:'Built area (m²) *',pb_lot:'Plot area (m²)',pb_lot_req:'Plot area (m²) *',
+ pb_beds:'Bedrooms',pb_baths:'Bathrooms',pb_year:'Year built',pb_beach:'Distance to the beach (m)',
+ pb_g3:'Description',pb_g3h:'Write in Portuguese, two or three sentences.',pb_desc:'Property description',pb_ph_desc:'What the property has, how you reach it, what is nearby',
+ pb_tr:'English and German: on the live site the text is translated automatically and the broker checks it before publishing.',
+ pb_g4:'Features',pb_g4h:'Tick what the property has.',pb_g4t:'Tick what the plot has.',
+ pb_g5:'Photos',pb_g5h:'The first photo becomes the cover.',pb_up:'Choose photos',pb_n1:'photo chosen',pb_n:'photos chosen',pb_rm:'Remove photos',pb_thumb:'Photo',
+ pb_fnote:'Your photos (up to 6) appear on the property page. Without photos, sample images are used.',
+ pb_go:'Publish listing',pb_fine:'Test: here the listing is saved in this browser only. The broker uses the same form with a login; on publish the site is updated and the listing is online for everyone in about two minutes.',
+ pb_e_name:'Enter the title of the property.',pb_e_loc:'Choose a location from the list or type a new one.',pb_e_price:'Enter the price in reais, numbers only.',pb_e_area:'Enter the built area in m².',pb_e_lot:'Enter the plot area in m².',
+ pb_sum1:'1 field is missing. See the message in red above.',pb_sum:'{n} fields are missing. See the messages in red above.',
+ pb_tips:'Three tips for a good listing',pb_tip1:'Title with type and place, such as “Single-storey house in central Pipa”.',pb_tip2:'Landscape cover photo, taken in daylight.',pb_tip3:'Exact price and areas. These are the figures clients compare.',
+ pb_who_t:'Who sees this page',pb_who_p:'Only the broker. Clients see the finished property, in the list and on its own page.',
+ pb_prev:'Listing preview',pb_prev_p:'Changes as you fill in the form.',pb_no_name:'Property title',pb_no_loc:'Location'},
+de:{pb_title:'Immobilie hinzufügen',pb_h1:'Immobilie hinzufügen',pb_lead:'Daten eintragen, Fotos auswählen und auf „Veröffentlichen“ klicken. Die Immobilie erscheint sofort in der Liste und erhält eine eigene Seite.',
+ pb_role_b:'Maklerbereich (Demo).',pb_role:'Auf der echten Website öffnet sich diese Seite erst nach dem Login.',pb_alt:'Flussufer von oben',
+ pb_g1:'Angebot und Art',pb_g1h:'Legt fest, in welcher Liste die Immobilie erscheint.',pb_deal:'Angebot',pb_type:'Immobilienart',
+ pb_g2:'Daten der Immobilie',pb_g2h:'Felder mit * sind Pflichtfelder.',
+ pb_name:'Titel *',pb_ph_name:'Ebenerdiges Haus im Zentrum von Pipa',pb_loc:'Ort *',pb_loc_pick:'Ort wählen',pb_loc_other:'Anderer Ort (eingeben)',pb_loc_ph:'Name des Strands oder Ortsteils',pb_loc_new:'Neuer Ort',
+ pb_price_v:'Kaufpreis (R$) *',pb_price_a:'Monatsmiete (R$) *',pb_area:'Wohnfläche (m²) *',pb_lot:'Grundstücksfläche (m²)',pb_lot_req:'Grundstücksfläche (m²) *',
+ pb_beds:'Schlafzimmer',pb_baths:'Bäder',pb_year:'Baujahr',pb_beach:'Entfernung zum Strand (m)',
+ pb_g3:'Beschreibung',pb_g3h:'Auf Portugiesisch, in zwei bis drei Sätzen.',pb_desc:'Beschreibung der Immobilie',pb_ph_desc:'Ausstattung, Zufahrt, was in der Nähe liegt',
+ pb_tr:'Englisch und Deutsch: Auf der echten Website wird der Text automatisch übersetzt und vor der Veröffentlichung vom Makler geprüft.',
+ pb_g4:'Ausstattung',pb_g4h:'Kreuzen Sie an, was die Immobilie bietet.',pb_g4t:'Kreuzen Sie an, was das Grundstück bietet.',
+ pb_g5:'Fotos',pb_g5h:'Das erste Foto wird das Titelbild des Inserats.',pb_up:'Fotos auswählen',pb_n1:'Foto ausgewählt',pb_n:'Fotos ausgewählt',pb_rm:'Fotos entfernen',pb_thumb:'Foto',
+ pb_fnote:'Ihre Fotos (bis zu 6) erscheinen auf der Objektseite. Ohne Fotos werden Beispielbilder verwendet.',
+ pb_go:'Immobilie veröffentlichen',pb_fine:'Test: Hier wird der Eintrag nur in diesem Browser gespeichert. Der Makler nutzt dasselbe Formular mit Login; nach dem Posten wird die Seite aktualisiert und der Eintrag ist in etwa zwei Minuten für alle online.',
+ pb_e_name:'Bitte geben Sie den Titel der Immobilie an.',pb_e_loc:'Bitte wählen Sie einen Ort aus der Liste oder geben Sie einen neuen ein.',pb_e_price:'Bitte geben Sie den Preis in Reais an, nur Ziffern.',pb_e_area:'Bitte geben Sie die Wohnfläche in m² an.',pb_e_lot:'Bitte geben Sie die Grundstücksfläche in m² an.',
+ pb_sum1:'Es fehlt 1 Angabe. Siehe roter Hinweis oben.',pb_sum:'Es fehlen {n} Angaben. Siehe rote Hinweise oben.',
+ pb_tips:'Drei Tipps für ein gutes Inserat',pb_tip1:'Titel mit Art und Ort, etwa „Ebenerdiges Haus im Zentrum von Pipa“.',pb_tip2:'Titelbild im Querformat, bei Tageslicht aufgenommen.',pb_tip3:'Preis und Flächen genau angeben. Diese Daten vergleichen Kunden.',
+ pb_who_t:'Wer diese Seite sieht',pb_who_p:'Nur der Makler. Kunden sehen die fertige Immobilie, in der Liste und auf ihrer eigenen Seite.',
+ pb_prev:'Vorschau des Inserats',pb_prev_p:'Ändert sich, während Sie ausfüllen.',pb_no_name:'Titel der Immobilie',pb_no_loc:'Ort'}});
+
+VIEWS.publicar={
+ LAND:['deed','paved','power','water','seaview','gated'],
+ title(){return tr('pb_title')},
+ blank(){return {deal:'venda',type:'casa',name:'',loc:'',locOther:'',price:'',area:'',lot:'',beds:'',baths:'',year:'',beach:'',desc:'',feats:[],files:[],errors:{}}},
+ st(){return APP.state.publicar||(APP.state.publicar=this.blank())},
+ num(v){return +String(v??'').replace(/\D/g,'')||0},
+ locs(){return [...new Set(SITE.listings.map(l=>l.loc))].sort((a,b)=>a.localeCompare(b,'pt'))},
+ locVal(s){return (s.loc==='__other'?s.locOther:s.loc).trim()},
+ keys(s){return s.type==='terreno'?this.LAND:Object.keys(FEATS)},
+ fallback(type){return type==='terreno'?['53','51','52']:['05','15','44','47','06']},
+ draft(s){const n=this.num,land=s.type==='terreno';
+  return {slug:'previa',deal:s.deal,type:s.type,name:s.name.trim()||tr('pb_no_name'),loc:this.locVal(s)||tr('pb_no_loc'),price:n(s.price),
+   beds:land?0:n(s.beds),baths:land?0:n(s.baths),area:land?0:n(s.area),lot:n(s.lot),year:land?0:n(s.year),beach:n(s.beach),status:'novo',imgs:this.fallback(s.type)}},
+ preview(s){const d=this.draft(s);let h=cardBelow(d).replace(/^<a class="pb" href="[^"]*"/,'<div class="pb"').replace(/<\/a>$/,'</div>');
+  if(!d.price)h=h.replace(`<b>${price(d)}</b>`,`<b>${price(d).replace(/\d[\d.,]*/,'–')}</b>`);
+  return h},
+ slug(name){let b=name.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,60).replace(/-+$/,'')||'imovel',s=b,i=2;
+  while(bySlug(s))s=b+'-'+i++;return s},
+ check(s){const e={},n=this.num;
+  if(!s.name.trim())e.name='pb_e_name';if(!this.locVal(s))e.loc='pb_e_loc';if(!n(s.price))e.price='pb_e_price';
+  if(s.type==='terreno'){if(!n(s.lot))e.lot='pb_e_lot'}else if(!n(s.area))e.area='pb_e_area';
+  return e},
+ sum(e){const c=Object.keys(e).length;return c?(c===1?tr('pb_sum1'):tr('pb_sum').replace('{n}',c)):''},
+ render(){const s=this.st(),land=s.type==='terreno',E=s.errors,v=k=>esc(s[k]);
+  const err=k=>`<span class="pb-err" data-err="${k}">${E[k]?tr(E[k]):''}</span>`,inv=k=>E[k]?' aria-invalid="true"':'';
+  const numf=(k,lab,ph)=>`<label class="f"><span>${lab}</span><input name="${k}" type="text" inputmode="numeric" autocomplete="off" placeholder="${ph}" value="${v(k)}"${inv(k)}>${err(k)}</label>`;
+  const seg=(k,opts)=>`<div><div class="pb-lab" id="pb-l-${k}">${tr('pb_'+k)}</div><div class="pb-seg" role="group" aria-labelledby="pb-l-${k}">${opts.map(o=>`<button type="button" data-${k}="${o[0]}" aria-pressed="${s[k]===o[0]}">${o[1]}</button>`).join('')}</div></div>`;
+  const locs=this.locs(),n=s.files.length;
+  return `<div class="v-publicar">
+<section class="pb-head"><div class="wide">
+ <div class="pb-in"><h1 class="h1">${tr('pb_h1')}</h1><p class="lead">${tr('pb_lead')}</p>
+  <p class="pb-role">${icon('user')}<span><b>${tr('pb_role_b')}</b> ${tr('pb_role')}</span></p></div>
+ <div class="pb-hero"><img ${srcW(SITE.media.publish)} alt="${tr('pb_alt')}"></div>
+</div></section>
+<section class="pb-main"><div class="wide pb-grid">
+ <form class="pb-form" novalidate>
+  <fieldset class="pb-g"><legend>${tr('pb_g1')}</legend><p class="pb-hint">${tr('pb_g1h')}</p>
+   <div class="pb-row">${seg('deal',[['venda',tr('sale')],['aluguel',tr('lease')]])}${seg('type',[['casa',tr('t_casa')],['apartamento',tr('t_apartamento')],['terreno',tr('t_terreno')]])}</div>
+  </fieldset>
+  <fieldset class="pb-g"><legend>${tr('pb_g2')}</legend><p class="pb-hint">${tr('pb_g2h')}</p>
+   <div class="pb-row"><label class="f pb-full"><span>${tr('pb_name')}</span><input name="name" type="text" maxlength="70" autocomplete="off" placeholder="${tr('pb_ph_name')}" value="${v('name')}"${inv('name')}>${err('name')}</label></div>
+   <div class="pb-row">
+    <div class="f"><label for="pb-loc">${tr('pb_loc')}</label><select id="pb-loc" name="loc"${inv('loc')}><option value="">${tr('pb_loc_pick')}</option>${locs.map(l=>`<option${s.loc===l?' selected':''}>${esc(l)}</option>`).join('')}<option value="__other"${s.loc==='__other'?' selected':''}>${tr('pb_loc_other')}</option></select>
+     <input class="pb-other" name="locOther" type="text" maxlength="50" autocomplete="off" aria-label="${tr('pb_loc_new')}" placeholder="${tr('pb_loc_ph')}" value="${v('locOther')}"${s.loc==='__other'?'':' hidden'}>${err('loc')}</div>
+    <label class="f"><span data-pl>${tr(s.deal==='aluguel'?'pb_price_a':'pb_price_v')}</span><input name="price" type="text" inputmode="numeric" autocomplete="off" placeholder="${s.deal==='aluguel'?'8.500':'1.250.000'}" value="${v('price')}"${inv('price')}>${err('price')}</label>
+   </div>
+   ${land?`<div class="pb-row">${numf('lot',tr('pb_lot_req'),'600')}${numf('beach',tr('pb_beach'),'300')}</div>`
+    :`<div class="pb-row">${numf('area',tr('pb_area'),'180')}${numf('lot',tr('pb_lot'),'450')}</div>
+   <div class="pb-row">${numf('beds',tr('pb_beds'),'3')}${numf('baths',tr('pb_baths'),'2')}</div>
+   <div class="pb-row">${numf('year',tr('pb_year'),'2020')}${numf('beach',tr('pb_beach'),'300')}</div>`}
+  </fieldset>
+  <fieldset class="pb-g"><legend>${tr('pb_g3')}</legend><p class="pb-hint">${tr('pb_g3h')}</p>
+   <label class="f"><span>${tr('pb_desc')}</span><textarea name="desc" rows="4" placeholder="${tr('pb_ph_desc')}">${v('desc')}</textarea></label>
+   <p class="pb-note">${tr('pb_tr')}</p>
+  </fieldset>
+  <fieldset class="pb-g"><legend>${tr('pb_g4')}</legend><p class="pb-hint">${tr(land?'pb_g4t':'pb_g4h')}</p>
+   <div class="pb-feats">${this.keys(s).map(k=>`<label><input type="checkbox" data-feat="${k}"${s.feats.includes(k)?' checked':''}>${tr('f_'+k)}</label>`).join('')}</div>
+  </fieldset>
+  <fieldset class="pb-g"><legend>${tr('pb_g5')}</legend><p class="pb-hint">${tr('pb_g5h')}</p>
+   <label class="pb-up">${icon('plus')}<span>${tr('pb_up')}</span><input type="file" accept="image/*" multiple data-files></label>
+   <div class="pb-thumbs">${s.files.map((f,i)=>`<img src="${f.url}" alt="${tr('pb_thumb')} ${i+1}">`).join('')}</div>
+   <div class="pb-fbar"${n?'':' hidden'}><span>${n} ${tr(n===1?'pb_n1':'pb_n')}</span><button type="button" data-rm>${tr('pb_rm')}</button></div>
+   <p class="pb-note">${tr('pb_fnote')}</p>
+  </fieldset>
+  <div class="pb-go"><p class="pb-err pb-sum" role="alert">${this.sum(E)}</p>
+   <button class="btn" type="submit">${tr('pb_go')}</button><p class="pb-fine">${tr('pb_fine')}</p></div>
+ </form>
+ <aside class="pb-side">
+  <div class="pb-card pb-tips"><h2>${tr('pb_tips')}</h2><ul>${[1,2,3].map(i=>`<li>${icon('check')}<span>${tr('pb_tip'+i)}</span></li>`).join('')}</ul></div>
+  <div class="pb-card pb-who">${icon('eye')}<div><h2>${tr('pb_who_t')}</h2><p>${tr('pb_who_p')}</p></div></div>
+  <div class="pb-card pb-prev"><h2>${tr('pb_prev')}</h2><p>${tr('pb_prev_p')}</p><div data-prev aria-live="off"></div></div>
+ </aside>
+</div></section>
+</div>`},
+ mount(root){const V=this,s=V.st(),form=$('.pb-form',root),prev=$('[data-prev]',root);
+  const paint=()=>{prev.innerHTML=V.preview(s);if(s.files[0]){const i=$('img',prev);if(i)i.src=s.files[0].url}};
+  const clear=k=>{if(!s.errors[k])return;delete s.errors[k];const e=$(`[data-err="${k}"]`,form);if(e)e.textContent='';$$(`[name="${k}"]`,form).forEach(x=>x.removeAttribute('aria-invalid'));$('.pb-sum',form).textContent=V.sum(s.errors)};
+  paint();
+  $$('input[name],select[name],textarea[name]',form).forEach(e=>{e.oninput=e.onchange=()=>{s[e.name]=e.value;
+    if(e.name==='loc'){const o=$('[name=locOther]',form);o.hidden=e.value!=='__other';if(!o.hidden&&document.activeElement===e)o.focus()}
+    clear(e.name==='locOther'?'loc':e.name);paint()}});
+  $$('[data-deal]',form).forEach(b=>b.onclick=()=>{s.deal=b.dataset.deal;$$('[data-deal]',form).forEach(x=>x.setAttribute('aria-pressed',x===b));
+    $('[data-pl]',form).textContent=tr(s.deal==='aluguel'?'pb_price_a':'pb_price_v');$('[name=price]',form).placeholder=s.deal==='aluguel'?'8.500':'1.250.000';paint()});
+  $$('[data-type]',form).forEach(b=>b.onclick=()=>{if(s.type===b.dataset.type)return;const was=s.type==='terreno';s.type=b.dataset.type;
+    if((s.type==='terreno')!==was){delete s.errors.area;delete s.errors.lot;rerender(true);const n=$(`.v-publicar [data-type="${s.type}"]`);if(n)n.focus({preventScroll:true})}
+    else{$$('[data-type]',form).forEach(x=>x.setAttribute('aria-pressed',x===b));paint()}});
+  $$('[data-feat]',form).forEach(c=>c.onchange=()=>{const k=c.dataset.feat;s.feats=s.feats.filter(x=>x!==k);if(c.checked)s.feats.push(k)});
+  const files=()=>{$('.pb-thumbs',form).innerHTML=s.files.map((f,i)=>`<img src="${f.url}" alt="${tr('pb_thumb')} ${i+1}">`).join('');const n=s.files.length,b=$('.pb-fbar',form);b.hidden=!n;$('span',b).textContent=`${n} ${tr(n===1?'pb_n1':'pb_n')}`;paint()};
+  $('[data-files]',form).onchange=e=>{[...e.target.files].filter(f=>f.type.startsWith('image/')).forEach(f=>s.files.push({url:URL.createObjectURL(f),name:f.name}));e.target.value='';files()};
+  $('[data-rm]',form).onclick=()=>{s.files.forEach(f=>URL.revokeObjectURL(f.url));s.files=[];files()};
+  form.onsubmit=ev=>{ev.preventDefault();const e=s.errors=V.check(s),ks=Object.keys(e);
+    if(ks.length){['name','loc','price','area','lot'].forEach(k=>{const el=$(`[data-err="${k}"]`,form);if(el)el.textContent=e[k]?tr(e[k]):'';$$(`[name="${k}"]`,form).forEach(x=>e[k]?x.setAttribute('aria-invalid','true'):x.removeAttribute('aria-invalid'))});
+      $('.pb-sum',form).textContent=V.sum(e);const first=['name','loc','price','area','lot'].find(k=>e[k]);
+      const f=first==='loc'&&s.loc==='__other'?$('[name=locOther]',form):$(`[name="${first}"]`,form);if(f){f.focus({preventScroll:true});f.scrollIntoView({block:'center'})}return}
+    const n=V.num,land=s.type==='terreno',slug=V.slug(s.name),beach=n(s.beach),loc=V.locVal(s);
+    const same=SITE.listings.find(l=>l.loc.toLowerCase()===loc.toLowerCase()),desc=s.desc.trim();
+    const item={slug,deal:s.deal,type:s.type,name:s.name.trim(),loc:same?same.loc:loc,price:n(s.price),beds:land?0:n(s.beds),baths:land?0:n(s.baths),area:land?0:n(s.area),lot:n(s.lot),year:land?0:n(s.year),beach,
+      status:'novo',imgs:V.fallback(s.type),feats:V.keys(s).filter(k=>s.feats.includes(k)),
+      dist:{beach:beach?Math.max(1,Math.round(beach/80))+' min':'–',center:same?same.dist.center:'–',airport:same?same.dist.airport:'–'},desc:{pt:desc}};
+    const toData=f=>new Promise(r=>{const im=new Image();im.onload=()=>{const k=Math.min(1,1200/im.width),c=document.createElement('canvas');c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext('2d').drawImage(im,0,0,c.width,c.height);r(c.toDataURL('image/jpeg',.72))};im.onerror=()=>r(null);im.src=f.url});
+    Promise.all(s.files.slice(0,6).map(toData)).then(d=>{d=d.filter(Boolean);if(d.length)item.imgs=d.concat(d.length<3?V.fallback(s.type).slice(0,3-d.length):[]);item.own=true;
+      SITE.listings.unshift(item);saveOwn();APP.state.publicar=V.blank();location.hash='#imovel-'+slug})}}
+};
+</script>

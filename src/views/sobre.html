@@ -1,0 +1,210 @@
+<style>
+/* Über uns: Kopf mit Porträt · Kennzahlenband · Geschichte · Werte · Abschlusskasten */
+.v-sobre .hero{padding:60px 0 120px}
+.v-sobre .hero__grid{display:grid;grid-template-columns:minmax(0,520fr) minmax(0,520fr);gap:100px;align-items:center}
+.v-sobre .hero__t{font-size:clamp(40px,4.9vw,70px);line-height:1.1;font-weight:600;letter-spacing:-.035em;text-wrap:balance}
+.v-sobre .hero__t span{display:block;color:var(--mute)}
+.v-sobre .hero__p{margin-top:22px;max-width:520px;color:var(--mute);line-height:1.5;text-wrap:pretty}
+.v-sobre .hero__cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.v-sobre .port{position:relative;aspect-ratio:520/607;border-radius:var(--r);background:var(--ink-2);color:#eef0ee;display:grid;place-items:center;overflow:hidden}
+.v-sobre .port__in{text-align:center;transform:translateY(-12%)}
+.v-sobre .port__ini{display:block;font-size:clamp(96px,12vw,172px);line-height:1;font-weight:300;letter-spacing:-.04em}
+.v-sobre .port__cap{display:block;margin-top:14px;font-size:13px;color:var(--mute-d)}
+.v-sobre .cred{position:absolute;right:20px;bottom:20px;min-width:216px;max-width:calc(100% - 40px);background:var(--white);color:var(--text);border-radius:var(--r);padding:22px 26px 20px}
+.v-sobre .cred__h{font-size:13px;font-weight:600;color:var(--mute);margin-bottom:8px}
+.v-sobre .cred li{position:relative;padding:3px 0 3px 14px;font-size:14px;line-height:1.35;font-weight:500}
+.v-sobre .cred li::before{content:"";position:absolute;left:0;top:.72em;width:4px;height:4px;border-radius:50%;background:var(--sea)}
+
+.v-sobre .band{padding:60px 0}
+.v-sobre .band__g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.v-sobre .band__i{width:60%;padding-right:20px;border-right:1px solid var(--line-d);min-height:70px}
+.v-sobre .band__i:last-child{border-right:0}
+.v-sobre .band__n{display:block;font-size:28px;line-height:31px;font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.v-sobre .band__l{display:block;margin-top:8px;font-size:13px;line-height:1.3;color:var(--mute-d)}
+
+.v-sobre .story{padding:100px 0 0}
+.v-sobre .story__imgs{display:grid;grid-template-columns:minmax(0,860fr) minmax(0,416fr);gap:24px}
+.v-sobre .ph{position:relative;overflow:hidden;border-radius:var(--r);background:var(--stone)}
+.v-sobre .ph img{width:100%;height:100%;object-fit:cover}
+.v-sobre .story__imgs .ph{height:452px}
+.v-sobre .story__imgs .ph:first-child{border-bottom-left-radius:0}
+.v-sobre .story__tag{position:absolute;left:0;bottom:0;width:300px;max-width:80%;min-height:86px;background:var(--paper);border-top-right-radius:var(--r);padding:18px 24px 6px 0;display:flex;gap:14px;align-items:center;font-size:14px;line-height:1.4}
+.v-sobre .story__tag .ico{width:22px;height:22px;color:var(--sea)}
+.v-sobre .story__tag b{display:block;font-weight:600}
+.v-sobre .story__h{margin-top:88px;max-width:1094px;font-size:clamp(34px,5vw,72px);line-height:.98;font-weight:700;letter-spacing:-.04em;text-wrap:balance}
+.v-sobre .story__q{margin-top:34px;max-width:470px;color:var(--mute);font-size:clamp(20px,1.8vw,26px);line-height:1.3;font-weight:300;text-wrap:pretty}
+.v-sobre .story__row{display:grid;grid-template-columns:1fr 1fr;align-items:end;margin-top:40px}
+.v-sobre .story__mark{display:flex;align-items:baseline;gap:56px;font-size:16px}
+.v-sobre .story__mark b{font-size:20px;font-weight:700;letter-spacing:-.03em}
+.v-sobre .story__txt{max-width:526px;margin-left:auto}
+.v-sobre .story__txt p{color:var(--mute);text-wrap:pretty}
+.v-sobre .story__txt p+p{margin-top:22px}
+.v-sobre .story__wide{margin-top:120px;aspect-ratio:1300/593}
+
+.v-sobre .vals{padding:100px 0}
+.v-sobre .vals__head{display:grid;grid-template-columns:minmax(0,753fr) minmax(0,447fr);gap:100px;align-items:end}
+.v-sobre .vals__head .h2{max-width:660px}
+.v-sobre .vals__row{display:grid;grid-template-columns:minmax(0,753fr) minmax(0,447fr);gap:100px;align-items:end;margin-top:52px}
+.v-sobre .vals__row .ph{aspect-ratio:753/506}
+.v-sobre .vals__list{display:grid;gap:44px}
+.v-sobre .vals__list li{display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start}
+.v-sobre .vals__ic{width:64px;height:64px;border-radius:50%;background:var(--stone);display:grid;place-items:center}
+.v-sobre .vals__ic .ico{width:24px;height:24px;stroke-width:1.3}
+.v-sobre .vals__list .h4{padding-top:4px}
+.v-sobre .vals__list p{margin-top:8px;font-size:17px;line-height:1.5;color:var(--mute);text-wrap:pretty}
+
+.v-sobre .end{padding:0 0 120px}
+.v-sobre .end__box{border-radius:var(--r);padding:50px;min-height:408px;display:grid;grid-template-columns:minmax(0,558fr) minmax(0,362fr);gap:100px;align-items:center}
+.v-sobre .end__h{font-size:clamp(28px,3vw,42px);line-height:1.1;font-weight:600;letter-spacing:-.03em;text-wrap:balance}
+.v-sobre .end__h span{display:block;color:var(--mute-d)}
+.v-sobre .end__p{margin-top:14px;max-width:470px;line-height:1.45;color:#d5dad7;text-wrap:pretty}
+.v-sobre .end__cta{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.v-sobre .end__cta .btn svg{width:18px;height:18px;fill:currentColor}
+
+@media (max-width:1100px){
+  .v-sobre .hero__grid{gap:48px}
+  .v-sobre .vals__head,.v-sobre .vals__row{gap:48px}
+  .v-sobre .end__box{gap:48px}
+}
+@media (max-width:860px){
+  .v-sobre .hero{padding:36px 0 76px}
+  .v-sobre .hero__grid{grid-template-columns:1fr;gap:36px}
+  .v-sobre .hero__cta .btn{flex:1 1 150px}
+  .v-sobre .cred{right:14px;bottom:14px;padding:18px 20px 16px}
+  .v-sobre .band{padding:40px 0}
+  .v-sobre .band__g{grid-template-columns:1fr 1fr;gap:28px 20px}
+  .v-sobre .band__i{width:auto;min-height:0;padding-right:16px}
+  .v-sobre .port__in{transform:translateY(-34%)}
+  .v-sobre .band__i:nth-child(2n){border-right:0}
+  .v-sobre .story{padding-top:76px}
+  .v-sobre .story__imgs{grid-template-columns:1fr;gap:12px}
+  .v-sobre .story__imgs .ph{height:auto;aspect-ratio:4/3}
+  .v-sobre .story__tag{width:270px;min-height:74px}
+  .v-sobre .story__h{margin-top:48px}
+  .v-sobre .story__q{margin-top:22px}
+  .v-sobre .story__row{grid-template-columns:1fr;gap:28px;margin-top:32px}
+  .v-sobre .story__txt{max-width:none;margin-left:0;order:-1}
+  .v-sobre .story__mark{gap:28px}
+  .v-sobre .story__wide{margin-top:56px;aspect-ratio:4/3}
+  .v-sobre .vals{padding:76px 0}
+  .v-sobre .vals__head,.v-sobre .vals__row{grid-template-columns:1fr;gap:20px}
+  .v-sobre .vals__row{margin-top:32px;gap:36px}
+  .v-sobre .vals__list{gap:30px}
+  .v-sobre .vals__list li{grid-template-columns:52px 1fr;gap:16px}
+  .v-sobre .vals__ic{width:52px;height:52px}
+  .v-sobre .end{padding-bottom:76px}
+  .v-sobre .end__box{grid-template-columns:1fr;gap:30px;padding:36px 24px;min-height:0}
+  .v-sobre .end__cta{align-items:stretch}
+}
+</style>
+<script>
+addDict({
+pt:{ab_title:'Sobre',ab_h1a:'Helena Cavalcanti',ab_h1b:'corretora de imóveis em Pipa',
+ ab_lead:'Helena atende compradores e proprietários em Pipa e Tibau do Sul. Trabalha sozinha, com um advogado parceiro e uma administradora para o aluguel por temporada, e só anuncia imóveis com os documentos conferidos.',
+ ab_b1:'Marcar uma conversa',ab_b2:'Ver imóveis',ab_photo:'foto do corretor',ab_cred:'Registro e idiomas',ab_langs:'Atende em',ab_since:'Em Pipa desde',
+ ab_s1:' anos',ab_l1:'de trabalho em Pipa',ab_l2:'imóveis vendidos',ab_l3:'países de origem dos compradores',ab_l4:'nota média das avaliações de clientes',
+ ab_office:'Escritório',
+ ab_sh:'Um escritório pequeno, com documentos conferidos',
+ ab_sq:'Uma corretora, um advogado parceiro e uma administradora. É toda a equipe.',
+ ab_place:'Pipa, Tibau do Sul/RN',
+ ab_p1:'Helena Cavalcanti chegou a Pipa em {y} e desde então trabalha com compra, venda e aluguel na região. O escritório continua sendo de uma pessoa: quem atende o telefone é quem mostra o imóvel e acompanha a escritura.',
+ ab_p2:'Na parte jurídica, um advogado parceiro confere a matrícula e as certidões antes de cada negócio. Uma administradora cuida das casas alugadas por temporada, das reservas à prestação de contas.',
+ ab_p3:'Um imóvel só entra no site depois que os documentos foram vistos. Quando falta algum papel, o anúncio espera.',
+ ab_alt1:'Casa com piscina entre plantas tropicais',ab_alt2:'Casa de praia entre coqueiros',ab_alt3:'Casa de madeira com deck',ab_alt4:'Bangalô com piscina e palmeiras',
+ ab_vh:'Três regras do escritório',ab_vl:'Valem para todo imóvel, do terreno à casa de frente para o mar.',
+ ab_v1:'Documentos antes do anúncio',ab_v1t:'Matrícula e certidões são conferidas antes de o imóvel ir para o site.',
+ ab_v2:'Uma só pessoa de contato',ab_v2t:'Da primeira mensagem à entrega das chaves, você fala com a Helena.',
+ ab_v3:'Contas reais na proposta',ab_v3t:'IPTU, manutenção e custos de compra são mostrados antes de qualquer sinal.',
+ ab_eh:'Comece por uma conversa',ab_ep:'Conte o que você procura ou qual imóvel quer vender. A Helena responde em português, inglês ou alemão.',
+ ab_wa:'Chamar no WhatsApp'},
+en:{ab_title:'About',ab_h1a:'Helena Cavalcanti',ab_h1b:'property broker in Pipa',
+ ab_lead:'Helena works with buyers and owners in Pipa and Tibau do Sul. She works alone, with a partner lawyer and a manager for holiday lets, and only lists properties whose documents have been checked.',
+ ab_b1:'Book a conversation',ab_b2:'View properties',ab_photo:'broker photo',ab_cred:'Licence and languages',ab_langs:'Speaks',ab_since:'In Pipa since',
+ ab_s1:' years',ab_l1:'working in Pipa',ab_l2:'properties sold',ab_l3:'countries our buyers come from',ab_l4:'average score in client reviews',
+ ab_office:'Office',
+ ab_sh:'A small office with checked documents',
+ ab_sq:'One broker, one partner lawyer and one rental manager. That is the whole team.',
+ ab_place:'Pipa, Tibau do Sul/RN',
+ ab_p1:'Helena Cavalcanti arrived in Pipa in {y} and has worked with sales and rentals in the area ever since. The office is still one person: whoever answers the phone also shows the property and follows the deed.',
+ ab_p2:'On the legal side, a partner lawyer checks the registry entry and the certificates before every deal. A manager looks after the houses let to holidaymakers, from bookings to the monthly statement.',
+ ab_p3:'A property only goes on the site after its documents have been seen. If a paper is missing, the listing waits.',
+ ab_alt1:'House with pool among tropical plants',ab_alt2:'Beach house among coconut palms',ab_alt3:'Wooden house with deck',ab_alt4:'Bungalow with pool and palms',
+ ab_vh:'Three rules of the office',ab_vl:'They apply to every property, from a plot to a house facing the sea.',
+ ab_v1:'Documents before the listing',ab_v1t:'Registry entry and certificates are checked before a property goes on the site.',
+ ab_v2:'One contact person',ab_v2t:'From the first message to the key handover, you talk to Helena.',
+ ab_v3:'Real bills in the offer',ab_v3t:'Property tax, upkeep and purchase costs are shown before any deposit.',
+ ab_eh:'Start with a conversation',ab_ep:'Tell us what you are looking for or which property you want to sell. Helena replies in Portuguese, English or German.',
+ ab_wa:'Message on WhatsApp'},
+de:{ab_title:'Über uns',ab_h1a:'Helena Cavalcanti',ab_h1b:'Maklerin in Pipa',
+ ab_lead:'Helena betreut Käufer und Eigentümer in Pipa und Tibau do Sul. Sie arbeitet allein, unterstützt von einem Partneranwalt und einer Verwalterin für die Ferienvermietung, und bietet nur Immobilien mit geprüften Unterlagen an.',
+ ab_b1:'Gespräch vereinbaren',ab_b2:'Immobilien ansehen',ab_photo:'Maklerfoto',ab_cred:'Zulassung und Sprachen',ab_langs:'Spricht',ab_since:'In Pipa seit',
+ ab_s1:' Jahre',ab_l1:'in Pipa tätig',ab_l2:'verkaufte Immobilien',ab_l3:'Heimatländer der Käufer',ab_l4:'Durchschnitt aller Bewertungen',
+ ab_office:'Büro',
+ ab_sh:'Ein kleines Büro mit geprüften Unterlagen',
+ ab_sq:'Eine Maklerin, ein Partneranwalt und eine Verwalterin. Das ist das ganze Team.',
+ ab_place:'Pipa, Tibau do Sul/RN',
+ ab_p1:'Helena Cavalcanti kam {y} nach Pipa und begleitet seitdem Kauf, Verkauf und Vermietung in der Region. Das Büro besteht bis heute aus einer Person: Wer ans Telefon geht, zeigt auch die Immobilie und begleitet den notariellen Kaufvertrag.',
+ ab_p2:'Rechtlich prüft ein Partneranwalt vor jedem Geschäft den Grundbucheintrag und die Bescheinigungen. Eine Verwalterin kümmert sich um die Ferienhäuser, von der Buchung bis zur Abrechnung.',
+ ab_p3:'Eine Immobilie kommt erst auf die Website, wenn die Unterlagen geprüft sind. Fehlt ein Dokument, wartet das Inserat.',
+ ab_alt1:'Haus mit Pool zwischen tropischen Pflanzen',ab_alt2:'Strandhaus zwischen Kokospalmen',ab_alt3:'Holzhaus mit Terrasse',ab_alt4:'Bungalow mit Pool und Palmen',
+ ab_vh:'Drei Regeln des Büros',ab_vl:'Sie gelten für jede Immobilie, vom Grundstück bis zum Haus am Meer.',
+ ab_v1:'Erst die Unterlagen, dann das Inserat',ab_v1t:'Grundbucheintrag und Bescheinigungen werden geprüft, bevor eine Immobilie auf die Website kommt.',
+ ab_v2:'Eine Ansprechpartnerin',ab_v2t:'Von der ersten Nachricht bis zur Schlüsselübergabe sprechen Sie mit Helena.',
+ ab_v3:'Echte Kosten im Angebot',ab_v3t:'Grundsteuer (IPTU), Instandhaltung und Kaufnebenkosten sehen Sie, bevor Sie eine Anzahlung leisten.',
+ ab_eh:'Beginnen Sie mit einem Gespräch',ab_ep:'Schreiben Sie, was Sie suchen oder welche Immobilie Sie verkaufen möchten. Helena antwortet auf Portugiesisch, Englisch oder Deutsch.',
+ ab_wa:'WhatsApp schreiben'}});
+
+VIEWS.sobre={
+  title(){return tr('ab_title')},
+  render(){
+    const a=SITE.agent,s=SITE.stats,m=SITE.media,since=2026-s.years;
+    const stat=(v,l,suf,dec)=>`<div class="band__i"><b class="band__n" data-count="${v}"${suf?` data-suf="${esc(suf)}"`:''}${dec?` data-dec="${dec}"`:''}>${nf(v,dec||0)}${suf?esc(suf):''}</b><span class="band__l">${tr(l)}</span></div>`;
+    const val=(ic,t,p)=>`<li><span class="vals__ic">${icon(ic)}</span><div><h3 class="h4">${tr(t)}</h3><p>${tr(p)}</p></div></li>`;
+    return `<div class="v-sobre">
+<section class="hero"><div class="wrap hero__grid">
+  <div>
+    <h1 class="hero__t">${tr('ab_h1a')}<span>${tr('ab_h1b')}</span></h1>
+    <p class="hero__p">${tr('ab_lead')}</p>
+    <div class="hero__cta"><a class="btn" href="#contato">${tr('ab_b1')}</a><a class="btn btn--line" href="#imoveis">${tr('ab_b2')}</a></div>
+  </div>
+  <div class="port">
+    <div class="port__in" style="background:url(${img(SITE.media.portrait)}) center/cover"></div>
+    <div class="cred"><p class="cred__h">${tr('ab_cred')}</p><ul>
+      <li>${esc(a.creci)}</li><li>${tr('ab_langs')} ${esc(a.langs)}</li><li>${tr('ab_since')} ${since}</li></ul></div>
+  </div>
+</div></section>
+
+<section class="band dark"><div class="wrap band__g">
+  ${stat(s.years,'ab_l1',tr('ab_s1'))}${stat(s.sold,'ab_l2')}${stat(s.countries,'ab_l3')}${stat(s.rating,'ab_l4','',1)}
+</div></section>
+
+<section class="story"><div class="wide">
+  <div class="story__imgs">
+    <div class="ph"><img ${srcW(m.story1)} alt="${tr('ab_alt1')}" loading="lazy">
+      <div class="story__tag">${icon('pin')}<span><b>${tr('ab_office')}</b>${esc(SITE.address.split(' · ')[0])}</span></div></div>
+    <div class="ph"><img ${srcW(m.story2)} alt="${tr('ab_alt2')}" loading="lazy"></div>
+  </div>
+  <h2 class="story__h">${tr('ab_sh')}</h2>
+  <p class="story__q">${tr('ab_sq')}</p>
+  <div class="story__row">
+    <div class="story__mark"><b>${esc(SITE.brandFull)}</b><span class="mute">${tr('ab_place')}</span></div>
+    <div class="story__txt"><p>${tr('ab_p1').replace('{y}',since)}</p><p>${tr('ab_p2')}</p><p>${tr('ab_p3')}</p></div>
+  </div>
+  <div class="ph story__wide"><img ${srcW(m.team)} alt="${tr('ab_alt3')}" loading="lazy"></div>
+</div></section>
+
+<section class="vals"><div class="wide">
+  <div class="vals__head"><h2 class="h2">${tr('ab_vh')}</h2><p class="lead mute">${tr('ab_vl')}</p></div>
+  <div class="vals__row">
+    <div class="ph"><img ${srcW(m.values)} alt="${tr('ab_alt4')}" loading="lazy"></div>
+    <ul class="vals__list">${val('doc','ab_v1','ab_v1t')}${val('user','ab_v2','ab_v2t')}${val('check','ab_v3','ab_v3t')}</ul>
+  </div>
+</div></section>
+
+<section class="end"><div class="wrap"><div class="end__box dark">
+  <div><h2 class="end__h">${tr('ab_eh')}</h2><p class="end__p">${tr('ab_ep')}</p></div>
+  <div class="end__cta"><a class="btn btn--wa" href="${waLink()}" target="_blank" rel="noopener">${WA_SVG}${tr('ab_wa')}</a><a class="btn btn--light" href="#imoveis">${tr('ab_b2')}</a></div>
+</div></div></section>
+</div>`}
+};
+</script>

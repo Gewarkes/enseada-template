@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="wrap">
+  <ol class="crumbs"><li><a href="{{ url('home') }}">{{ t.navHome }}</a></li><li aria-current="page">{{ t.navAbout }}</li></ol>
+</div>
+<section class="sec-tight">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h1>{{ t.aboutH }}</h1>
+        <p class="prose-lead">{{ t.aboutLead }}</p>
+        <div class="btn-row" style="margin-top:22px">
+          <a class="btn btn-line" href="{{ url('imoveis') }}">{{ t.navAll }}</a>
+        </div>
+      </div>
+      <div class="split-media">{{ pic(site.media.about, '(min-width:900px) 560px, 100vw', t.aboutAlt, '', true) }}</div>
+    </div>
+    <div class="stats four">
+      <div><b>{{ site.stats.sold }}</b><span>{{ t.stSold }}</span></div>
+      <div><b>{{ site.stats.years }}</b><span>{{ t.stYears }}</span></div>
+      <div><b>{{ site.stats.countries }}</b><span>{{ t.stCountries }}</span></div>
+      <div><b>{{ nf(site.stats.rating, 1) }}</b><span>{{ t.stRating }} ({{ site.stats.reviews }})</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="split rev">
+      <div class="split-media">{{ pic(site.media.story, '(min-width:900px) 560px, 100vw', '') }}</div>
+      <div>
+        <h2>{{ t.storyH }}</h2>
+        <div class="prose" style="margin-top:14px;color:var(--muted)"><p>{{ t.story1 }}</p><p>{{ t.story2 }}</p></div>
+        <div class="agent" style="margin-top:22px">
+          {{ m.agentbox() }}
+          <ul class="info" style="margin-top:0">
+            <li>{{ icon('globe') }}<span>{{ t.agentLangs }}: {{ site.agent.langs }}</span></li>
+            {% if site.agent.creci %}<li>{{ icon('shield') }}<span>{{ t.agentLic }}: {{ site.agent.creci }}</span></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.stepsH }}</h2><p>{{ t.stepsP }}</p></div></div>
+    <ol class="steps">
+      {% for i in range(1, 5) %}<li class="step"><h3>{{ t['step' ~ i] }}</h3><p>{{ t['step' ~ i ~ 'p'] }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.servH }}</h2></div></div>
+    <div class="points serv">
+      {% for ic, k in [('home','sv1'),('tag','sv2'),('cal','sv3'),('doc','sv4')] %}
+      <div class="point"><span class="point-ico">{{ icon(ic) }}</span><div><h3>{{ t[k] }}</h3><p>{{ t[k ~ 'p'] }}</p></div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.areasH2 }}</h2></div></div>
+    <div class="tiles">
+      {% for x in locs %}
+      <a class="tile" href="{{ url('imoveis') }}?loc={{ x.slug }}">{{ pic(x.img, '(min-width:1100px) 200px, (min-width:800px) 33vw, 50vw', '') }}<div><b>{{ x.name }}</b><span>{{ plural(x.n, 'obj1', 'objN') }}</span></div></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if site.reviews %}
+<section class="sec sec-dark">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.revH }}</h2></div></div>
+    <div class="quotes">
+      {% for r in site.reviews[:3] %}
+      <figure class="quote">{{ stars() }}<blockquote>{{ L(r.text) }}</blockquote><footer><b>{{ r.name }}</b><span>{{ L(r.from) }}</span></footer></figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{{ m.ctaband(t.ctaHG, t.ctaPG, site.media.cta) }}
+{% endblock %}

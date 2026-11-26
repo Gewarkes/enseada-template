@@ -1,0 +1,74 @@
+{
+ "slug": "casa-da-mata",
+ "ref": "EN-1034",
+ "deal": "aluguel",
+ "type": "casa",
+ "name": "Casa da Mata",
+ "title": {
+  "pt": "Casa de 3 quartos para aluguel anual no Madeiro",
+  "en": "Three-bedroom house for long-term rent near Madeiro",
+  "es": "Casa de 3 dormitorios para alquiler anual en Madeiro",
+  "de": "Haus mit 3 Schlafzimmern zur Jahresmiete im Madeiro"
+ },
+ "loc": "Praia do Madeiro",
+ "lat": -6.2168,
+ "lng": -35.08,
+ "price": 16500,
+ "condo": 0,
+ "iptu": 3200,
+ "beds": 3,
+ "suites": 2,
+ "baths": 3,
+ "parking": 2,
+ "area": 260,
+ "lot": 900,
+ "year": 2020,
+ "beach": 300,
+ "status": "disponivel",
+ "date": "2026-10-20",
+ "imgs": [
+  "06",
+  "13",
+  "74"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "pool",
+  "ac",
+  "furnished",
+  "garden",
+  "deck",
+  "fiber"
+ ],
+ "dist": {
+  "beach": "5 min",
+  "center": "10 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "Piscina natural com filtro biológico",
+   "Aceita animais de estimação"
+  ],
+  "en": [
+   "Natural pool with biological filter",
+   "Pets welcome"
+  ],
+  "es": [
+   "Piscina natural con filtro biológico",
+   "Acepta mascotas"
+  ],
+  "de": [
+   "Natürlicher Pool mit biologischem Filter",
+   "Haustiere erlaubt"
+  ]
+ },
+ "desc": {
+  "pt": "Casa numa estrada de terra batida que sai da pista do Madeiro. O lote é cercado e mantém a mata nativa em dois lados.\n\nAluguel anual, com contrato de doze meses, renovável. A cozinha é equipada. O valor inclui a manutenção da piscina e do jardim. Energia, água e internet ficam com o inquilino. A caução é de dois aluguéis.",
+  "en": "House on a compacted dirt road off the Madeiro road. The plot is fenced and borders native forest on two sides.\n\nLong-term rental on a renewable twelve-month lease, with an equipped kitchen. Rent includes pool and garden maintenance. The tenant pays electricity, water and internet. The security deposit is two months’ rent.",
+  "es": "Casa en un camino de tierra que sale de la ruta de Madeiro. El lote está cercado y conserva el monte nativo en dos lados.\n\nAlquiler anual, con contrato de doce meses renovable y cocina equipada. El valor incluye el mantenimiento de la piscina y del jardín. La energía, el agua e internet corren por cuenta del inquilino. El depósito equivale a dos alquileres.",
+  "de": "Haus an einer ungepflasterten, aber festen Erdstraße, die von der Straße nach Madeiro abgeht. Das Grundstück ist eingezäunt und grenzt auf zwei Seiten an ursprünglichen Wald.\n\nJahresmiete mit verlängerbarem Zwölf-Monats-Vertrag und ausgestatteter Küche. Der Preis enthält die Pflege von Pool und Garten. Strom, Wasser und Internet zahlt der Mieter. Die Kaution beträgt zwei Monatsmieten."
+ },
+ "ordem": 6
+}

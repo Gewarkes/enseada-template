@@ -1,0 +1,12 @@
+ENSEADA – Makler-Website-Template (komplettes Projekt)
+
+So machst du damit weiter (3 Schritte):
+1. Diese ZIP entpacken (Rechtsklick -> "Alle extrahieren") und den Ordner "enseada-template" in deinem Claude öffnen
+   (Claude Code / Cowork: Ordner verbinden. Claude im Browser: ZIP hochladen).
+2. Deinem Claude schreiben:
+   "Lies CLAUDE.md und README.md. Baue die Seite einmal (python build.py) und zeig mir, ob alles läuft.
+    Danach arbeite ich damit weiter."
+3. Fertig. Alles Weitere (Aufbau, Regeln, was entschieden ist, was offen ist) steht in CLAUDE.md.
+
+Wichtig: Alle Namen, Zahlen, Preise, Adressen und Kundenstimmen in der Seite sind erfunden (Demo).
+Vor einem Kunden-Einsatz alles durch echte Daten ersetzen (siehe CLAUDE.md, Abschnitt "Neuen Kunden anpassen").

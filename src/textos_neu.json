@@ -1,0 +1,398 @@
+{
+ "navBuyGuide": {
+  "pt": "Guia de compra",
+  "en": "Buying guide",
+  "es": "Guía de compra",
+  "de": "Kaufratgeber"
+ },
+ "creciLabel": {
+  "pt": "Corretora de Imóveis",
+  "en": "Licensed real estate agent",
+  "es": "Corredor de Imóveis",
+  "de": "Immobilienmaklerin"
+ },
+ "creciCheck": {
+  "pt": "Conferir no CRECI",
+  "en": "Check at CRECI",
+  "es": "Verificar en el CRECI",
+  "de": "Beim CRECI prüfen"
+ },
+ "gStand": {
+  "pt": "Atualizado em",
+  "en": "Updated",
+  "es": "Actualizado el",
+  "de": "Aktualisiert am"
+ },
+ "gSources": {
+  "pt": "Fontes",
+  "en": "Sources",
+  "es": "Fuentes",
+  "de": "Quellen"
+ },
+ "nInfo": {
+  "pt": "Bom saber",
+  "en": "Good to know",
+  "es": "Bueno saber",
+  "de": "Gut zu wissen"
+ },
+ "nWarn": {
+  "pt": "Atenção",
+  "en": "Careful",
+  "es": "Atención",
+  "de": "Achtung"
+ },
+ "nUnclear": {
+  "pt": "Ainda não confirmado",
+  "en": "Not yet confirmed",
+  "es": "Aún sin confirmar",
+  "de": "Noch nicht bestätigt"
+ },
+ "nOk": {
+  "pt": "Bom saber",
+  "en": "Good to know",
+  "es": "Bueno saber",
+  "de": "Gut zu wissen"
+ },
+ "chkWa": {
+  "pt": "Enviar lista por WhatsApp",
+  "en": "Send the list on WhatsApp",
+  "es": "Enviar lista por WhatsApp",
+  "de": "Liste per WhatsApp senden"
+ },
+ "chkDone": {
+  "pt": "itens conferidos",
+  "en": "items checked",
+  "es": "ítems verificados",
+  "de": "Punkte geprüft"
+ },
+ "partFree": {
+  "pt": "Espaço para parceiro do corretor",
+  "en": "Space for the agent’s partner",
+  "es": "Espacio reservado para un socio de la corredora",
+  "de": "Platz für einen Partner der Maklerin"
+ },
+ "partOpen": {
+  "pt": "Abrir",
+  "en": "Open",
+  "es": "Abrir",
+  "de": "Öffnen"
+ },
+ "pr_lawyer": {
+  "pt": "Advogado",
+  "en": "Lawyer",
+  "es": "Abogado",
+  "de": "Anwalt"
+ },
+ "pr_translation": {
+  "pt": "Tradução juramentada",
+  "en": "Sworn translation",
+  "es": "Traducción jurada",
+  "de": "Beeidigte Übersetzung"
+ },
+ "pr_fx": {
+  "pt": "Câmbio",
+  "en": "Currency exchange",
+  "es": "Cambio de divisas",
+  "de": "Geldwechsel"
+ },
+ "pr_visa": {
+  "pt": "Visto e residência",
+  "en": "Visa and residency",
+  "es": "Visa y residencia",
+  "de": "Visum und Aufenthalt"
+ },
+ "pr_tax": {
+  "pt": "Contador",
+  "en": "Tax advisor",
+  "es": "Contador",
+  "de": "Steuerberater"
+ },
+ "pr_appraiser": {
+  "pt": "Avaliador",
+  "en": "Appraiser",
+  "es": "Tasador",
+  "de": "Gutachter"
+ },
+ "pr_admin": {
+  "pt": "Administração do imóvel",
+  "en": "Property management",
+  "es": "Administración de la propiedad",
+  "de": "Hausverwaltung"
+ },
+ "pr_insurance": {
+  "pt": "Seguro",
+  "en": "Insurance",
+  "es": "Seguro",
+  "de": "Versicherung"
+ },
+ "cbPrice": {
+  "pt": "Preço do imóvel (R$)",
+  "en": "Property price (R$)",
+  "es": "Precio de la propiedad (R$)",
+  "de": "Preis der Immobilie (R$)"
+ },
+ "cbItiv": {
+  "pt": "ITBI/ITIV (%) · valor de exemplo, confirme na prefeitura",
+  "en": "Transfer tax (ITBI, %) · example value, confirm with the town hall",
+  "es": "ITBI/ITIV (%) · valor de ejemplo, confírmalo en la prefeitura",
+  "de": "ITBI/ITIV (%) · Beispielwert, bei der Stadtverwaltung bestätigen"
+ },
+ "cbDocs": {
+  "pt": "Documentos para traduzir (R$ 129 cada, valor médio)",
+  "en": "Documents to translate (R$ 129 each, average price)",
+  "es": "Documentos a traducir (R$ 129 cada uno, valor promedio)",
+  "de": "Zu übersetzende Dokumente (R$ 129 pro Stück, Durchschnittswert)"
+ },
+ "cbReg": {
+  "pt": "Registro de Imóveis (R$, preencha)",
+  "en": "Registration fee (R$, enter amount)",
+  "es": "Registro de Imóveis (R$, complétalo)",
+  "de": "Grundbuchamt (Registro de Imóveis), in R$ (bitte eintragen)"
+ },
+ "cbLaw": {
+  "pt": "Advogado (R$, preencha)",
+  "en": "Lawyer (R$, enter amount)",
+  "es": "Abogado (R$, complétalo)",
+  "de": "Anwalt, in R$ (bitte eintragen)"
+ },
+ "cbRes": {
+  "pt": "Soma conhecida",
+  "en": "Total so far",
+  "es": "Suma conocida",
+  "de": "Bekannte Summe"
+ },
+ "cbItivL": {
+  "pt": "ITBI/ITIV",
+  "en": "Transfer tax",
+  "es": "ITBI/ITIV",
+  "de": "ITBI/ITIV"
+ },
+ "cbIofL": {
+  "pt": "IOF sobre o câmbio (0 a 0,38%)",
+  "en": "IOF (tax on currency exchange, 0 to 0.38%)",
+  "es": "IOF sobre el cambio (0 a 0,38 %)",
+  "de": "IOF auf den Geldwechsel (0 bis 0,38 %)"
+ },
+ "cbNotL": {
+  "pt": "Escritura (tabela do TJRN)",
+  "en": "Notary fee for the deed (TJRN fee table)",
+  "es": "Escritura (tabla del TJRN)",
+  "de": "Kaufurkunde (Escritura) beim Notar, Tabelle des TJRN"
+ },
+ "cbTrL": {
+  "pt": "Traduções",
+  "en": "Translations",
+  "es": "Traducciones",
+  "de": "Übersetzungen"
+ },
+ "cbNotEx": {
+  "pt": "Só há valor de exemplo para R$ 1.000.000: R$ 26.850,47 (Portaria TJRN 1.984/2022, desde 09/01/2023)",
+  "en": "Example value only for R$ 1,000,000: R$ 26,850.47 (TJRN Ordinance 1.984/2022, in effect since Jan 9, 2023)",
+  "es": "Solo hay un valor de ejemplo para R$ 1.000.000: R$ 26.850,47 (Portaria TJRN 1.984/2022, desde el 09.01.2023)",
+  "de": "Einen Beispielwert gibt es nur für R$ 1.000.000: R$ 26.850,47 (Portaria TJRN 1.984/2022, seit 09.01.2023)"
+ },
+ "cbNotOpen": {
+  "pt": "em aberto para este valor",
+  "en": "to be confirmed for this amount",
+  "es": "pendiente para este valor",
+  "de": "für diesen Wert offen"
+ },
+ "cbOpen": {
+  "pt": "em aberto",
+  "en": "to be confirmed",
+  "es": "pendiente",
+  "de": "offen"
+ },
+ "cbRange": {
+  "pt": "Faixa",
+  "en": "Range",
+  "es": "Rango",
+  "de": "Spanne"
+ },
+ "cbSrc": {
+  "pt": "Fonte e estado",
+  "en": "Source and status",
+  "es": "Fuente y estado",
+  "de": "Quelle und Stand"
+ },
+ "cbSrcTxt": {
+  "pt": "Valores de exemplo. Confirme na prefeitura e no cartório.",
+  "en": "Example values. Confirm with the city hall and the notary.",
+  "es": "Valores de ejemplo. Confírmalos en la prefeitura y en la notaría.",
+  "de": "Beispielwerte. Bei der Stadtverwaltung (Prefeitura) und im Notariat (Cartório) bestätigen."
+ },
+ "gnSale": {
+  "pt": "Preço de venda (R$)",
+  "en": "Sale price (R$)",
+  "es": "Precio de venta (R$)",
+  "de": "Verkaufspreis (R$)"
+ },
+ "gnBuy": {
+  "pt": "Preço de compra mais custos (R$)",
+  "en": "Purchase price plus costs (R$)",
+  "es": "Precio de compra más costos (R$)",
+  "de": "Kaufpreis plus Kosten (R$)"
+ },
+ "gnWho": {
+  "pt": "Quem vende",
+  "en": "Seller",
+  "es": "Quién vende",
+  "de": "Wer verkauft"
+ },
+ "gnRes": {
+  "pt": "Residente no Brasil (15 a 22,5%)",
+  "en": "Brazilian resident (15% to 22.5%)",
+  "es": "Residente en Brasil (15 a 22,5 %)",
+  "de": "Wohnsitz in Brasilien (15 bis 22,5 %)"
+ },
+ "gnNon": {
+  "pt": "Não residente (a partir de 15%)",
+  "en": "Non-resident (from 15%)",
+  "es": "No residente (desde 15 %)",
+  "de": "Ohne Wohnsitz in Brasilien (ab 15 %)"
+ },
+ "gnGain": {
+  "pt": "Ganho",
+  "en": "Gain",
+  "es": "Ganancia",
+  "de": "Gewinn"
+ },
+ "gnTax": {
+  "pt": "Imposto estimado",
+  "en": "Estimated tax",
+  "es": "Impuesto estimado",
+  "de": "Geschätzte Steuer"
+ },
+ "gnNet": {
+  "pt": "Resta após o imposto",
+  "en": "Net after tax",
+  "es": "Queda después del impuesto",
+  "de": "Bleibt nach der Steuer"
+ },
+ "gnNote": {
+  "pt": "Faixas da Lei 13.259/2016 para residentes: até R$ 5 mi 15%, até 10 mi 17,5%, até 30 mi 20%, acima 22,5%. Sem isenções.",
+  "en": "Brackets for residents under Law 13.259/2016: 15% up to R$ 5m, 17.5% up to R$ 10m, 20% up to R$ 30m, 22.5% above. Exemptions are not included.",
+  "es": "Tramos de la Ley 13.259/2016 para residentes: hasta R$ 5 millones 15 %, hasta 10 millones 17,5 %, hasta 30 millones 20 %, más de eso 22,5 %. Sin exenciones.",
+  "de": "Stufen des Gesetzes 13.259/2016 für Personen mit Wohnsitz in Brasilien: bis R$ 5 Mio. 15 %, bis 10 Mio. 17,5 %, bis 30 Mio. 20 %, darüber 22,5 %. Ohne Befreiungen."
+ },
+ "sfWhere": {
+  "pt": "Onde fica e o que é? Quanto pensa em pedir?",
+  "en": "Where is the property, and what kind is it? What price do you have in mind?",
+  "es": "¿Dónde queda y qué es? ¿Cuánto quieres pedir?",
+  "de": "Wo liegt sie und was ist es? Was möchtest du ungefähr verlangen?"
+ },
+ "sfSend": {
+  "pt": "Enviar",
+  "en": "Send",
+  "es": "Enviar",
+  "de": "Senden"
+ },
+ "mkH": {
+  "pt": "Documentos deste imóvel",
+  "en": "Documents for this property",
+  "es": "Documentos de este inmueble",
+  "de": "Unterlagen zu dieser Immobilie"
+ },
+ "mkNote": {
+  "pt": "Informado pela corretora. Peça os comprovantes.",
+  "en": "As stated by the agent. Ask for proof.",
+  "es": "Informado por la corredora. Pide los comprobantes.",
+  "de": "Angabe der Maklerin. Belege bitte anfordern."
+ },
+ "mkMat": {
+  "pt": "Papel que prova o dono (matrícula) em mãos",
+  "en": "Title record (matrícula) received",
+  "es": "Matrícula en mano",
+  "de": "Grundbuchauszug (Matrícula) liegt vor"
+ },
+ "mkDebt": {
+  "pt": "Dívidas conferidas",
+  "en": "Debts and encumbrances checked",
+  "es": "Deudas y gravámenes verificados",
+  "de": "Schulden und Belastungen geprüft"
+ },
+ "mkOn": {
+  "pt": "em",
+  "en": "on",
+  "es": "el",
+  "de": "am"
+ },
+ "mkNone": {
+  "pt": "Documentos ainda não recebidos",
+  "en": "Documents not received yet",
+  "es": "Documentos aún no recibidos",
+  "de": "Unterlagen liegen noch nicht vor"
+ },
+ "resChip": {
+  "pt": "Valor acima do mínimo para o visto de investidor",
+  "en": "Price above the minimum for the investor residence permit",
+  "es": "Valor por encima del mínimo para la residencia por inversión",
+  "de": "Preis über der Mindestgrenze für einen Aufenthaltstitel durch Investition"
+ },
+ "resChipL": {
+  "pt": "Ver condições",
+  "en": "See conditions",
+  "es": "Ver condiciones",
+  "de": "Bedingungen ansehen"
+ },
+ "tempOk": {
+  "pt": "Pode alugar para turistas",
+  "en": "Short-term rentals allowed",
+  "es": "Alquiler por temporada permitido",
+  "de": "Ferienvermietung erlaubt"
+ },
+ "tempNo": {
+  "pt": "Não pode alugar para turistas",
+  "en": "Short-term rentals not allowed",
+  "es": "Alquiler por temporada no permitido",
+  "de": "Ferienvermietung nicht erlaubt"
+ },
+ "footGuide": {
+  "pt": "Guias e artigos",
+  "en": "Guides and articles",
+  "es": "Guías y artículos",
+  "de": "Ratgeber und Artikel"
+ },
+ "footTools": {
+  "pt": "Compra e venda",
+  "en": "Buying and selling",
+  "es": "Compra y venta",
+  "de": "Kaufen und verkaufen"
+ },
+ "hubH": {
+  "pt": "Comprar com segurança, passo a passo",
+  "en": "Buy safely, step by step",
+  "es": "Comprar con seguridad, paso a paso",
+  "de": "Sicher kaufen, Schritt für Schritt"
+ },
+ "hubP": {
+  "pt": "Etapas, custos, residência e como reconhecer ofertas sérias, em linguagem simples.",
+  "en": "Steps, costs, residency and how to spot serious offers, in plain language.",
+  "es": "Etapas, costos, residencia y cómo reconocer ofertas serias, en lenguaje simple.",
+  "de": "Schritte, Kosten, Aufenthaltstitel und wie du seriöse Angebote erkennst, einfach erklärt."
+ },
+ "hubBtn": {
+  "pt": "Abrir o guia",
+  "en": "Open the guide",
+  "es": "Abrir la guía",
+  "de": "Ratgeber öffnen"
+ },
+ "navSellS": {
+  "pt": "Vender",
+  "en": "Sell",
+  "es": "Vender",
+  "de": "Verkaufen"
+ },
+ "navBuyGuideS": {
+  "pt": "Guia de compra",
+  "en": "Buying guide",
+  "es": "Guía de compra",
+  "de": "Kaufratgeber"
+ },
+ "cbExS": {
+  "pt": "exemplo",
+  "en": "example",
+  "es": "ejemplo",
+  "de": "Beispiel"
+ }
+}

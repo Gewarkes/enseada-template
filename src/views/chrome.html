@@ -1,0 +1,195 @@
+<style>
+/* ---------- navigation (Start-1) ---------- */
+.v-chrome.nv{position:relative;z-index:30;padding:20px var(--gut)}
+.v-chrome.nv--over{position:absolute;left:0;right:0;padding-top:25px}
+.v-chrome .nv__bar{max-width:var(--wrap);margin:0 auto;height:52px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;background:var(--white);border-radius:var(--r);padding:0 6px 0 20px}
+.v-chrome.nv--over .nv__bar,.v-chrome.nv--over .nv__panel{max-width:var(--wide)}
+.v-chrome .nv__logo{justify-self:start;font-size:22px;line-height:1;font-weight:700;letter-spacing:-.035em;color:var(--fg);display:inline-flex;align-items:center;min-height:44px}
+.v-chrome .nv__menu{display:flex;align-items:center;gap:6px}
+.v-chrome .nv__a{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 11px;border:0;background:none;font-size:14px;line-height:18px;font-weight:500;color:var(--mute);border-radius:12px;transition:color .2s}
+.v-chrome .nv__a:hover,.v-chrome .nv__a[aria-current="page"],.v-chrome .nv__a[aria-expanded="true"]{color:var(--fg)}
+.v-chrome .nv__a .ico{width:14px;height:14px;transition:transform .2s}
+.v-chrome .nv__a[aria-expanded="true"] .ico{transform:rotate(180deg)}
+.v-chrome .nv__dd{position:relative}
+.v-chrome .nv__sub{position:absolute;left:-8px;top:100%;padding-top:12px;visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s}
+.v-chrome .nv__dd:hover .nv__sub,.v-chrome .nv__dd:focus-within .nv__sub,.v-chrome .nv__dd.is-open .nv__sub{visibility:visible;opacity:1}
+.v-chrome .nv__sub ul{min-width:210px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:8px}
+.v-chrome .nv__sub a{display:flex;align-items:center;justify-content:space-between;gap:16px;height:44px;padding:0 12px;font-size:14px;font-weight:500;color:var(--text);border-radius:12px;transition:background .2s}
+.v-chrome .nv__sub a:hover{background:var(--paper)}
+.v-chrome .nv__sub a .ico{width:15px;height:15px;color:var(--mute)}
+.v-chrome .nv__sub li:last-child{border-top:1px solid var(--line);margin-top:8px;padding-top:8px}
+.v-chrome .nv__right{justify-self:end;display:flex;align-items:center;gap:10px}
+.v-chrome .nv__right .sw{color:var(--fg)}
+.v-chrome .nv__sep{width:1px;height:16px;background:var(--line)}
+.v-chrome .nv__cta{height:40px;margin-left:8px}
+.v-chrome .nv__burger{display:none;justify-self:end;width:44px;height:44px;border:0;border-radius:12px;background:var(--ink);color:#fff;place-items:center}
+.v-chrome .nv__burger .ico{width:20px;height:20px}
+.v-chrome .nv__panel{display:none}
+
+@media (max-width:1080px){
+  .v-chrome.nv{padding:10px var(--gut)}
+  .v-chrome.nv--over{padding-top:15px}
+  .v-chrome .nv__bar{height:56px;grid-template-columns:1fr auto;padding:0 6px 0 16px}
+  .v-chrome .nv__menu,.v-chrome .nv__right{display:none}
+  .v-chrome .nv__burger{display:grid}
+  .v-chrome .nv__panel{position:absolute;left:var(--gut);right:var(--gut);top:calc(100% - 2px);margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:8px 16px 16px;max-height:calc(100vh - 110px);overflow:auto}
+  .v-chrome .nv__panel.is-open{display:block}
+  .v-chrome .nv__tools{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:4px}
+  .v-chrome .nv__tools .sw{font-size:15px;gap:0}
+  .v-chrome .nv__tools .sw button{min-width:44px;min-height:44px;padding:0 8px}
+  .v-chrome .nv__plist a{display:flex;align-items:center;min-height:50px;font-size:19px;font-weight:600;letter-spacing:-.015em;color:var(--fg);border-bottom:1px solid var(--line)}
+  .v-chrome .nv__plist a.is-sub{font-size:16px;font-weight:400;letter-spacing:0;min-height:46px;padding-left:16px;color:var(--text)}
+  .v-chrome .nv__panel .btn{width:100%;height:50px;margin-top:16px;font-size:15px}
+}
+
+/* ---------- footer (Start-8) ---------- */
+.v-chrome.ft{background:var(--ink);color:#eef0ee;padding-top:110px;overflow:hidden;position:relative}
+.v-chrome .ft__top{display:grid;grid-template-columns:400px 1fr;gap:56px;align-items:start}
+.v-chrome .ft__news{background:var(--ink-2);border-radius:var(--r);padding:28px}
+.v-chrome .ft__lab{font-size:14px;line-height:20px;color:var(--mute-d);margin-bottom:12px}
+.v-chrome .ft__news h2{font-size:18px;line-height:1.3;font-weight:600;letter-spacing:-.015em;margin-bottom:20px}
+.v-chrome .ft__news form{display:grid;gap:10px}
+.v-chrome .ft__news input{width:100%;height:46px;padding:0 14px;border:1px solid var(--line-d);border-radius:12px;background:var(--ink);color:#fff;font-size:16px}
+.v-chrome .ft__news input::placeholder{color:var(--mute-d)}
+.v-chrome .ft__news .btn{width:100%}
+.v-chrome .ft__news .ok{color:#eef0ee;min-height:0}
+.v-chrome .ft__news .ok:empty{display:none}
+.v-chrome .ft__cols{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:40px;padding-top:6px;max-width:824px;margin-left:auto;width:100%}
+.v-chrome .ft__cols li a,.v-chrome .ft__cols li span{display:inline-block;padding:3px 0;font-size:16px;line-height:24px}
+.v-chrome .ft__cols li a{transition:color .2s}
+.v-chrome .ft__cols li a:hover{color:var(--mute-d)}
+.v-chrome .ft__cols li span{color:var(--mute-d)}
+.v-chrome .ft__band{margin-top:70px;overflow:hidden;user-select:none;height:clamp(118px,25.6vw,372px)}
+.v-chrome .ft__track{display:flex;width:max-content;animation:v-chrome-run 80s linear infinite;will-change:transform}
+.v-chrome .ft__track.is-paused{animation-play-state:paused}
+.v-chrome .ft__track span{font-size:clamp(150px,32.5vw,472px);line-height:.86;font-weight:500;letter-spacing:-.05em;color:#222a28;padding-right:.3em;white-space:nowrap}
+@keyframes v-chrome-run{to{transform:translateX(-50%)}}
+.v-chrome .ft__base{position:absolute;left:0;right:0;bottom:22px}
+.v-chrome .ft__row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.v-chrome .ft__pill{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border:0;border-radius:12px;background:var(--ink-2);color:#c9cfcc;font-size:14px;line-height:20px}
+.v-chrome a.ft__pill,.v-chrome button.ft__pill{color:#eef0ee;font-weight:500;transition:background .2s}
+.v-chrome a.ft__pill:hover,.v-chrome button.ft__pill:hover{background:#2a3330}
+.v-chrome .ft__pill--ico{width:40px;padding:0;justify-content:center}
+.v-chrome .ft__pill .ico{width:16px;height:16px}
+.v-chrome .ft__pill .ico--n{transform:rotate(-45deg)}
+.v-chrome .ft__gap{flex:1}
+@media (max-width:1500px){.v-chrome .ft__base .wide{padding-right:calc(var(--gut) + 66px)}}
+@media (max-width:1080px){
+  .v-chrome .ft__top{grid-template-columns:1fr;gap:56px}
+  .v-chrome .ft__news{max-width:440px}
+  .v-chrome .ft__cols{margin-left:0}
+}
+@media (max-width:860px){
+  .v-chrome.ft{padding-top:72px}
+  .v-chrome .ft__news{max-width:none}
+  .v-chrome .ft__cols{grid-template-columns:1fr 1fr;gap:40px 24px}
+  .v-chrome .ft__cols>div:last-child{grid-column:1/-1}
+  .v-chrome .ft__cols li a,.v-chrome .ft__cols li span{padding:10px 0}
+  .v-chrome .ft__cols li span{padding:6px 0}
+  .v-chrome .ft__news input{height:50px}
+  .v-chrome .ft__band{margin-top:48px}
+  .v-chrome .ft__base{position:static;padding:20px 0 96px}
+  .v-chrome .ft__base .wide{padding-right:var(--gut)}
+  .v-chrome .ft__row{flex-direction:column;align-items:flex-start}
+  .v-chrome .ft__pill{min-height:44px}
+  .v-chrome .ft__pill--ico{width:44px}
+  .v-chrome .ft__gap{display:none}
+}
+</style>
+<script>
+addDict({
+pt:{ch_imoveis:'Imóveis',ch_buy:'Comprar',ch_rent:'Alugar',ch_land:'Terrenos',ch_all:'Todos os imóveis',ch_about:'Sobre',ch_blog:'Blog',ch_contact:'Contato',ch_cta:'Agendar visita',ch_menu:'Abrir menu',ch_close:'Fechar menu',ch_lang:'Idioma',ch_cur:'Moeda',ch_nav:'Navegação principal',
+ ch_news:'Newsletter',ch_newsT:'Novos imóveis em Pipa, uma vez por mês.',ch_mail:'Seu e-mail',ch_sub:'Assinar newsletter',ch_c1:'Imóveis',ch_c2:'Empresa',ch_c3:'Escritório',ch_wa:'Falar pelo WhatsApp',ch_rights:'Todos os direitos reservados.',ch_broker:'Área do corretor',ch_top:'Voltar ao topo',ch_pause:'Pausar faixa animada',ch_play:'Retomar faixa animada'},
+en:{ch_imoveis:'Properties',ch_buy:'Buy',ch_rent:'Rent',ch_land:'Land',ch_all:'All properties',ch_about:'About',ch_blog:'Blog',ch_contact:'Contact',ch_cta:'Book a viewing',ch_menu:'Open menu',ch_close:'Close menu',ch_lang:'Language',ch_cur:'Currency',ch_nav:'Main navigation',
+ ch_news:'Newsletter',ch_newsT:'New listings in Pipa, once a month.',ch_mail:'Your email',ch_sub:'Subscribe to newsletter',ch_c1:'Properties',ch_c2:'Company',ch_c3:'Office',ch_wa:'Chat on WhatsApp',ch_rights:'All rights reserved.',ch_broker:'Broker area',ch_top:'Back to top',ch_pause:'Pause moving band',ch_play:'Resume moving band'},
+de:{ch_imoveis:'Immobilien',ch_buy:'Kaufen',ch_rent:'Mieten',ch_land:'Grundstücke',ch_all:'Alle Immobilien',ch_about:'Über uns',ch_blog:'Blog',ch_contact:'Kontakt',ch_cta:'Besichtigung vereinbaren',ch_menu:'Menü öffnen',ch_close:'Menü schließen',ch_lang:'Sprache',ch_cur:'Währung',ch_nav:'Hauptnavigation',ch_news:'Newsletter',ch_newsT:'Neue Objekte in Pipa, einmal im Monat.',ch_mail:'Ihre E-Mail-Adresse',ch_sub:'Newsletter abonnieren',ch_c1:'Immobilien',ch_c2:'Unternehmen',ch_c3:'Büro',ch_wa:'Per WhatsApp schreiben',ch_rights:'Alle Rechte vorbehalten.',ch_broker:'Maklerbereich',ch_top:'Nach oben',ch_pause:'Laufband anhalten',ch_play:'Laufband fortsetzen'}});
+
+(function(){
+  const st=APP.state.chrome=APP.state.chrome||{open:false,paused:false};
+  const sw=()=>`<span class="sw" role="group" aria-label="${tr('ch_lang')}">${['pt','en','de'].map(l=>`<button type="button" data-lang="${l}" aria-pressed="${APP.lang===l}">${l.toUpperCase()}</button>`).join('')}</span>`;
+  const cu=()=>`<span class="sw" role="group" aria-label="${tr('ch_cur')}">${[['BRL','R$'],['USD','US$'],['EUR','€']].map(c=>`<button type="button" data-cur="${c[0]}" aria-pressed="${APP.cur===c[0]}">${c[1]}</button>`).join('')}</span>`;
+  const subs=[['imoveis-venda','ch_buy'],['imoveis-aluguel','ch_rent'],['imoveis-terrenos','ch_land']];
+  const cur=(r,v)=>r.view===v?' aria-current="page"':'';
+
+  function nav(r){
+    const over=r.view==='home';
+    return `<div class="v-chrome nv${over?' nv--over':''}">
+<nav class="nv__bar" aria-label="${tr('ch_nav')}">
+  <a class="nv__logo" href="#home" aria-label="${esc(SITE.brandFull)}">${esc(SITE.brand)}</a>
+  <div class="nv__menu">
+    <div class="nv__dd">
+      <button type="button" class="nv__a" data-ch="dd" aria-expanded="false" aria-haspopup="true"${r.view==='imoveis'||r.view==='imovel'?' aria-current="page"':''}>${tr('ch_imoveis')}${icon('chev')}</button>
+      <div class="nv__sub"><ul>${subs.map(s=>`<li><a href="#${s[0]}">${tr(s[1])}</a></li>`).join('')}<li><a href="#imoveis">${tr('ch_all')}${icon('arrow')}</a></li></ul></div>
+    </div>
+    <a class="nv__a" href="#sobre"${cur(r,'sobre')}>${tr('ch_about')}</a>
+    <a class="nv__a" href="#blog"${r.view==='blog'||r.view==='artigo'?' aria-current="page"':''}>${tr('ch_blog')}</a>
+    <a class="nv__a" href="#contato"${cur(r,'contato')}>${tr('ch_contact')}</a>
+  </div>
+  <div class="nv__right">${sw()}<span class="nv__sep" aria-hidden="true"></span>${cu()}<a class="btn nv__cta" href="#contato">${tr('ch_cta')}</a></div>
+  <button type="button" class="nv__burger" data-ch="menu" aria-expanded="${st.open}" aria-controls="v-chrome-panel" aria-label="${tr(st.open?'ch_close':'ch_menu')}">${icon(st.open?'close':'menu')}</button>
+</nav>
+<div class="nv__panel${st.open?' is-open':''}" id="v-chrome-panel">
+  <div class="nv__tools">${sw()}${cu()}</div>
+  <ul class="nv__plist">
+    <li><a href="#imoveis">${tr('ch_imoveis')}</a></li>
+    ${subs.map(s=>`<li><a class="is-sub" href="#${s[0]}">${tr(s[1])}</a></li>`).join('')}
+    <li><a href="#sobre">${tr('ch_about')}</a></li>
+    <li><a href="#blog">${tr('ch_blog')}</a></li>
+    <li><a href="#contato">${tr('ch_contact')}</a></li>
+  </ul>
+  <a class="btn" href="#contato">${tr('ch_cta')}</a>
+</div>
+</div>`}
+
+  function footer(r){
+    const word=`<span>${esc(SITE.brand)}</span>`.repeat(3);
+    return `<div class="v-chrome ft">
+<div class="wide ft__top">
+  <div class="ft__news">
+    <p class="ft__lab">${tr('ch_news')}</p>
+    <h2>${tr('ch_newsT')}</h2>
+    <form data-demo><input type="email" required autocomplete="email" placeholder="${tr('ch_mail')}" aria-label="${tr('ch_mail')}"><button class="btn btn--light" type="submit">${tr('ch_sub')}</button><div class="ok" role="status"></div></form>
+  </div>
+  <div class="ft__cols">
+    <div><p class="ft__lab">${tr('ch_c1')}</p><ul>${subs.map(s=>`<li><a href="#${s[0]}">${tr(s[1])}</a></li>`).join('')}<li><a href="#imoveis">${tr('ch_all')}</a></li></ul></div>
+    <div><p class="ft__lab">${tr('ch_c2')}</p><ul><li><a href="#sobre">${tr('ch_about')}</a></li><li><a href="#blog">${tr('ch_blog')}</a></li><li><a href="#contato">${tr('ch_contact')}</a></li></ul></div>
+    <div><p class="ft__lab">${tr('ch_c3')}</p><ul>
+      <li><a href="tel:${SITE.phone.replace(/[^+\d]/g,'')}">${esc(SITE.phone)}</a></li>
+      <li><a href="${waLink()}" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></li>
+      <li><span>${esc(SITE.address)}</span></li>
+      <li><span>${esc(L(SITE.hours))}</span></li></ul></div>
+  </div>
+</div>
+<div class="ft__band" aria-hidden="true"><div class="ft__track${st.paused?' is-paused':''}">${word}${word}</div></div>
+<div class="ft__base"><div class="wide ft__row">
+  <button type="button" class="ft__pill ft__pill--ico" data-ch="band" aria-pressed="${st.paused}" aria-label="${tr(st.paused?'ch_play':'ch_pause')}">${st.paused?'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>':'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>'}</button>
+  <span class="ft__pill">© ${new Date().getFullYear()} ${esc(SITE.brandFull)}. ${tr('ch_rights')}</span>
+  <span class="ft__pill">${esc(SITE.agent.creci)}</span>
+  <button type="button" class="ft__pill" data-theme-toggle>${tr('thSw')}</button>
+  ${SITE.brokerLink===false?'':`<a class="ft__pill" href="#publicar">${tr('ch_broker')}</a>`}
+  <span class="ft__gap"></span>
+  <button type="button" class="ft__pill" data-ch="top">${tr('ch_top')}<svg class="ico ico--n" viewBox="0 0 24 24" aria-hidden="true">${ICONS.up}</svg></button>
+</div></div>
+<a class="wa-fab" href="${waLink()}" target="_blank" rel="noopener" aria-label="${tr('ch_wa')}">${WA_SVG}</a>
+</div>`}
+
+  /* menu state lives in APP.state.chrome so a language switch keeps the mobile menu open */
+  function setMenu(open){st.open=open;const p=$('#v-chrome-panel'),b=$('.v-chrome .nv__burger');if(!p||!b)return;
+    p.classList.toggle('is-open',open);b.setAttribute('aria-expanded',open);b.setAttribute('aria-label',tr(open?'ch_close':'ch_menu'));b.innerHTML=icon(open?'close':'menu')}
+  function setDD(open){const d=$('.v-chrome .nv__dd');if(!d)return;d.classList.toggle('is-open',open);$('button',d).setAttribute('aria-expanded',open)}
+  addEventListener('hashchange',()=>{st.open=false});
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('[data-ch]');
+    if(b){const k=b.dataset.ch;
+      if(k==='menu')setMenu(!st.open);
+      else if(k==='dd'){setDD(!$('.v-chrome .nv__dd').classList.contains('is-open'));return}
+      else if(k==='band'){st.paused=!st.paused;$('#foot').innerHTML=footer(APP.route);const n=$('#foot [data-ch="band"]');if(n)n.focus()}
+      else if(k==='top')scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}
+    else if(e.target.closest('.v-chrome.nv a[href^="#"]'))setMenu(false);
+    if(!e.target.closest('.v-chrome .nv__dd')||e.target.closest('.v-chrome .nv__sub a'))setDD(false)});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){setDD(false);if(st.open)setMenu(false)}});
+
+  VIEWS.chrome={nav,footer,mount(r){setDD(false)}};
+})();
+</script>

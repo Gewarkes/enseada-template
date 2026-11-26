@@ -1,0 +1,166 @@
+<style>
+.v-contato{--ct-err:#a12b22}
+.v-contato .ct-top{padding:60px 0 var(--sec)}
+.v-contato .ct-grid{display:grid;grid-template-columns:minmax(0,693fr) minmax(0,347fr);gap:100px;align-items:start}
+.v-contato .ct-h1{font-size:clamp(40px,4.9vw,70px);line-height:1.1;font-weight:700;letter-spacing:-.035em;text-wrap:balance}
+.v-contato .ct-h1 span{display:block;color:var(--mute)}
+.v-contato .ct-lead{max-width:30em;margin-top:22px;color:var(--mute);text-wrap:pretty}
+.v-contato .ct-topic{margin-top:40px;border:0;padding:0;min-width:0}
+.v-contato .ct-topic legend{font-size:14px;font-weight:600;padding:0;margin-bottom:12px}
+.v-contato .ct-chips{display:flex;flex-wrap:wrap;gap:10px}
+.v-contato .ct-chip{display:inline-flex;align-items:center;gap:9px;height:36px;padding:0 16px 0 12px;border:1px solid var(--line);border-radius:12px;background:var(--white);font-size:14px;font-weight:500;color:var(--text);transition:background .2s,color .2s,border-color .2s}
+.v-contato .ct-chip i{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none}
+.v-contato .ct-chip:hover{border-color:var(--fg)}
+.v-contato .ct-chip[aria-pressed="true"]{background:var(--ink);border-color:var(--fg);color:var(--white)}
+.v-contato .ct-chip[aria-pressed="true"] i{background:var(--white)}
+.v-contato .ct-form{margin-top:28px;display:grid;gap:20px 10px;grid-template-columns:1fr 1fr}
+.v-contato .ct-form .f input,.v-contato .ct-form .f select{min-height:54px}
+.v-contato .ct-full{grid-column:1/-1}
+.v-contato .ct-send{grid-column:1/-1;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:8px}
+.v-contato .ct-send .btn{height:54px;min-width:150px}
+.v-contato .ct-send p{font-size:14px;line-height:1.45;color:var(--mute);max-width:22em}
+.v-contato .ct-form .ok{grid-column:1/-1}
+
+.v-contato .ct-side{display:grid;gap:25px}
+.v-contato .ct-card{border-radius:var(--r);padding:30px;background:var(--white)}
+.v-contato .ct-agent{background:var(--ink);color:#eef0ee}
+.v-contato .ct-ph{display:flex;align-items:flex-end;gap:14px}
+.v-contato .ct-ph b{display:grid;place-items:center;width:96px;height:112px;border-radius:var(--r);background:var(--ink-2);font-size:38px;font-weight:300;letter-spacing:-.02em;line-height:1}
+.v-contato .ct-ph small{font-size:13px;color:var(--mute-d);padding-bottom:4px}
+.v-contato .ct-name{font-size:20px;line-height:1.25;font-weight:600;letter-spacing:-.01em;margin-top:22px}
+.v-contato .ct-meta{font-size:14px;line-height:1.5;color:var(--mute-d);margin-top:4px}
+.v-contato .ct-quote{margin:20px 0 24px;padding-top:20px;border-top:1px solid var(--line-d);font-style:italic;font-size:16px;line-height:1.45}
+.v-contato .ct-agent .btn{width:100%;height:50px}
+.v-contato .ct-agent .btn svg{width:20px;height:20px;fill:#fff}
+.v-contato .ct-ttl{font-size:14px;font-weight:600;color:var(--mute);margin-bottom:6px}
+.v-contato .ct-rows li{display:grid;grid-template-columns:22px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line);align-items:start}
+.v-contato .ct-rows li:first-child{border-top:0}
+.v-contato .ct-rows .ico{margin-top:3px;color:var(--sea);width:20px;height:20px}
+.v-contato .ct-rows small{display:block;font-size:13px;color:var(--mute);line-height:1.3}
+.v-contato .ct-rows p{margin-top:2px;font-size:16px;line-height:1.4;overflow-wrap:anywhere}
+.v-contato .ct-rows a:hover{text-decoration:underline;text-underline-offset:4px}
+.v-contato .ct-note{display:grid;grid-template-columns:22px 1fr;gap:14px}
+.v-contato .ct-note .ico{width:20px;height:20px;margin-top:3px;color:var(--sea)}
+.v-contato .ct-note h2{font-size:16px;font-weight:600;line-height:1.3}
+.v-contato .ct-note p{font-size:14px;line-height:1.5;color:var(--mute);margin-top:6px}
+
+.v-contato .ct-office{padding-bottom:var(--sec)}
+.v-contato .ct-office figure{position:relative;aspect-ratio:2.5/1;overflow:hidden;background:var(--stone)}
+.v-contato .ct-office img{width:100%;height:100%;object-fit:cover}
+.v-contato .ct-addr{position:absolute;right:24px;top:24px;width:260px;background:var(--white);padding:26px 28px 28px}
+.v-contato .ct-addr h2{font-size:24px;line-height:1.1;font-weight:500;letter-spacing:-.015em}
+.v-contato .ct-addr p{font-size:16px;line-height:1.35;color:var(--mute);margin-top:22px}
+
+.v-contato .ct-cta{position:relative;min-height:600px;display:grid;place-items:center;text-align:center;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
+.v-contato .ct-cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.v-contato .ct-cta::before{content:"";position:absolute;inset:0;background:rgba(10,14,13,.56);z-index:-1}
+.v-contato .ct-cta div{padding:80px var(--gut);max-width:calc(900px + 2*var(--gut))}
+.v-contato .ct-cta h2{font-size:clamp(40px,6.25vw,90px);line-height:.9;font-weight:500;letter-spacing:-.028em;text-wrap:balance}
+.v-contato .ct-cta .btn{margin-top:36px;height:62px;padding:0 44px;font-size:15px}
+
+@media (max-width:1100px){.v-contato .ct-grid{gap:56px}}
+@media (max-width:860px){
+  .v-contato .ct-top{padding-top:36px}
+  .v-contato .ct-grid{grid-template-columns:1fr;gap:56px}
+  .v-contato .ct-chip{height:44px}
+  .v-contato .ct-form{grid-template-columns:1fr}
+  .v-contato .ct-send .btn{width:100%}
+  .v-contato .ct-office .wide{padding:0}
+  .v-contato .ct-office figure{aspect-ratio:auto;overflow:visible;background:none}
+  .v-contato .ct-office img{aspect-ratio:3/2;height:auto}
+  .v-contato .ct-addr{position:static;width:auto;padding:24px var(--gut)}
+  .v-contato .ct-addr p{margin-top:10px}
+  .v-contato .ct-cta{min-height:460px}
+  .v-contato .ct-cta h2{line-height:.98}
+}
+</style>
+<script>
+addDict({
+pt:{ct_title:'Contato',ct_h1a:'Fale com a',ct_h1b:'em',ct_lead:'Diga o que você procura. Lemos cada mensagem e respondemos por WhatsApp ou e-mail, no idioma que você escolher.',
+ ct_topic:'Assunto da mensagem',ct_t_comprar:'Comprar',ct_t_alugar:'Alugar',ct_t_vender:'Vender meu imóvel',ct_t_terreno:'Terreno',ct_t_outro:'Outro',
+ ct_name:'Nome *',ct_wa:'WhatsApp *',ct_email:'E-mail',ct_lang:'Idioma preferido',ct_msg:'Mensagem',
+ ct_ph_name:'Seu nome completo',ct_ph_wa:'+55 84 90000-0000',ct_ph_email:'nome@email.com',ct_ph_msg:'Bairro, faixa de preço, número de quartos, datas da visita',
+ ct_send:'Enviar mensagem',ct_req:'Os campos com * são obrigatórios. Seus dados não são repassados a terceiros.',
+ ct_photo:'foto do corretor',ct_quote:'“Eu mesma respondo às mensagens e acompanho cada visita.”',ct_wabtn:'Chamar no WhatsApp',ct_speaks:'Atende em',
+ ct_office:'Escritório',ct_addr:'Endereço',ct_hours:'Horário',ct_phone:'Telefone',ct_mail:'E-mail',
+ ct_note_t:'Resposta no mesmo dia útil',ct_note_p:'Mensagens que chegam até as 16h costumam ser respondidas no mesmo dia. Depois disso, no dia útil seguinte.',
+ ct_where:'Onde estamos',ct_alt_office:'Vista aérea da costa de Pipa',ct_alt_cta:'Dunas vistas do alto ao entardecer',
+ ct_cta:'Imóveis à venda e para alugar em Pipa',ct_cta_btn:'Ver imóveis'},
+en:{ct_title:'Contact',ct_h1a:'Talk to',ct_h1b:'in',ct_lead:'Tell us what you are looking for. We read every message and reply by WhatsApp or email, in the language you choose.',
+ ct_topic:'Subject of your message',ct_t_comprar:'Buy',ct_t_alugar:'Rent',ct_t_vender:'Sell my property',ct_t_terreno:'Land',ct_t_outro:'Other',
+ ct_name:'Name *',ct_wa:'WhatsApp *',ct_email:'Email',ct_lang:'Preferred language',ct_msg:'Message',
+ ct_ph_name:'Your full name',ct_ph_wa:'+44 7000 000000',ct_ph_email:'name@email.com',ct_ph_msg:'Area, price range, number of bedrooms, viewing dates',
+ ct_send:'Send message',ct_req:'Fields with * are required. Your details are not passed on to third parties.',
+ ct_photo:'broker photo',ct_quote:'“I answer the messages myself and come along to every viewing.”',ct_wabtn:'Message on WhatsApp',ct_speaks:'Speaks',
+ ct_office:'Office',ct_addr:'Address',ct_hours:'Opening hours',ct_phone:'Phone',ct_mail:'Email',
+ ct_note_t:'Reply on the same working day',ct_note_p:'Messages that arrive before 4 pm are usually answered the same day. After that, on the next working day.',
+ ct_where:'Where we are',ct_alt_office:'Aerial view of the Pipa coast',ct_alt_cta:'Dunes from above in evening light',
+ ct_cta:'Homes for sale and to rent in Pipa',ct_cta_btn:'View listings'},
+de:{ct_title:'Kontakt',ct_h1a:'Sprechen Sie mit',ct_h1b:'in',ct_lead:'Schreiben Sie uns, was Sie suchen. Wir lesen jede Nachricht und antworten per WhatsApp oder E-Mail, in der Sprache Ihrer Wahl.',
+ ct_topic:'Ihr Anliegen',ct_t_comprar:'Kaufen',ct_t_alugar:'Mieten',ct_t_vender:'Verkaufen',ct_t_terreno:'Grundstück',ct_t_outro:'Sonstiges',
+ ct_name:'Name *',ct_wa:'WhatsApp *',ct_email:'E-Mail',ct_lang:'Bevorzugte Sprache',ct_msg:'Nachricht',
+ ct_ph_name:'Vor- und Nachname',ct_ph_wa:'+49 170 0000000',ct_ph_email:'name@email.de',ct_ph_msg:'Ortsteil, Preisrahmen, Zahl der Schlafzimmer, Besichtigungstermine',
+ ct_send:'Nachricht senden',ct_req:'Felder mit * sind Pflichtfelder. Ihre Daten geben wir nicht an Dritte weiter.',
+ ct_photo:'Maklerfoto',ct_quote:'„Ich beantworte die Nachrichten selbst und bin bei jeder Besichtigung dabei.“',ct_wabtn:'WhatsApp schreiben',ct_speaks:'Spricht',
+ ct_office:'Büro',ct_addr:'Adresse',ct_hours:'Öffnungszeiten',ct_phone:'Telefon',ct_mail:'E-Mail',
+ ct_note_t:'Antwort am selben Werktag',ct_note_p:'Nachrichten, die bis 16 Uhr eingehen, beantworten wir in der Regel noch am selben Tag, spätere am nächsten Werktag.',
+ ct_where:'So finden Sie uns',ct_alt_office:'Luftbild der Küste von Pipa',ct_alt_cta:'Dünen von oben im Abendlicht',
+ ct_cta:'Immobilien zum Kauf und zur Miete in Pipa',ct_cta_btn:'Immobilien ansehen'}});
+
+VIEWS.contato={
+ title(){return tr('ct_title')},
+ st(){return APP.state.contato||(APP.state.contato={topic:'comprar',name:'',wa:'',email:'',lang:'',msg:''})},
+ render(){const s=this.st(),a=SITE.agent,topics=['comprar','alugar','vender','terreno','outro'],lg=s.lang||APP.lang;
+  const tel=SITE.phone.replace(/[^+\d]/g,'');
+  return `<div class="v-contato">
+<section class="ct-top"><div class="wrap ct-grid">
+ <div>
+  <h1 class="ct-h1">${tr('ct_h1a')} ${esc(SITE.brand)}<span>${tr('ct_h1b')} ${esc(SITE.city)}</span></h1>
+  <p class="lead ct-lead">${tr('ct_lead')}</p>
+  <fieldset class="ct-topic"><legend>${tr('ct_topic')}</legend><div class="ct-chips">
+   ${topics.map(t=>`<button type="button" class="ct-chip" data-topic="${t}" aria-pressed="${s.topic===t}"><i></i>${tr('ct_t_'+t)}</button>`).join('')}
+  </div></fieldset>
+  <form class="ct-form" data-demo>
+   <input type="hidden" name="assunto" value="${s.topic}">
+   <label class="f"><span>${tr('ct_name')}</span><input name="name" type="text" required autocomplete="name" placeholder="${tr('ct_ph_name')}" value="${esc(s.name)}"></label>
+   <label class="f"><span>${tr('ct_wa')}</span><input name="wa" type="tel" required autocomplete="tel" inputmode="tel" placeholder="${tr('ct_ph_wa')}" value="${esc(s.wa)}"></label>
+   <label class="f"><span>${tr('ct_email')}</span><input name="email" type="email" autocomplete="email" placeholder="${tr('ct_ph_email')}" value="${esc(s.email)}"></label>
+   <label class="f"><span>${tr('ct_lang')}</span><select name="lang">${[['pt','Português'],['en','English'],['de','Deutsch']].map(o=>`<option value="${o[0]}"${lg===o[0]?' selected':''}>${o[1]}</option>`).join('')}</select></label>
+   <label class="f ct-full"><span>${tr('ct_msg')}</span><textarea name="msg" rows="4" placeholder="${tr('ct_ph_msg')}">${esc(s.msg)}</textarea></label>
+   <div class="ct-send"><button class="btn" type="submit">${tr('ct_send')}</button><p>${tr('ct_req')}</p></div>
+   <div class="ok" role="status"></div>
+  </form>
+ </div>
+ <aside class="ct-side">
+  <div class="ct-card ct-agent">
+   <div class="ct-ph"><b>${esc(a.initials)}</b></div>
+   <p class="ct-name">${esc(a.name)}</p>
+   <p class="ct-meta">${esc(L(a.role))} · ${esc(a.creci)}<br>${tr('ct_speaks')} ${esc(a.langs)}</p>
+   <p class="ct-quote">${tr('ct_quote')}</p>
+   <a class="btn btn--wa" href="${waLink()}" target="_blank" rel="noopener">${WA_SVG}${tr('ct_wabtn')}</a>
+  </div>
+  <div class="ct-card">
+   <h2 class="ct-ttl">${tr('ct_office')}</h2>
+   <ul class="ct-rows">
+    <li>${icon('pin')}<div><small>${tr('ct_addr')}</small><p>${esc(SITE.address)}</p></div></li>
+    <li>${icon('cal')}<div><small>${tr('ct_hours')}</small><p>${esc(L(SITE.hours))}</p></div></li>
+    <li>${icon('phone')}<div><small>${tr('ct_phone')}</small><p><a href="tel:${tel}">${esc(SITE.phone)}</a></p></div></li>
+    <li>${icon('mail')}<div><small>${tr('ct_mail')}</small><p><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></p></div></li>
+   </ul>
+  </div>
+  <div class="ct-card ct-note">${icon('check')}<div><h2>${tr('ct_note_t')}</h2><p>${tr('ct_note_p')}</p></div></div>
+ </aside>
+</div></section>
+<section class="ct-office"><div class="wide"><figure>
+ <img ${srcW(SITE.media.office)} alt="${tr('ct_alt_office')}" loading="lazy">
+ <figcaption class="ct-addr"><h2>${tr('ct_where')}</h2><p>${esc(SITE.address)}</p></figcaption>
+</figure></div></section>
+<section class="ct-cta"><img ${srcW(SITE.media.cta)} alt="${tr('ct_alt_cta')}" loading="lazy">
+ <div><h2>${tr('ct_cta')}</h2><a class="btn btn--light" href="#imoveis">${tr('ct_cta_btn')}</a></div>
+</section>
+</div>`},
+ mount(root){const s=this.st(),chips=$$('.ct-chip',root),hid=$('input[name=assunto]',root);
+  chips.forEach(b=>b.onclick=()=>{s.topic=b.dataset.topic;chips.forEach(x=>x.setAttribute('aria-pressed',x===b));if(hid)hid.value=s.topic});
+  $$('.ct-form [name]',root).forEach(e=>{if(e.name in s&&e.name!=='topic')e.oninput=e.onchange=()=>{s[e.name]=e.value}})}
+};
+</script>

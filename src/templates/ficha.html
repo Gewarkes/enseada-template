@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ hl }}"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>{{ l.name }} · {{ t.pdfRef }} {{ l.ref }}</title>
+<style>@font-face{font-family:'Open Sans';font-weight:300 800;src:url({{ base }}assets/open-sans-latin.woff2) format('woff2')}{{ ficha_css }}</style></head>
+<body>
+<header class="fh"><div class="fb">{{ site.brandFull }}</div><div class="fs">{{ icon('shield') }} {{ t.slSeal }} · {{ site.agent.name }}{% if site.agent.creci %} · {{ site.agent.creci }}{% endif %}</div></header>
+<div class="hero"><img src="{{ base }}img/pdf/{{ l.imgs[0] }}.jpg" alt=""></div>
+<section class="top">
+  <div><h1>{{ l.name }}</h1><p class="loc">{{ l.loc }}, {{ site.state }} · {{ t.pdfRef }} {{ l.ref }}</p><p class="sub">{{ L(l.title) }}</p></div>
+  <div class="pr"><small>{{ t.pdfPrice }}</small><b>{{ money(l.price) }}{% if l.deal == 'aluguel' %}<span>{{ t.perMonth }}</span>{% endif %}</b>{% if l.priceBefore %}<s>{{ money(l.priceBefore) }}</s>{% endif %}</div>
+</section>
+<section class="kv">
+  {% for ic, n, w in facts(l) %}<div><b>{{ n }}</b><span>{{ w }}</span></div>{% endfor %}
+</section>
+<h2>{{ t.pdfData }}</h2>
+<table class="dt">
+  {% if l.type != 'terreno' %}<tr><td>{{ t.built }}</td><td>{{ nf(l.area) }} m²</td></tr>{% endif %}
+  {% if l.lot %}<tr><td>{{ t.pdfLot }}</td><td>{{ nf(l.lot) }} m²</td></tr>{% endif %}
+  {% if l.year %}<tr><td>{{ t.dYear }}</td><td>{{ l.year }}</td></tr>{% endif %}
+  {% if l.suites %}<tr><td>{{ t.pdfSuites }}</td><td>{{ l.suites }}</td></tr>{% endif %}
+  {% if l.condo %}<tr><td>{{ t.dCondo }}</td><td>{{ money(l.condo) }}{{ t.perMonth }}</td></tr>{% endif %}
+  {% if l.iptu %}<tr><td>{{ t.dIptu }}</td><td>{{ money(l.iptu) }}{{ t.perYear }}</td></tr>{% endif %}
+  {% if l.beach %}<tr><td>{{ t.toBeachCap }}</td><td>{{ nf(l.beach) }} m</td></tr>{% endif %}
+</table>
+{% for para in L(l.desc).split('\n') if para.strip() %}<p class="ds">{{ para }}</p>{% endfor %}
+{% if L(l.highlights) %}<ul class="hl">{% for x in L(l.highlights) %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+{% if l.feats %}<h2>{{ t.dFeats }}</h2><ul class="ft">{% for f in l.feats %}<li>{{ t['f_' ~ f] }}</li>{% endfor %}</ul>{% endif %}
+{% if l.dist %}<h2>{{ t.pdfDist }}</h2><ul class="ft">
+  {% if l.dist.get('beach') %}<li>{{ t.dBeach }}: {{ l.dist.get('beach') }}</li>{% endif %}{% if l.dist.get('center') %}<li>{{ t.dCenter }}: {{ l.dist.get('center') }}</li>{% endif %}{% if l.dist.get('airport') %}<li>{{ t.dAirport }}: {{ l.dist.get('airport') }}</li>{% endif %}</ul>{% endif %}
+<h2>{{ t.pdfDocs }}</h2>
+<p class="ds">{% if l.checks.matricula and l.checks.debts %}{{ t.pdfDocsOk }} {{ fdate(l.checks.date) if l.checks.date else '' }}.{% else %}{{ t.pdfDocsNo }}{% endif %}</p>
+{% if l.imgs | length > 1 %}<div class="ph">{% for k in l.imgs[1:5] %}<div><img src="{{ base }}img/pdf/{{ k }}.jpg" alt=""></div>{% endfor %}</div>{% endif %}
+<footer class="ff">
+  <div><b>{{ t.pdfAgent }}: {{ site.agent.name }}</b><br>{% if site.agent.creci %}{{ site.agent.creci }}<br>{% endif %}{{ site.phone }} · {{ site.email }}<br>{{ site.address }}</div>
+  <div class="fn">{{ t.pdfFoot }} {{ today_str }}.<br>{{ abs('imovel-' + l.slug) }}</div>
+</footer>
+</body></html>

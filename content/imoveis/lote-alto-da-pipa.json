@@ -1,0 +1,77 @@
+{
+ "slug": "lote-alto-da-pipa",
+ "ref": "EN-1033",
+ "deal": "venda",
+ "type": "terreno",
+ "name": "Lote Alto da Pipa",
+ "title": {
+  "pt": "Lote de 600 m² em loteamento fechado no Chapadão",
+  "en": "600 m² plot in a gated development in Chapadão",
+  "es": "Lote de 600 m² en urbanización cerrada en Chapadão",
+  "de": "Grundstück mit 600 m² in einer geschlossenen Anlage im Chapadão"
+ },
+ "loc": "Chapadão",
+ "lat": -6.2411,
+ "lng": -35.0433,
+ "price": 420000,
+ "condo": 380,
+ "iptu": 840,
+ "beds": 0,
+ "suites": 0,
+ "baths": 0,
+ "parking": 0,
+ "area": 0,
+ "lot": 600,
+ "year": 0,
+ "beach": 700,
+ "status": "disponivel",
+ "date": "2026-10-14",
+ "imgs": [
+  "79",
+  "81",
+  "21"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "deed",
+  "paved",
+  "power",
+  "water",
+  "gated"
+ ],
+ "dist": {
+  "beach": "9 min",
+  "center": "6 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "Projeto já aprovado na prefeitura",
+   "Ruas internas calçadas e iluminadas",
+   "Sem prazo para começar a obra"
+  ],
+  "en": [
+   "Plans already approved by the town hall",
+   "Internal roads paved and lit",
+   "No deadline to start building"
+  ],
+  "es": [
+   "Proyecto ya aprobado en la municipalidad",
+   "Calles internas empedradas e iluminadas",
+   "Sin plazo para comenzar la obra"
+  ],
+  "de": [
+   "Bauplan bereits von der Stadt genehmigt",
+   "Straßen gepflastert und beleuchtet",
+   "Keine Frist für den Baubeginn"
+  ]
+ },
+ "desc": {
+  "pt": "Loteamento fechado no alto do Chapadão. O terreno é plano e já está limpo. O esgoto é por fossa séptica.\n\nMatrícula e certidões solicitadas; situação conforme os documentos. A taxa de condomínio cobre portaria e vias. O comprador pode usar o projeto aprovado ou apresentar outro; recuos, altura e demais regras devem ser confirmados na prefeitura e no loteamento.",
+  "en": "Gated development on the Chapadão plateau. The plot is level and already cleared. Sewage goes to a septic tank.\n\nMatrícula and certificates requested; status as shown in the documents. The community fee covers the gatehouse and roads. The buyer may use the approved plans or submit a different design; setbacks, height limits and other rules must be confirmed with the town hall and the development.",
+  "es": "Urbanización cerrada en lo alto de Chapadão. El terreno es plano y ya está limpio. El desagüe es por fosa séptica.\n\nMatrícula y certificados solicitados; situación según los documentos. La cuota cubre la portería y las calles. El comprador puede usar el proyecto aprobado o presentar otro; los retiros, la altura y demás reglas deben confirmarse en la municipalidad y en la urbanización.",
+  "de": "Geschlossene Anlage oben im Chapadão. Das Grundstück ist eben und schon gerodet. Das Abwasser läuft über eine Klärgrube.\n\nGrundbuchauszug (Matrícula) und Bescheinigungen sind angefragt; der Stand steht bei den Unterlagen. Die Gebühr der Anlage deckt Pförtner und Straßen. Der Käufer kann den genehmigten Plan nutzen oder einen anderen einreichen. Abstände, Höhe und weitere Regeln solltest du dir von der Stadtverwaltung (Prefeitura) und der Anlage bestätigen lassen."
+ },
+ "ordem": 10
+}

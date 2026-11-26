@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="wrap">
+  <ol class="crumbs">
+    <li><a href="{{ url('home') }}">{{ t.navHome }}</a></li>
+    {% if cat %}<li><a href="{{ url('imoveis') }}">{{ t.navAll }}</a></li>{% endif %}
+    <li aria-current="page">{{ t[{'venda':'navBuy','aluguel':'navRent','terrenos':'navLand'}[cat]] if cat else t.navAll }}</li>
+  </ol>
+  <div class="page-head">
+    <h1>{{ h1 }}</h1>
+    <p>{{ lead }}</p>
+  </div>
+</div>
+
+<div class="filters" data-filters data-cat="{{ cat or '' }}">
+  <div class="wrap filters-in">
+    <nav class="tabs tabs-auto" style="--i:{{ 1 if cat == 'venda' else (2 if cat == 'aluguel' else 0) }};--n:3" data-slide aria-label="{{ t.sDeal }}">
+      {% for r, k, c2 in [('imoveis','tabAll', none),('imoveis-venda','navBuy','venda'),('imoveis-aluguel','navRent','aluguel')] %}
+      <a href="{{ url(r) }}" data-keepq{% if cat == c2 %} aria-current="true"{% endif %}>{{ t[k] }}</a>
+      {% endfor %}
+    </nav>
+    <div class="filter-row">
+      <label class="chip"><span class="sr">{{ t.sWhere }}</span>
+        <select data-f="loc"><option value="">{{ t.sAnyLoc }}</option>{% for x in locs %}<option value="{{ x.slug }}">{{ x.name }}</option>{% endfor %}</select></label>
+      {% if cat != 'terrenos' %}
+      <label class="chip"><span class="sr">{{ t.sType }}</span>
+        <select data-f="type"><option value="">{{ t.sAnyType }}</option><option value="casa">{{ t.tCasa }}</option><option value="apartamento">{{ t.tApto }}</option>{% if cat != 'aluguel' %}<option value="terreno">{{ t.tTerreno }}</option>{% endif %}</select></label>
+      <label class="chip"><span class="sr">{{ t.sBeds }}</span>
+        <select data-f="beds"><option value="">{{ t.sBeds }}</option>{% for n in [1, 2, 3, 4] %}<option value="{{ n }}">{{ n }}+ {{ t.beds }}</option>{% endfor %}</select></label>
+      {% endif %}
+      {% if cat %}
+      <label class="chip"><span class="sr">{{ t.sMax }}</span>
+        <select data-f="max"><option value="">{{ t.sMax }}</option>{% for v in maxopts %}<option value="{{ v }}">{{ t.upTo }} {{ money(v) }}</option>{% endfor %}</select></label>
+      {% endif %}
+      <label class="chip"><span class="sr">{{ t.sort }}</span>
+        <select data-f="sort"><option value="">{{ t.sortRec }}</option><option value="new">{{ t.sortNew }}</option><option value="asc">{{ t.sortAsc }}</option><option value="desc">{{ t.sortDesc }}</option></select></label>
+      <button class="chip-btn" type="button" data-morebtn aria-expanded="false">{{ icon('filter') }} <span data-more-t data-a="{{ t.fMore }}" data-b="{{ t.fLess }}">{{ t.fMore }}</span><b class="cnt" data-more-n hidden></b></button>
+    </div>
+    <div class="more" data-more hidden>
+      <div class="mg mg-d"><h3>{{ t.fgD }}</h3><div class="mg-i">
+        <label class="chip"><span class="sr">{{ t.fArea }}</span><select data-f="area"><option value="">{{ t.fArea }}</option>{% for n in [60, 100, 150, 200, 300] %}<option value="{{ n }}">{{ t.fAreaN | replace('{n}', n) }}</option>{% endfor %}</select></label>
+        <label class="chip"><span class="sr">{{ t.fLot }}</span><select data-f="lot"><option value="">{{ t.fLot }}</option>{% for n in [300, 500, 1000, 2000] %}<option value="{{ n }}">{{ t.fAreaN | replace('{n}', n) }}</option>{% endfor %}</select></label>
+        <label class="chip"><span class="sr">{{ t.fBaths }}</span><select data-f="baths"><option value="">{{ t.fBaths }}</option>{% for n in [1, 2, 3, 4] %}<option value="{{ n }}">{{ n }}+</option>{% endfor %}</select></label>
+        <label class="chip"><span class="sr">{{ t.fBeach }}</span><select data-f="beachd"><option value="">{{ t.fBeach }}</option><option value="200">{{ t.fBeach1 }}</option><option value="500">{{ t.fBeach2 }}</option><option value="1000">{{ t.fBeach3 }}</option></select></label>
+      </div></div>
+      {% for g, gt, items2 in [('a','fgA',[('seaview','fSea'),('pool','fPool'),('furnished','fFurn'),('parking','fPark')]),('b','fgB',[('new','fNew'),('red','fRed'),('temp','fTemp')]),('c','fgC',[('docs','fDocs'),('res','fRes')])] %}
+      <div class="mg mg-{{ g }}"><h3>{{ t[gt] }}</h3><div class="mg-i">
+        {% for k, lab in items2 %}<label class="tgl"><input type="checkbox" data-x="{{ k }}"><span>{{ t[lab] }}</span></label>{% endfor %}
+      </div></div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="results-bar">
+    <div class="vw" role="group" aria-label="{{ t.viewList }} / {{ t.viewMap }}"><button type="button" data-view="list" aria-pressed="true">{{ icon('list') }} {{ t.viewList }}</button><button type="button" data-view="map" aria-pressed="false">{{ icon('map') }} {{ t.viewMap }}</button></div>
+    <span><b data-n>{{ items | length }}</b> <span data-nword data-one="{{ t.obj1 }}" data-many="{{ t.objN }}">{{ t.obj1 if items | length == 1 else t.objN }}</span></span>
+    <button class="link" type="button" data-reset hidden>{{ t.reset }}</button>
+  </div>
+  <div class="results" data-results>
+    <div class="map" data-map="pins" data-lazy><div class="map-ph">{{ t.mapLoad }}</div></div>
+    <script type="application/json" data-pins>{{ pins | tojson_safe }}</script>
+    <div>
+      <div class="grid" data-grid>
+        {% for l in items %}{{ m.card(l, true, loop.index) }}{% endfor %}
+      </div>
+      <div class="empty" data-empty>
+        <h2>{{ t.emptyH }}</h2>
+        <p>{{ t.emptyP }}</p>
+        <div class="btn-row"><button class="btn btn-primary" type="button" data-reset>{{ t.reset }}</button><a class="btn btn-wa" href="{{ wa(t.waSearch) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.emptyWa }}</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">{{ m.answers() }}</div>
+{{ m.wishbox() }}
+
+{% endblock %}

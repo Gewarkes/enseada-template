@@ -1,0 +1,85 @@
+{
+ "slug": "casa-mirante-do-madeiro",
+ "ref": "EN-1042",
+ "deal": "venda",
+ "type": "casa",
+ "name": "Casa Mirante do Madeiro",
+ "title": {
+  "pt": "Casa de 4 suítes com vista para o mar no Madeiro",
+  "en": "Four-bedroom house with sea view above Praia do Madeiro",
+  "es": "Casa de 4 suites con vista al mar en Madeiro",
+  "de": "Haus mit 4 Suiten und Meerblick im Madeiro"
+ },
+ "loc": "Praia do Madeiro",
+ "lat": -6.2142,
+ "lng": -35.0815,
+ "price": 4850000,
+ "condo": 0,
+ "iptu": 9800,
+ "beds": 4,
+ "suites": 4,
+ "baths": 5,
+ "parking": 3,
+ "area": 420,
+ "lot": 1100,
+ "year": 2021,
+ "beach": 250,
+ "status": "novo",
+ "date": "2026-11-10",
+ "feat": true,
+ "imgs": [
+  "02",
+  "17",
+  "49",
+  "44",
+  "71"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "pool",
+  "seaview",
+  "ac",
+  "furnished",
+  "garage",
+  "garden",
+  "bbq",
+  "solar",
+  "fiber",
+  "staff"
+ ],
+ "dist": {
+  "beach": "4 min",
+  "center": "9 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "Suítes voltadas para o nordeste",
+   "Piscina de borda infinita",
+   "Casa do caseiro com entrada própria"
+  ],
+  "en": [
+   "Bedrooms face northeast",
+   "Infinity pool",
+   "Caretaker’s house with a separate entrance"
+  ],
+  "es": [
+   "Suites orientadas al noreste",
+   "Piscina de borde infinito",
+   "Casa del cuidador con entrada propia"
+  ],
+  "de": [
+   "Suiten mit Blick nach Nordosten",
+   "Infinity-Pool",
+   "Hausmeisterhaus mit eigenem Eingang"
+  ]
+ },
+ "desc": {
+  "pt": "Casa no alto da falésia do Madeiro, em rua calçada. O lote é murado nas laterais e nos fundos e abre a frente para o mar.\n\nMóveis incluídos, conforme lista. Matrícula e certidões solicitadas; situação conforme os documentos. Madeiras e esquadrias passaram por manutenção em 2026.",
+  "en": "House on top of the Madeiro cliffs, on a paved road. The plot is walled at the sides and rear and open at the front, facing the sea.\n\nFurnished, per the inventory. Matrícula and certificates requested; status as shown in the documents. The wood and window frames were serviced in 2026.",
+  "es": "Casa en lo alto del acantilado de Madeiro, en una calle empedrada. El lote está cercado por los lados y por el fondo, y abre el frente hacia el mar.\n\nMuebles incluidos, según lista. Matrícula y certificados solicitados; situación según los documentos. Las maderas y los marcos recibieron mantenimiento en 2026.",
+  "de": "Haus oben auf der Steilküste von Madeiro, an einer gepflasterten Straße. Das Grundstück ist an den Seiten und hinten ummauert und öffnet sich vorne zum Meer.\n\nMöbel laut Liste im Preis enthalten. Grundbuchauszug (Matrícula) und Bescheinigungen sind angefragt; der Stand steht bei den Unterlagen. Holz und Fensterrahmen wurden 2026 gewartet."
+ },
+ "ordem": 1
+}

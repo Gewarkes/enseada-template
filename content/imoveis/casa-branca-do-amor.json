@@ -1,0 +1,76 @@
+{
+ "slug": "casa-branca-do-amor",
+ "ref": "EN-1008",
+ "deal": "venda",
+ "type": "casa",
+ "name": "Casa Branca do Amor",
+ "title": {
+  "pt": "Casa de 4 suítes a 180 m da Praia do Amor",
+  "en": "Four-bedroom house 180 m from Praia do Amor",
+  "es": "Casa de 4 suites a 180 m de la Praia do Amor",
+  "de": "Haus mit 4 Suiten, 180 m von der Praia do Amor"
+ },
+ "loc": "Praia do Amor",
+ "lat": -6.2349,
+ "lng": -35.0441,
+ "price": 3650000,
+ "condo": 0,
+ "iptu": 7600,
+ "beds": 4,
+ "suites": 4,
+ "baths": 4,
+ "parking": 2,
+ "area": 330,
+ "lot": 780,
+ "year": 2019,
+ "beach": 180,
+ "status": "reservado",
+ "date": "2026-08-12",
+ "imgs": [
+  "24",
+  "01",
+  "43",
+  "75"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "pool",
+  "seaview",
+  "ac",
+  "garage",
+  "garden",
+  "bbq",
+  "fiber"
+ ],
+ "dist": {
+  "beach": "3 min",
+  "center": "7 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "Vista para o mar do andar de cima",
+   "Cozinha integrada ao terraço"
+  ],
+  "en": [
+   "Sea view from the upper floor",
+   "Kitchen opens onto the terrace"
+  ],
+  "es": [
+   "Vista al mar desde el piso superior",
+   "Cocina integrada a la terraza"
+  ],
+  "de": [
+   "Meerblick vom Obergeschoss",
+   "Küche öffnet sich zur Terrasse"
+  ]
+ },
+ "desc": {
+  "pt": "Casa branca numa rua calçada acima da Praia do Amor, com escada de acesso à areia. O lote é murado e tem jardim na frente.\n\nMatrícula e certidões solicitadas; situação conforme os documentos. A pintura externa foi refeita em 2025. No momento a casa está reservada, com proposta em análise. Anotamos o contato de interessados caso a reserva não se confirme.",
+  "en": "White house on a paved road above Praia do Amor, with steps down to the sand. The plot is walled and has a garden at the front.\n\nMatrícula and certificates requested; status as shown in the documents. The exterior was repainted in 2025. The house is currently reserved, with an offer under review. We are keeping a list of interested buyers in case the reservation falls through.",
+  "es": "Casa blanca en una calle empedrada sobre la Praia do Amor, con escalera de acceso a la arena. El lote está cercado y tiene jardín al frente.\n\nMatrícula y certificados solicitados; situación según los documentos. La pintura exterior se rehízo en 2025. Por el momento la casa está reservada, con una oferta en análisis. Anotamos el contacto de los interesados por si la reserva no se concreta.",
+  "de": "Weißes Haus an einer gepflasterten Straße oberhalb der Praia do Amor, mit Treppe hinunter zum Strand. Das Grundstück ist ummauert und hat vorn einen Garten.\n\nGrundbuchauszug (Matrícula) und Bescheinigungen sind angefragt; der Stand steht bei den Unterlagen. Der Außenanstrich wurde 2025 erneuert. Im Moment ist das Haus reserviert, ein Angebot wird geprüft. Wir notieren Interessenten für den Fall, dass aus der Reservierung nichts wird."
+ },
+ "ordem": 4
+}

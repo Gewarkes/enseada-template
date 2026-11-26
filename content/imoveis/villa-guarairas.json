@@ -1,0 +1,85 @@
+{
+ "slug": "villa-guarairas",
+ "ref": "EN-1039",
+ "deal": "venda",
+ "type": "casa",
+ "name": "Villa Guaraíras",
+ "title": {
+  "pt": "Casa de 5 suítes de frente para a lagoa de Guaraíras",
+  "en": "Five-bedroom house facing the Guaraíras lagoon",
+  "es": "Casa de 5 suites frente a la laguna de Guaraíras",
+  "de": "Haus mit 5 Suiten direkt an der Lagune von Guaraíras"
+ },
+ "loc": "Tibau do Sul",
+ "lat": -6.1893,
+ "lng": -35.0922,
+ "price": 6200000,
+ "condo": 2400,
+ "iptu": 12400,
+ "beds": 5,
+ "suites": 5,
+ "baths": 6,
+ "parking": 4,
+ "area": 580,
+ "lot": 1800,
+ "year": 2023,
+ "beach": 120,
+ "status": "novo",
+ "date": "2026-11-06",
+ "imgs": [
+  "04",
+  "03",
+  "16",
+  "48",
+  "72"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "pool",
+  "lagoon",
+  "ac",
+  "furnished",
+  "garage",
+  "garden",
+  "solar",
+  "well",
+  "gated",
+  "staff",
+  "deck"
+ ],
+ "dist": {
+  "beach": "2 min",
+  "center": "14 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "Sala de pé-direito duplo",
+   "Cozinha com despensa",
+   "Deck de madeira liga sala e piscina"
+  ],
+  "en": [
+   "Double-height living room",
+   "Kitchen with pantry",
+   "Wooden deck connecting the living room and pool"
+  ],
+  "es": [
+   "Sala con doble altura",
+   "Cocina con despensa",
+   "Deck de madera que conecta la sala con la piscina"
+  ],
+  "de": [
+   "Wohnzimmer mit doppelter Deckenhöhe",
+   "Küche mit Vorratsraum",
+   "Holzterrasse verbindet Wohnzimmer und Pool"
+  ]
+ },
+ "desc": {
+  "pt": "Casa num condomínio fechado de Tibau do Sul, em lote de leve declive para o oeste. O sol se põe em frente à sala e ao deck.\n\nMóveis incluídos. Matrícula individual e escritura. A água vem de poço próprio, e a outorga do poço (autorização de uso da água) deve ser conferida. A taxa de condomínio cobre portaria, vias internas e áreas comuns.",
+  "en": "House in a gated community in Tibau do Sul, on a plot that slopes gently to the west. The sun sets in front of the living room and deck.\n\nFurnished. The house has its own registry entry and title deed. Water comes from a private well, and the well’s outorga (water-use permit) still needs to be checked. The community fee covers the gatehouse, internal roads and shared areas.",
+  "es": "Casa en un condominio cerrado de Tibau do Sul, en un lote con una leve pendiente hacia el oeste. El sol se pone frente a la sala y al deck.\n\nMuebles incluidos. Matrícula individual y escritura. El agua viene de un pozo propio, y la outorga del pozo (autorización de uso del agua) debe verificarse. La cuota de condominio cubre la portería, las calles internas y las áreas comunes.",
+  "de": "Haus in einer geschlossenen Anlage in Tibau do Sul, auf einem Grundstück mit leichtem Gefälle nach Westen. Die Sonne geht vor Wohnzimmer und Terrasse unter.\n\nMöbel im Preis enthalten. Eigener Grundbuchauszug (Matrícula) und Kaufurkunde (Escritura). Das Wasser kommt aus einem eigenen Brunnen; die Outorga do poço (Genehmigung für den Brunnen) muss noch geprüft werden. Das Hausgeld der Anlage deckt Pförtner, interne Straßen und Gemeinschaftsflächen."
+ },
+ "ordem": 3
+}

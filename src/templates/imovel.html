@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% block bodyclass %}has-bar{% endblock %}
+{% block preload %}<link rel="preload" as="image" href="{{ img(l.imgs[0]) }}" imagesrcset="{{ img(l.imgs[0], '-xs') }} 480w, {{ img(l.imgs[0], '-s') }} 760w, {{ img(l.imgs[0]) }} 1400w" imagesizes="(min-width:800px) 66vw, 100vw" fetchpriority="high">{% endblock %}
+{% block main %}
+{% set land = l.type == 'terreno' %}
+{% set fi = {'pool':'wave','ac':'snow','furnished':'sofa','fiber':'wifi','garage':'car','gated':'gate','garden':'leaf','solar':'sun','water':'drop','well':'drop','power':'bolt','seaview':'eye','lagoon':'wave','alarm':'shield','staff':'user','deed':'doc','paved':'road','bbq':'flame','deck':'sun'} %}
+<div class="wrap">
+  <ol class="crumbs">
+    <li><a href="{{ url('home') }}">{{ t.navHome }}</a></li>
+    <li><a href="{{ url(catroute) }}">{{ catname }}</a></li>
+    <li aria-current="page">{{ l.name }}</li>
+  </ol>
+
+  <div class="gal" data-gallery>
+    <div class="gal-track" data-track>
+      {% for k in l.imgs %}
+      <button type="button" data-photo="{{ loop.index0 }}" aria-label="{{ t.photo }} {{ loop.index }}">{{ pic(k, '(min-width:800px) 66vw, 100vw' if loop.first else '(min-width:800px) 33vw, 100vw', l.name ~ ' – ' ~ t.photo ~ ' ' ~ loop.index, '', loop.first) }}</button>
+      {% endfor %}
+    </div>
+    <div class="badges">
+      {% if l.status == 'novo' %}<span class="badge badge-new">{{ t.stNew }}</span>{% elif l.status == 'reservado' %}<span class="badge badge-res">{{ t.stRes }}</span>{% endif %}
+      <span class="badge">{{ t.dealRent if l.deal == 'aluguel' else t.dealSale }}</span>
+    </div>
+    <span class="gal-count">{{ icon('camera') }}<span data-pos>1</span> / {{ l.imgs | length }}</span>
+    <button class="btn btn-light btn-s gal-all" type="button" data-photo="0">{{ icon('camera') }} {{ t.allPhotos }} ({{ l.imgs | length }})</button>
+  </div>
+
+  <div class="det">
+    <div class="det-main">
+      <div class="det-top">
+        <h1>{{ l.name }}</h1>
+        <p class="det-sub">{{ L(l.title) }}</p>
+        <ul class="det-meta">
+          <li>{{ icon('pin') }}{{ l.loc }}, {{ site.state }}</li>
+          <li>{{ icon('tag') }}{{ t.ref }} {{ l.ref }}</li>
+          <li>{{ icon('cal') }}{{ t.listed }} {{ fdate(l.date) }}</li>
+        </ul>
+        <div class="det-price">
+          <b>{{ price(l) }}</b>
+          {% if not l.por %}<span data-fxline data-brl="{{ l.price | int }}"></span> {% endif %}
+          {% set sqm = l.area or l.lot %}{% if sqm and l.deal == 'venda' and not l.por %}<span>· <span data-brl="{{ (l.price / sqm) | round | int }}">{{ money(l.price / sqm) }}</span>/m²</span>{% endif %}
+        </div>
+        {% if lang != 'pt' and l.deal == 'venda' and not land and l.price >= taxes.residence.northeast %}<p class="ichip">{{ icon('user') }}<span>{{ t.resChip }} <a href="{{ url('residencia') }}">{{ t.resChipL }}</a></span></p>{% endif %}
+        {% if l.temporada in ('sim','nao') %}<p class="ichip">{{ icon('cal') }}{{ t.tempOk if l.temporada == 'sim' else t.tempNo }}</p>{% endif %}
+        <ul class="keys gl {{ "c2" if land else "c4" }}">
+          {% if land %}
+          <li>{{ icon('lot') }}<span><b>{{ nf(l.lot) }}<small>m²</small></b> {{ t.lotWord }}</span></li>
+          <li>{{ icon('pin') }}<span><b>{{ nf(l.beach) }}<small>m</small></b> {{ t.toBeach }}</span></li>
+          {% else %}
+          {% if l.beds %}<li>{{ icon('bed') }}<span><b>{{ l.beds }}</b> {{ t.bed1 if l.beds == 1 else t.beds }}</span></li>{% endif %}
+          {% if l.baths %}<li>{{ icon('bath') }}<span><b>{{ l.baths }}</b> {{ t.bath1 if l.baths == 1 else t.baths }}</span></li>{% endif %}
+          {% if l.area %}<li>{{ icon('area') }}<span><b>{{ nf(l.area) }}<small>m²</small></b> {{ t.built }}</span></li>{% endif %}
+          {% if l.parking %}<li>{{ icon('car') }}<span><b>{{ l.parking }}</b> {{ t.park1 if l.parking == 1 else t.parks }}</span></li>{% endif %}
+          {% endif %}
+        </ul>
+        <div class="det-actions" data-actions>
+          <a class="btn btn-primary" href="#contato">{{ icon('cal') }} {{ t.visit }}</a>
+          <a class="btn btn-wa" href="{{ wa(t.waHello ~ ' ' ~ l.name ~ ' (' ~ l.ref ~ ')') }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a>
+          <button class="btn btn-line" type="button" data-share data-title="{{ l.name }}">{{ icon('share') }} {{ t.share }}</button>
+          <button class="btn btn-line btn-fav" type="button" data-fav data-slug="{{ l.slug }}" data-name="{{ l.name }}" data-url="{{ url('imovel-' + l.slug) }}" data-price="{{ l.price | int }}" aria-pressed="false">{{ icon('heart') }} <span data-fav-t data-a="{{ t.mlAdd }}" data-b="{{ t.mlDel }}">{{ t.mlAdd }}</span></button>
+          <a class="btn btn-pdf" href="{{ base }}pdf/{{ lang }}/{{ l.slug }}.pdf" download><span class="pdf-tag">PDF</span> {{ t.pdfBtn }}</a>
+        </div>
+      </div>
+
+      <section class="block glance">
+        {% if l.feats %}<h2>{{ t.glH }}</h2>
+        {% set rank = ['pool','seaview','lagoon','ac','furnished','garage','garden','bbq','deck','solar','fiber','gated','alarm','staff','paved','power','water','well','deed'] %}{% set feats = [] %}{% for r in rank %}{% if r in l.feats and not (r == 'deed' and not l.checks.matricula) %}{% set _ = feats.append(r) %}{% endif %}{% endfor %}{% set fn = feats|length %}<ul class="gl {{ "c5" if fn%5==0 else ("c4" if fn%4==0 else ("c3" if fn%3==0 else "c2")) }}">{% for f in feats %}<li>{{ icon(fi.get(f, 'check')) }}<span>{{ t['f_' ~ f] }}</span></li>{% endfor %}</ul>{% endif %}
+        {% if l.dist %}
+        <h2 class="gl-h2">{{ t.distH }}</h2>
+        <ul class="gl dist c3">
+          {% if l.dist.get('beach') %}<li>{{ icon('umbrella') }}<span><b>{{ l.dist.get('beach') }}</b> {{ t.dBeach }}</span></li>{% endif %}
+          {% if l.dist.get('center') %}<li>{{ icon('pin') }}<span><b>{{ l.dist.get('center') }}</b> {{ t.dCenter }}</span></li>{% endif %}
+          {% if l.dist.get('airport') %}<li>{{ icon('plane') }}<span><b>{{ l.dist.get('airport') }}</b> {{ t.dAirport }}</span></li>{% endif %}
+        </ul>
+        <p class="form-note">{{ t.dDistNote }}</p>
+        {% endif %}
+      </section>
+
+      <section class="block">
+        <h2>{{ t.dAbout }}</h2>
+        {% if L(l.highlights) %}
+        <ul class="hl">{% for h in L(l.highlights) %}<li>{{ icon('check') }}<span>{{ h }}</span></li>{% endfor %}</ul>
+        {% endif %}
+        {% set paras = L(l.desc).split('\n\n') %}
+        <div class="prose"><p>{{ paras[0] }}</p>{% if paras | length > 1 %}<details class="readmore"><summary>{{ t.readMore }}</summary>{% for para in paras[1:] %}<p>{{ para }}</p>{% endfor %}</details>{% endif %}</div>
+      </section>
+
+      {% if l.deal == 'venda' %}
+      <section class="block mk">
+        <h3>{{ t.mkH }}</h3>
+        {% if l.checks.matricula or l.checks.debts %}
+        <ul>{% if l.checks.matricula %}<li>{{ icon('check') }}{{ t.mkMat }}</li>{% endif %}{% if l.checks.debts %}<li>{{ icon('check') }}{{ t.mkDebt }}{% if l.checks.date %} · {{ t.mkOn }} {{ fdate(l.checks.date) }}{% endif %}</li>{% endif %}</ul>
+        {% else %}<p>{{ t.mkNone }}</p>{% endif %}
+        <small>{{ t.mkNote }} <a href="{{ url('golpes') }}">{{ pages['golpes'].nav[lang] }}</a></small>
+      </section>
+      {% endif %}
+      {% if l.deal == 'venda' %}
+      <section class="block" id="financiamento">
+        <h2>{{ t.kCardH }}</h2><p class="calc-sub">{{ t.kCardP }}</p>
+        {{ m.calc(calc_price) }}
+      </section>
+      {% endif %}
+
+      <section class="block">
+        <h2>{{ t.dData }}</h2>
+        <dl class="table dtiles">
+          <div><dt>{{ t.ref }}</dt><dd>{{ l.ref }}</dd></div>
+          <div><dt>{{ t.dType }}</dt><dd>{{ t['t_' ~ l.type] }}</dd></div>
+          {% if l.lot %}<div><dt>{{ t.lotCap }}</dt><dd>{{ nf(l.lot) }} m²</dd></div>{% endif %}
+          {% if l.year %}<div><dt>{{ t.dYear }}</dt><dd>{{ l.year }}</dd></div>{% endif %}
+          <div><dt>{{ t.dCondo }}</dt><dd>{% if l.condo %}<span data-brl="{{ l.condo | int }}">{{ money(l.condo) }}</span>{{ t.perMonth }}{% else %}{{ t.none }}{% endif %}</dd></div>
+          {% if l.iptu %}<div><dt>{{ t.dIptu }}</dt><dd><span data-brl="{{ l.iptu | int }}">{{ money(l.iptu) }}</span>{{ t.perYear }}</dd></div>{% endif %}
+        </dl>
+      </section>
+
+      {% if l.video %}
+      <section class="block">
+        <h2>{{ t.dVideo }}</h2>
+        <a class="btn btn-line" href="{{ l.video }}" target="_blank" rel="noopener">{{ icon('play') }} {{ t.dVideoBtn }}</a>
+      </section>
+      {% endif %}
+      {% if l.plan %}
+      <section class="block">
+        <h2>{{ t.dPlan }}</h2>
+        <div class="split-media" style="aspect-ratio:auto">{{ pic(l.plan, '(min-width:1000px) 760px, 100vw', t.dPlan) }}</div>
+      </section>
+      {% endif %}
+
+      <section class="block" id="lage">
+        <h2>{{ t.dLoc }}</h2>
+        {% if l.lat %}
+        <div class="map map-s" data-map="area" data-lat="{{ l.lat }}" data-lng="{{ l.lng }}"><div class="map-ph">{{ t.mapLoad }}</div></div>
+        <p class="map-note">{{ icon('info') }}<span>{{ t.mapApprox }} <a href="https://www.google.com/maps/search/?api=1&query={{ l.lat }},{{ l.lng }}" target="_blank" rel="noopener" style="text-decoration:underline">{{ t.mapGoogle }}</a></span></p>
+        {% endif %}
+      </section>
+
+
+    </div>
+
+    <aside class="det-side" id="contato">
+      {{ m.answers() }}
+      <div class="agent">
+        <h2 style="font-size:1.25rem">{{ t.dContact }}</h2>
+        {{ m.agentbox() }}
+        <div class="btn-row">
+          <a class="btn btn-wa" style="flex:1" href="{{ wa(msg) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a>
+          <a class="btn btn-line" style="flex:1" href="tel:{{ site.phone | replace(' ', '') }}">{{ icon('phone') }} {{ t.call }}</a>
+        </div>
+        {{ m.inquiry(l.name ~ ' (' ~ l.ref ~ ')', msg ~ ' ' ~ t.fMsgVisit) }}
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% if similar %}
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>{{ t.simH }}</h2></div>
+      <a class="link" href="{{ url(catroute) }}">{{ t.seeAll }} {{ icon('arrow') }}</a>
+    </div>
+    <div class="rail">{% for x in similar %}{{ m.card(x, false, loop.index, '(min-width:1000px) 380px, (min-width:640px) 46vw, 84vw') }}{% endfor %}</div>
+  </div>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block after %}
+<div class="bar" data-bar>
+  <div class="bar-price"><b>{{ price(l) }}</b><span>{{ t.ref }} {{ l.ref }}</span></div>
+  <a class="btn btn-line bar-ico" href="#contato" aria-label="{{ t.inquire }}">{{ icon('mail') }}</a>
+  <a class="btn btn-wa" href="{{ wa(msg) }}" target="_blank" rel="noopener">{{ wa_icon() }} WhatsApp</a>
+</div>
+<div class="lb" data-lightbox role="dialog" aria-modal="true" aria-label="{{ t.allPhotos }}">
+  <div class="lb-top"><span><span data-lbpos>1</span> / {{ l.imgs | length }} · {{ l.name }}</span><button class="lb-x" type="button" data-lbclose aria-label="{{ t.close }}">{{ icon('close') }}</button></div>
+  <div class="lb-track" data-lbtrack>
+    {% for k in l.imgs %}<figure>{{ pic(k, '100vw', l.name ~ ' – ' ~ t.photo ~ ' ' ~ loop.index) }}</figure>{% endfor %}
+  </div>
+  <button class="lb-nav prev" type="button" data-lbstep="-1" aria-label="{{ t.prev }}">{{ icon('arrow') }}</button>
+  <button class="lb-nav next" type="button" data-lbstep="1" aria-label="{{ t.next }}">{{ icon('arrow') }}</button>
+</div>
+{% endblock %}

@@ -1,0 +1,171 @@
+{% import '_m.html' as m with context %}
+<!DOCTYPE html>
+<html lang="{{ hl }}" data-theme="{{ 'dark' if site.theme == 'dark' else 'light' }}">
+<head>
+<meta charset="utf-8">
+<script>addEventListener("pagereveal",function(){try{var s=JSON.parse(sessionStorage.getItem("langScroll")||"null");if(!s)return;var b="{{ base }}",p=location.pathname;if(p.indexOf(b)==0)p=p.slice(b.length);p=p.replace(/^(en|es|de)\//,"");if(s.p===p&&!location.hash){sessionStorage.removeItem("langScroll");scrollTo(0,s.y)}}catch(e){}})</script>
+<script type="speculationrules">{"prerender":[{"where":{"selector_matches":"[data-lang],[data-slide] a"},"eagerness":"eager"}],"prefetch":[{"where":{"href_matches":"{{ base }}*"},"eagerness":"moderate"}]}</script>
+
+<script>try{var q=new URLSearchParams(location.search).get("theme");if(q==="dark"||q==="light")localStorage.setItem("theme",q);var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+{% block first %}{% endblock %}
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{ title }}</title>
+<meta name="description" content="{{ desc }}">
+{% if noindex %}<meta name="robots" content="noindex">{% endif %}
+{% if canonical %}
+<link rel="canonical" href="{{ canonical }}">
+{% for h, u in alts %}
+<link rel="alternate" hreflang="{{ h }}" href="{{ u }}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ xdef }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.brandFull }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ desc }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ ogimg }}">
+<meta property="og:locale" content="{{ oglocale }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endif %}
+<meta name="theme-color" content="{{ '#172220' if site.theme == 'dark' else '#FFFFFF' }}">
+<link rel="preload" as="font" type="font/woff2" href="{{ base }}assets/open-sans-latin.woff2" crossorigin>
+{% block preload %}{% endblock %}
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230F3B37'/%3E%3Cpath d='M7 20c3-4 6-4 9 0s6 4 9 0M9 14l7-5 7 5' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="{{ css_file }}">
+{% if brandcss %}<style>{{ brandcss }}</style>{% endif %}
+<script type="application/ld+json">{{ ld }}</script>
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+<a class="sr" href="#main">{{ t.skip }}</a>
+<header class="head">
+  <div class="wrap head-in">
+    <a class="logo" href="{{ url('home') }}" aria-label="{{ site.brandFull }}">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c3-4 6-4 9 0s6 4 9 0M5 10l7-5 7 5"/></svg></span>
+      <span>{{ site.brandShort or site.brandFull }}</span>
+    </a>
+    <nav class="nav" aria-label="{{ t.menu }}">
+      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('comprar','navBuyGuideS'),('vender','navSellS'),('sobre','navAbout'),('contato','navContact')] %}
+      <a href="{{ url(r) }}"{% if route == r %} aria-current="page"{% endif %}>{{ t[k] }}</a>
+      {% endfor %}
+    </nav>
+    <div class="head-tools">
+      <div class="seg" role="group" aria-label="{{ t.currency }}">
+        {% for c, s in [('BRL','R$'),('USD','US$'),('EUR','€')] %}<button type="button" data-cur="{{ c }}" aria-pressed="{{ 'true' if c == 'BRL' else 'false' }}">{{ s }}</button>{% endfor %}
+      </div>
+      <div class="seg" role="group" aria-label="{{ t.language }}">
+        {% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}><span class="fl" aria-hidden="true">{{ FLG[lg] }}</span><span>{{ lg | upper }}</span></a>{% endfor %}
+      </div>
+      <a class="btn btn-wa btn-s" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">{{ wa_icon() }} <span class="wa-t">WhatsApp</span></a>
+    </div>
+    <div class="seg seg-m" role="group" aria-label="{{ t.language }}">{% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}><span class="fl" aria-hidden="true">{{ FLG[lg] }}</span><span class="sr">{{ lg | upper }}</span></a>{% endfor %}</div>
+    <button class="burger" type="button" data-open="menu" aria-label="{{ t.menu }}" aria-expanded="false">{{ icon('menu') }}</button>
+  </div>
+</header>
+
+<div class="sheet" id="menu" role="dialog" aria-modal="true" aria-label="{{ t.menu }}">
+  <div class="sheet-top">
+    <a class="logo" href="{{ url('home') }}"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c3-4 6-4 9 0s6 4 9 0M5 10l7-5 7 5"/></svg></span><span>{{ site.brandShort or site.brandFull }}</span></a>
+    <button class="burger" type="button" data-close="menu" aria-label="{{ t.close }}">{{ icon('close') }}</button>
+  </div>
+  <div class="sheet-body">
+    <nav class="sheet-nav">
+      {% for r, k in [('imoveis-venda','navBuy'),('imoveis-aluguel','navRent'),('comprar','navBuyGuide'),('vender','navSellS'),('sobre','navAbout'),('contato','navContact')] %}
+      <a href="{{ url(r) }}">{{ t[k] }}</a>
+      {% endfor %}
+    </nav>
+    <div class="sheet-row"><span>{{ t.language }}</span>
+      <div class="seg">{% for lg in langs %}<a href="{{ alt_url(lg) }}" hreflang="{{ lg }}" data-lang="{{ lg }}"{% if lg == lang %} aria-current="true"{% endif %}><span class="fl" aria-hidden="true">{{ FLG[lg] }}</span><span>{{ lg | upper }}</span></a>{% endfor %}</div>
+    </div>
+    <div class="sheet-row"><span>{{ t.currency }}</span>
+      <div class="seg">{% for c, s in [('BRL','R$'),('USD','US$'),('EUR','€')] %}<button type="button" data-cur="{{ c }}" aria-pressed="{{ 'true' if c == 'BRL' else 'false' }}">{{ s }}</button>{% endfor %}</div>
+    </div>
+    <div class="sheet-cta">
+      <a class="btn btn-wa btn-block" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.waWrite }}</a>
+      <a class="btn btn-line btn-block" href="tel:{{ site.phone | replace(' ', '') }}">{{ icon('phone') }} {{ site.phone }}</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a class="logo" href="{{ url('home') }}"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c3-4 6-4 9 0s6 4 9 0M5 10l7-5 7 5"/></svg></span><span>{{ site.brandShort or site.brandFull }}</span></a>
+        <p>{{ t.footAbout }}</p>
+        <ul class="foot-contact" style="margin-top:18px">
+          <li>{{ wa_icon() }}<a href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">WhatsApp {{ site.phone }}</a></li>
+          <li>{{ icon('mail') }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{{ icon('pin') }}<span>{{ site.address }}</span></li>
+          <li>{{ icon('clock') }}<span>{{ L(site.hours) }}</span></li>
+        </ul>
+        {% include '_social.html' %}
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h3>{{ t.footProps }}</h3>
+          <ul class="foot-links">
+            <li><a href="{{ url('imoveis-venda') }}">{{ t.navBuy }}</a></li>
+            <li><a href="{{ url('imoveis-aluguel') }}">{{ t.navRent }}</a></li>
+            <li><a href="{{ url('imoveis-terrenos') }}">{{ t.navLand }}</a></li>
+            <li><a href="{{ url('vender') }}">{{ t.navSell }}</a></li>
+            <li><a href="{{ url('comprar') }}">{{ t.navBuyGuide }}</a></li>
+            <li><a href="{{ url('comprar-do-exterior') }}">{{ pages['comprar-do-exterior'].nav[lang] }}</a></li>
+            <li><a href="{{ url('golpes') }}">{{ pages['golpes'].nav[lang] }}</a></li>
+            <li><a href="{{ url('calculadoras') }}">{{ pages['calculadoras'].nav[lang] }}</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>{{ t.footCompany }}</h3>
+          <ul class="foot-links">
+            <li><a href="{{ url('sobre') }}">{{ t.navAbout }}</a></li>
+            <li><a href="{{ url('blog') }}">{{ t.navGuide }}</a></li>
+            <li><a href="{{ url('contato') }}">{{ t.navContact }}</a></li>
+          </ul>
+        </div>
+        <div class="foot-areas">
+          <h3>{{ t.footAreas }}</h3>
+          <ul class="foot-links">
+            {% for x in locs %}<li><a href="{{ url('imoveis') }}?loc={{ x.slug }}">{{ x.name }}</a></li>{% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="news">
+        <b>{{ t.newsH }}</b>
+        <p>{{ t.newsP }}</p>
+        <form data-form="news" novalidate>
+          <label class="sr" for="news-mail">{{ t.fEmail }}</label>
+          <input class="inp" id="news-mail" type="email" name="email" placeholder="{{ t.fEmailPh }}" autocomplete="email" required>
+          <button class="btn btn-light btn-block" type="submit">{{ t.newsBtn }}</button>
+          <p class="form-msg" role="status"></p>
+          <p class="form-note">{{ t.newsNote }} <a href="{{ url('privacidade') }}">{{ t.privH }}</a>.</p>
+        </form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© {{ year }} {{ site.brandFull }}</span>
+      {% if site.agent.creci %}<span>{{ site.agent.creci }}</span>{% endif %}
+      <a href="{{ url('verificada') }}">{{ t.slSeal }}</a>
+      <a href="{{ url('privacidade') }}">{{ t.privH }}</a>
+      {% if site.brokerUrl %}<a class="sp" href="{{ site.brokerUrl }}" target="_blank" rel="noopener nofollow">{{ t.brokerArea }}</a>{% endif %}
+    </div>
+  </div>
+  {% if demo %}<div class="demo-note">{{ t.demoFoot }}</div>{% endif %}
+</footer>
+
+{% block after %}{% endblock %}
+<button class="fav-pill" type="button" data-fav-open hidden>{{ icon('heart') }}<span data-fav-n>0</span></button>
+<a class="wa-fab" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener" aria-label="{{ t.waWrite }}">{{ wa_icon('') }}</a>
+<div class="fav-sheet" data-fav-sheet hidden role="dialog" aria-label="{{ t.mlH }}"><div class="fav-in"><div class="fav-top"><h2>{{ t.mlH }}</h2><button type="button" class="link" data-fav-close>{{ t.mlClose }}</button></div><div data-fav-list></div><p class="form-note">{{ t.mlNote }}</p><a class="btn btn-wa btn-block" data-fav-wa href="#" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.mlSend }}</a></div></div>
+<div class="consent" id="consent" role="dialog" aria-label="{{ t.consentH }}">
+  <p><b>{{ t.consentH }}</b><br>{{ t.consentP }} <a href="{{ url('privacidade') }}" style="text-decoration:underline">{{ t.privH }}</a></p>
+  <div class="btn-row"><button class="btn btn-primary btn-s" type="button" data-consent="yes">{{ t.consentYes }}</button><button class="btn btn-line btn-s" type="button" data-consent="no">{{ t.consentNo }}</button></div>
+</div>
+<script>window.SITE={{ {'base': base, 'lang': lang, 'wa': site.wa, 'fx': site.fx, 'contactUrl': site.contactUrl, 'newsletterUrl': site.newsletterUrl, 'gaId': site.gaId, 'rate': site.rate, 'buyCosts': site.buyCosts, 'geo': site.geo, 'taxes': taxes, 'ap': paises.apostille, 'cc': paises.all, 'uploadUrl': site.uploadUrl, 'v': v2,
+ 't': {'onReq': t.priceOnReq, 'perMonth': t.perMonth, 'sent': t.fSent, 'sendErr': t.fErr, 'newsOk': t.newsOk, 'newsDemo': t.newsDemo, 'copied': t.copied, 'years': t.years, 'mapLoad': t.mapLoad, 'office': t.office, 'waForm': t.waForm, 'fName': t.fName, 'fPhone': t.fPhone, 'fEmail': t.fEmail, 'fSubject': t.fSubject, 'mi': t.mi, 'mil': t.mil, 'required': t.fRequired, 'waOpen': t.waOpen, 'emailBad': t.fEmailBad, 'cbOpen': t.cbOpen, 'cbNotEx': t.cbExS, 'cbNotOpen': t.cbNotOpen, 'chkDone': t.chkDone}} | tojson_safe }}</script>
+<script defer src="{{ js_file }}"></script>
+</body>
+</html>

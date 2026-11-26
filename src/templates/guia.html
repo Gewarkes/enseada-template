@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="wrap">
+  <ol class="crumbs"><li><a href="{{ url('home') }}">{{ t.navHome }}</a></li>{% if route != 'comprar' and route not in ('vender','calculadoras') %}<li><a href="{{ url('comprar') }}">{{ t.navBuyGuide }}</a></li>{% endif %}<li aria-current="page">{{ L(pg.nav) }}</li></ol>
+</div>
+<section class="sec-tight">
+  <div class="wrap guide">
+    <h1>{{ L(pg.h1) }}</h1>
+    <p class="prose-lead">{{ L(pg.lead) }}</p>
+    {% if route != 'vender' %}<p class="g-stand">{{ t.gStand }} {{ pg.stand }}</p>{% endif %}
+    {% for b in pg.blocks %}
+    {% if route == 'vender' and loop.index0 == 5 %}<details class="fold"><summary>{{ L(b.x) }}</summary>
+    {% elif b.t == 'h2' %}<h2 class="g-h2">{{ L(b.x) }}</h2>
+    {% elif b.t == 'p' %}<p class="g-p">{{ L(b.x) }}</p>
+    {% elif b.t == 'ul' %}<ul class="g-ul">{% for i in b.x %}<li>{{ L(i) }}</li>{% endfor %}</ul>
+    {% elif b.t == 'steps' %}
+    <ol class="steps col">{% for s in b.x %}<li class="step"><h3>{{ L(s.h) }}</h3><p>{{ L(s.p) }}</p>{% if s.n %}<p class="g-unclear">{{ icon('info') }}<span>{{ L(s.n) }}</span></p>{% endif %}</li>{% endfor %}</ol>
+    {% elif b.t == 'note' %}<div class="note note-{{ b.k }}">{{ icon('info') }}<p><b>{{ t['n' ~ b.k[0]|upper ~ b.k[1:]] }}:</b> {{ L(b.x) }}</p></div>
+    {% elif b.t == 'table' %}
+    <div class="g-table-w"><table class="g-table"><thead><tr>{% for h in b.head %}<th>{{ L(h) }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for r in b.rows %}<tr>{% for cell in r %}<td{% if loop.first %} class="g-first"{% else %} data-l="{{ L(b.head[loop.index0]) }}"{% endif %}>{{ L(cell) }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div>
+    {% elif b.t == 'cards' %}
+    <div class="gcards">{% for cd in b.x %}<a class="gcard" href="{{ url(cd.url) }}">{{ icon(cd.icon) }}<b>{{ L(cd.h) }}</b><span>{{ L(cd.p) }}</span></a>{% endfor %}</div>
+    {% elif b.t == 'check' %}
+    <div class="chk" data-chk data-title="{{ L(b.h) }}">
+      <h3>{{ L(b.h) }}</h3>
+      <ul>{% for i in b.x %}<li><label><input type="checkbox"><span>{{ L(i) }}</span></label></li>{% endfor %}</ul>
+      <p class="chk-n"><span data-chk-n>0</span>/{{ b.x | length }} {{ t.chkDone }}</p>
+      <button class="btn btn-wa" type="button" data-chk-wa>{{ wa_icon() }} {{ t.chkWa }}</button>
+    </div>
+    {% elif b.t == 'faq' %}
+    <div class="faq">{% for i in b.x %}<details><summary>{{ L(i.q) }}</summary><p>{{ L(i.a) }}</p></details>{% endfor %}</div>
+    {% elif b.t == 'wa' %}
+    <div class="btn-row" style="margin-top:26px"><a class="btn btn-wa" href="{{ wa(L(b.m)) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ L(b.b) }}</a></div>
+    {% elif b.t == 'seal' %}
+    <div class="seal-card">
+      <div class="seal-big">{{ icon('shield') }}<b>{{ t.slSeal }}</b></div>
+      <dl>
+        <div><dt>{{ t.slName }}</dt><dd>{{ site.agent.name }}</dd></div>
+        {% if site.agent.creci %}<div><dt>{{ t.slNum }}</dt><dd>{{ site.agent.creci }}</dd></div>{% endif %}
+        <div><dt>{{ t.slStatus }}</dt><dd>{{ t.slActive }}</dd></div>
+        <div><dt>{{ t.slDate }}</dt><dd>{{ fdate(site.agent.verifiedAt) if site.agent.verifiedAt else '–' }}</dd></div>
+      </dl>
+      <a class="btn btn-line" href="{{ site.agent.creciUrl }}" target="_blank" rel="noopener">{{ t.slOpen }}</a>
+      {% if site.demoNote %}<p class="g-unclear">{{ icon('info') }}<span>{{ t.slDemo }}</span></p>{% endif %}
+    </div>
+    {% elif b.t == 'timeline' %}
+    <ol class="tl">{% for s in b.x %}<li class="tl-i"><span class="tl-n">{{ loop.index }}</span><div class="tl-b"><h3>{{ L(s.h) }}</h3><p>{{ L(s.p) }}</p><span class="tl-d">{{ icon('clock') }}{{ L(s.d) }}</span></div></li>
+    {% endfor %}</ol>
+    {% elif b.t == 'kp' %}
+    <div class="kp"><h2 class="g-h2" style="margin-top:0">{{ t.kpH }}</h2><p class="g-p">{{ t.kpP }}</p>
+      <ul class="hl">{% for k in ['kp1','kp2','kp3','kp4'] %}<li>{{ icon('check') }}<span>{{ t[k] }}</span></li>
+    {% endfor %}</ul>
+      <p class="g-unclear">{{ icon('info') }}<span>{{ t.kp4n }}</span></p>
+      <div class="btn-row"><a class="btn btn-line" href="{{ url('traducao') }}">{{ pages['traducao'].nav[lang] }}</a><a class="btn btn-line" href="{{ url('residencia') }}">{{ pages['residencia'].nav[lang] }}</a></div></div>
+    {% elif b.t == 'widget' %}
+      {% if b.x == 'buycosts' %}
+      <div class="calc" data-w="buycosts">
+        <div class="calc-box">
+          <label>{{ t.cbPrice }}<input class="inp" data-i="price" inputmode="numeric" value="1000000"></label>
+          <label>{{ t.cbItiv }}<input class="inp" data-i="itiv" inputmode="decimal" value="{{ nf(taxes.itiv.default, 1) }}"></label>
+          <label>{{ t.cbDocs }}<input class="inp" data-i="docs" inputmode="numeric" value="3"></label>
+          <label>{{ t.cbReg }}<input class="inp" data-i="reg" inputmode="numeric" placeholder="0"></label>
+          <label>{{ t.cbLaw }}<input class="inp" data-i="law" inputmode="numeric" placeholder="0"></label>
+        </div>
+        <div class="calc-res">
+          <div><small>{{ t.cbRes }}</small><div class="calc-big" data-o="total"></div></div>
+          <div class="calc-grid" style="grid-template-columns:1fr">
+            <div><small>{{ t.cbItivL }}</small><b data-o="itiv"></b></div>
+            <div><small>{{ t.cbIofL }}</small><b data-o="iof"></b></div>
+            <div><small>{{ t.cbTrL }}</small><b data-o="tr"></b></div>
+            <div><small>{{ t.cbNotL }}</small><b data-o="not"></b></div>
+          </div>
+          <p class="calc-note"><b>{{ t.cbSrc }}:</b> {{ t.cbSrcTxt }}</p>
+        </div>
+      </div>
+      {% elif b.x == 'gains' %}
+      <div class="calc" data-w="gains">
+        <div class="calc-box">
+          <label>{{ t.gnSale }}<input class="inp" data-i="sale" inputmode="numeric" value="1000000"></label>
+          <label>{{ t.gnBuy }}<input class="inp" data-i="buy" inputmode="numeric" value="700000"></label>
+          <label>{{ t.gnWho }}<select class="inp" data-i="who"><option value="res">{{ t.gnRes }}</option><option value="non">{{ t.gnNon }}</option></select></label>
+        </div>
+        <div class="calc-res">
+          <div><small>{{ t.gnTax }}</small><div class="calc-big" data-o="tax"></div></div>
+          <div class="calc-grid"><div><small>{{ t.gnGain }}</small><b data-o="gain"></b></div><div><small>{{ t.gnNet }}</small><b data-o="net"></b></div></div>
+          <p class="calc-note">{{ t.gnNote }}</p>
+        </div>
+      </div>
+      {% elif b.x == 'countrypick' %}
+      <div class="cp" data-cp>
+        <h3 class="cp-h">{{ t.cpH }}</h3><p class="g-p">{{ t.cpP }}</p>
+        <label class="cp-l">{{ t.cpSel }}<select class="inp cp-sel" data-cp-sel><option value="">{{ t.cpSel }}</option></select></label>
+        <div class="cp-br" data-cp-br hidden>
+          <label class="cp-l">{{ t.cpState }}<select class="inp" data-cp-state></select></label>
+          <label class="cp-l">{{ t.cpCity }}<input class="inp" data-cp-city autocomplete="address-level2"></label>
+        </div>
+        <div class="cp-out" data-cp-out aria-live="polite"></div>
+        <a class="btn btn-wa cp-wa" data-cp-wa href="#" target="_blank" rel="noopener" hidden>{{ wa_icon() }} {{ t.cpSend }}</a>
+      </div>
+      {% elif b.x == 'sellupload' %}
+      <form class="form sellup" data-sellup novalidate>
+        <label>{{ t.fName }}<input class="inp" name="name" autocomplete="name" required></label>
+        <label>{{ t.fPhone }}<input class="inp" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+55 84 9XXXX-XXXX" required></label>
+        <label>{{ t.suWhere }}<input class="inp" name="where" placeholder="Pipa, Tibau do Sul, Sibaúma …"></label>
+        <details class="su-opt"><summary>{{ t.suOpt }}</summary>
+        <label class="up"><input type="file" name="photos" accept="image/*" multiple data-up><span class="up-b">{{ icon('camera') }}<b>{{ t.suPhotos }}</b></span><span class="up-n" data-up-n></span></label>
+        <label class="up"><input type="file" name="docs" accept="image/*,application/pdf" multiple data-up><span class="up-b">{{ icon('doc') }}<b>{{ t.suDocs }}</b></span><span class="up-n" data-up-n></span></label>
+        <div class="su-2"><label>{{ t.suSize }}<input class="inp" name="size" inputmode="numeric"></label><label>{{ t.suPrice }}<input class="inp" name="price" inputmode="numeric"></label></div></details>
+        <button class="btn btn-primary btn-block" type="submit">{{ t.suSend }}</button>
+        <p class="su-or">{{ t.suOr }}</p>
+        <a class="btn btn-wa btn-block" href="{{ wa(t.suWaMsg) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.suWa }}</a>
+        <p class="form-note">{{ t.suPriv }}</p>
+        <p class="form-msg" role="status"></p>
+      </form>
+      {% elif b.x == 'sellform' %}
+      <form class="form sellform" data-form="contact" data-subject="{{ t.navSell }}" novalidate>
+        <label>{{ t.fName }}<input class="inp" name="name" autocomplete="name" required></label>
+        <label>{{ t.fPhone }}<input class="inp" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <label>{{ t.sfWhere }}<textarea class="inp" name="message" rows="3"></textarea></label>
+        <button class="btn btn-primary btn-block" type="submit">{{ t.sfSend }}</button>
+        <p class="form-msg" role="status"></p>
+      </form>
+      {% endif %}
+    {% endif %}
+    {% if route == 'vender' and loop.last %}</details>{% endif %}
+    {% endfor %}
+    {% if pg.sources %}
+    <h2 class="g-h2">{{ t.gSources }}</h2>
+    <ul class="g-ul g-src">{% for s in pg.sources %}<li>{% set _s = s[0] | replace(' (link exato da consulta: não confirmado)', '') %}{% if lang == 'en' %}{{ _s | replace('consulta em', 'accessed on') | replace('consulta pública de corretores', 'public broker register') | replace('Guias de cartório e portais', 'Registry guides and portals') | replace('terrenos de marinha', 'marinha land') }}{% elif lang == 'es' %}{{ _s | replace('consulta em', 'consultado el') | replace('consulta pública de corretores', 'consulta pública de corredores') | replace('Guias de cartório e portais', 'Guías de notaría y portales') | replace('terrenos de marinha', 'terrenos de marina') }}{% elif lang == 'de' %}{{ _s | replace('consulta em', 'abgerufen am') | replace('consulta pública de corretores', 'öffentliche Maklersuche') | replace('Guias de cartório e portais', 'Notariats-Leitfäden und Portale') | replace('terrenos de marinha', 'Küstengrundstücke der Union (terrenos de marinha)') }}{% else %}{{ _s }}{% endif %}</li>{% endfor %}</ul>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

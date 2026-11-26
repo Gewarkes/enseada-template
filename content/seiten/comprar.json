@@ -1,0 +1,526 @@
+{
+ "slug": "comprar",
+ "nav": {
+  "pt": "Guia de compra",
+  "en": "Buying guide",
+  "es": "Guía de compra",
+  "de": "Kaufratgeber"
+ },
+ "h1": {
+  "pt": "Comprar imóvel em Pipa: passo a passo",
+  "en": "Buying property in Pipa: step by step",
+  "es": "Comprar una propiedad en Pipa: paso a paso",
+  "de": "Immobilie in Pipa kaufen: Schritt für Schritt"
+ },
+ "lead": {
+  "pt": "Do primeiro contato às chaves, em passos simples. Você sabe o que fazer em cada um.",
+  "en": "From first contact to the keys, in plain language.",
+  "es": "Del primer contacto a las llaves, en lenguaje simple.",
+  "de": "Vom ersten Kontakt bis zu den Schlüsseln, in einfachen Schritten. Bei jedem Schritt weißt du, was zu tun ist."
+ },
+ "meta": {
+  "pt": "Guia de compra de imóvel no Brasil para brasileiros e estrangeiros: etapas, custos, documentos, residência e compra segura.",
+  "en": "Guide to buying property in Brazil for locals and foreigners: steps, costs, documents, residency and safe buying.",
+  "es": "Guía para comprar una propiedad en Brasil, para brasileños y extranjeros: pasos, costos, documentos, residencia y compra segura.",
+  "de": "Ratgeber zum Immobilienkauf in Brasilien für Brasilianer und Ausländer: Schritte, Kosten, Unterlagen, Aufenthaltstitel und sicherer Kauf."
+ },
+ "stand": "17.11.2026",
+ "blocks": [
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Seu caminho em 7 passos",
+    "en": "Your path in 7 steps",
+    "es": "Tu camino en 7 pasos",
+    "de": "Dein Weg in 7 Schritten"
+   }
+  },
+  {
+   "t": "timeline",
+   "x": [
+    {
+     "h": {
+      "pt": "1. Escolher o imóvel e fazer a proposta",
+      "en": "Choose the property and make an offer",
+      "es": "Elegir la propiedad y hacer la oferta",
+      "de": "Immobilie auswählen und Angebot machen"
+     },
+     "p": {
+      "pt": "Veja fotos e visite o imóvel. Gostou? Faça a proposta por escrito: preço, forma de pagamento e prazos. Ainda não pague nada.",
+      "en": "Browse photos and visit the property (by video if you are far away). If you like it, make a written offer: price, payment terms and deadlines. Do not pay anything yet.",
+      "es": "Mira fotos y visita la propiedad (por video si estás lejos). Si te gusta, haz una oferta por escrito: precio, forma de pago y plazos. Todavía no pagues nada.",
+      "de": "Sieh dir Fotos an und besichtige die Immobilie (aus der Ferne per Video). Gefällt sie dir, mach ein schriftliches Angebot: Preis, Zahlungsweise und Fristen. Zahle noch nichts."
+     },
+     "d": {
+      "pt": "você decide",
+      "en": "up to you",
+      "es": "depende de ti",
+      "de": "du entscheidest"
+     }
+    },
+    {
+     "h": {
+      "pt": "2. Conferir os documentos",
+      "en": "Check the documents",
+      "es": "Revisar los documentos",
+      "de": "Unterlagen prüfen"
+     },
+     "p": {
+      "pt": "Com a proposta aceita, peça a matrícula atualizada (registro oficial do imóvel) e as certidões do vendedor e do imóvel. Seu advogado confere dívidas, penhoras, IPTU e condomínio. Só siga em frente se estiver tudo limpo.",
+      "en": "Once your offer is accepted, ask for the current matrícula (the official property record) and the certidões (certificates) for the seller and the property. Your lawyer checks debts, liens, IPTU and condominium fees. Move on only if everything is in order.",
+      "es": "Con la oferta aceptada, pide la matrícula actualizada (el registro oficial de la propiedad) y las certidões (certificados) del vendedor y del inmueble. Tu abogado verifica deudas, embargos, IPTU y condominio. Sigue solo si todo está limpio.",
+      "de": "Ist dein Angebot angenommen, fordere den aktuellen Grundbuchauszug (Matrícula) und die Certidões (Bescheinigungen) zu Verkäufer und Objekt an. Dein Anwalt prüft Schulden, Pfändungen, IPTU und Hausgeld. Mach nur weiter, wenn alles sauber ist."
+     },
+     "d": {
+      "pt": "1 a 3 semanas (referência)",
+      "en": "1 to 3 weeks (reference)",
+      "es": "1 a 3 semanas (referencia)",
+      "de": "1 bis 3 Wochen (Richtwert)"
+     }
+    },
+    {
+     "h": {
+      "pt": "3. Contrato preliminar e sinal",
+      "en": "Preliminary contract and deposit",
+      "es": "Contrato preliminar y seña",
+      "de": "Vorvertrag und Sinal"
+     },
+     "p": {
+      "pt": "Documentos em ordem? Então assine o contrato preliminar e pague o sinal (entrada que garante o negócio). Seu advogado lê o contrato antes. Se precisar fechar antes da conferência, inclua no contrato: “pagamento só após a conferência positiva”.",
+      "en": "Documents in order? Then sign the preliminary contract and pay the sinal (a deposit that secures the deal). Your lawyer reads the contract first. If you must sign before the check is done, write into the contract: “payment only after a positive document check”.",
+      "es": "¿Documentos en orden? Entonces firma el contrato preliminar y paga la seña (anticipo que asegura el negocio). Antes, tu abogado revisa el contrato. Si tienes que firmar antes de la revisión, escribe en el contrato: “pago solo tras una revisión positiva”.",
+      "de": "Unterlagen in Ordnung? Dann unterschreibe den Vorvertrag und zahle das Sinal (Anzahlung, die das Geschäft sichert). Dein Anwalt liest den Vertrag vorher. Musst du vor der Prüfung unterschreiben, schreibe in den Vertrag: „Zahlung erst nach positiver Prüfung“."
+     },
+     "d": {
+      "pt": "alguns dias",
+      "en": "a few days",
+      "es": "unos días",
+      "de": "einige Tage"
+     }
+    },
+    {
+     "h": {
+      "pt": "4. Pagar o ITBI",
+      "en": "Pay the ITBI (transfer tax)",
+      "es": "Pagar el ITBI",
+      "de": "Die ITBI zahlen"
+     },
+     "p": {
+      "pt": "O ITBI é o imposto da prefeitura sobre a compra. Peça a guia na prefeitura e pague antes da escritura. O percentual varia por município (em geral entre 2 e 4%). Confirme o valor na prefeitura.",
+      "en": "ITBI is the municipal transfer tax on the purchase. You pay it before the escritura. The rate varies by municipality (generally 2% to 4%); confirm with the town hall.",
+      "es": "El ITBI es el impuesto municipal sobre la compra. Se paga antes de la escritura. El porcentaje varía según el municipio (en general entre 2 y 4 %); confírmalo en la municipalidad (prefeitura).",
+      "de": "Die ITBI ist die städtische Grunderwerbsteuer. Du zahlst sie vor der Escritura. Der Satz hängt von der Gemeinde ab (meist 2 bis 4 %); lass ihn dir bei der Prefeitura bestätigen."
+     },
+     "d": {
+      "pt": "alguns dias",
+      "en": "a few days",
+      "es": "unos días",
+      "de": "einige Tage"
+     }
+    },
+    {
+     "h": {
+      "pt": "5. Assinar a escritura",
+      "en": "Sign the deed",
+      "es": "Firmar la escritura",
+      "de": "Kaufurkunde unterschreiben"
+     },
+     "p": {
+      "pt": "No cartório de notas vocês assinam a escritura (o documento oficial da venda). Leve RG e CPF. Aqui você paga o saldo e, se financiar, o banco libera o dinheiro.",
+      "en": "At the cartório (notary office) you sign the escritura (the official sale deed) and pay the balance.",
+      "es": "En la notaría (cartório de notas), tú y el vendedor firman la escritura (el documento oficial de la venta). Aquí pagas el saldo.",
+      "de": "Im Cartório (Notariat) unterschreibt ihr die Escritura (die offizielle Kaufurkunde). Hier zahlst du den Restbetrag."
+     },
+     "d": {
+      "pt": "1 dia",
+      "en": "1 day",
+      "es": "1 día",
+      "de": "1 Tag"
+     }
+    },
+    {
+     "h": {
+      "pt": "6. Registrar no seu nome",
+      "en": "Register in your name",
+      "es": "Registrar a tu nombre",
+      "de": "Auf deinen Namen eintragen"
+     },
+     "p": {
+      "pt": "Leve a escritura ao Registro de Imóveis e peça o registro. Só depois dele o imóvel é legalmente seu. Peça a matrícula nova com seu nome.",
+      "en": "The Registro de Imóveis (property registry) puts the property in your name. Only then is it legally yours.",
+      "es": "El Registro de la Propiedad inscribe la propiedad a tu nombre. Solo entonces es tuya legalmente.",
+      "de": "Das Registro de Imóveis (Grundbuchamt) trägt die Immobilie auf deinen Namen ein. Erst dann gehört sie dir rechtlich."
+     },
+     "d": {
+      "pt": "algumas semanas",
+      "en": "a few weeks",
+      "es": "algunas semanas",
+      "de": "einige Wochen"
+     }
+    },
+    {
+     "h": {
+      "pt": "7. Receber as chaves",
+      "en": "Get the keys",
+      "es": "Recibir las llaves",
+      "de": "Schlüssel erhalten"
+     },
+     "p": {
+      "pt": "Passe as contas (água, luz, condomínio, IPTU) para o seu nome.",
+      "en": "Move the utility bills (water, electricity), condominium fees and IPTU (property tax) into your name.",
+      "es": "Cambia a tu nombre las cuentas (agua, luz, condominio).",
+      "de": "Stell die Rechnungen (Wasser, Strom, Hausgeld, IPTU) auf deinen Namen um."
+     },
+     "d": {
+      "pt": "pronto",
+      "en": "done",
+      "es": "listo",
+      "de": "fertig"
+     }
+    }
+   ]
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "À vista, imóvel usado: cerca de 60 a 90 dias. Os prazos variam por cartório. Com financiamento, conte com mais tempo (veja Caminhos de compra).",
+    "en": "Cash purchase of a resale property: about 60 to 90 days. Times vary by cartório. Brazilian buyers living in Brazil can also finance the purchase (see Ways to buy). If you live abroad, see the guide “Buying from abroad”.",
+    "es": "Compra al contado, propiedad usada: unos 60 a 90 días. Los plazos varían según la notaría. Quien vive en Brasil también puede financiar (ver Caminos de compra). Si vives en el exterior, mira la guía “Comprar desde el exterior”.",
+    "de": "Barkauf, gebrauchte Immobilie: etwa 60 bis 90 Tage. Die Fristen sind je nach Cartório verschieden. Wer in Brasilien lebt, kann auch finanzieren (siehe Kaufwege). Wohnst du im Ausland, hilft dir der Leitfaden „Aus dem Ausland kaufen“."
+   }
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Quanto custa além do preço?",
+    "en": "What costs come on top of the price?",
+    "es": "¿Qué costos hay además del precio?",
+    "de": "Welche Kosten kommen zum Preis dazu?"
+   }
+  },
+  {
+   "t": "check",
+   "h": {
+    "pt": "Custos de compra (valores variam; confirme cada um)",
+    "en": "Closing costs (amounts vary; confirm each one)",
+    "es": "Costos de compra (los valores varían; confirma cada uno)",
+    "de": "Kaufnebenkosten (Beträge variieren; jeweils einzeln bestätigen lassen)"
+   },
+   "x": [
+    {
+     "pt": "ITBI: imposto da prefeitura, em geral entre 2 e 4% do valor",
+     "en": "ITBI: municipal tax, generally 2% to 4% of the value",
+     "es": "ITBI: impuesto municipal, en general entre 2 y 4 % del valor",
+     "de": "ITBI: städtische Grunderwerbsteuer, meist 2 bis 4 % des Wertes"
+    },
+    {
+     "pt": "Escritura (cartório de notas): taxa conforme tabela do estado",
+     "en": "Escritura (notary): fee set by the state fee table",
+     "es": "Escritura (notaría): tasa según la tabla del estado",
+     "de": "Escritura (Notariat): Gebühr nach der Gebührentabelle des Bundesstaates"
+    },
+    {
+     "pt": "Registro de Imóveis: taxa conforme tabela do estado",
+     "en": "Registro de Imóveis: fee set by the state fee table",
+     "es": "Registro de la Propiedad: tasa según la tabla del estado",
+     "de": "Registro de Imóveis: Gebühr nach der Gebührentabelle des Bundesstaates"
+    },
+    {
+     "pt": "Certidões e matrícula atualizada: valores pequenos, pagos por documento",
+     "en": "Certidões and current matrícula: small fees, paid per document",
+     "es": "Certificados (certidões) y matrícula actualizada: valores pequeños, se pagan por documento",
+     "de": "Certidões und aktuelle Matrícula: kleine Beträge, pro Dokument"
+    },
+    {
+     "pt": "Advogado e, se financiar, avaliação do imóvel e taxas do banco",
+     "en": "Lawyer and, if financing, property appraisal and bank fees",
+     "es": "Abogado y, si financias, tasación del inmueble y tarifas del banco",
+     "de": "Anwalt und, bei Finanzierung, Bewertung der Immobilie und Bankgebühren"
+    }
+   ]
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Quer o valor em reais? Use a página de custos. Taxas de cartório e de banco mudam; peça o valor exato antes de assinar.",
+    "en": "Want the amount in reais? Use the costs page. Notary and bank fees change; ask for the exact amount before signing.",
+    "es": "¿Quieres el valor en reales? Usa la página de costos. Las tasas de la notaría y del banco cambian; pide el valor exacto antes de firmar.",
+    "de": "Willst du den Betrag in Reais? Nutze die Kostenseite. Notar- und Bankgebühren ändern sich; lass dir den genauen Betrag vor der Unterschrift nennen."
+   }
+  },
+  {
+   "t": "check",
+   "h": {
+    "pt": "Documentos que você leva (morando no Brasil)",
+    "en": "Documents to bring (if you live in Brazil)",
+    "es": "Documentos que llevas (si vives en Brasil)",
+    "de": "Unterlagen, die du mitbringst (wenn du in Brasilien wohnst)"
+   },
+   "x": [
+    {
+     "pt": "RG ou CNH e CPF",
+     "en": "ID (RG or CNH) and CPF",
+     "es": "RG o CNH y CPF",
+     "de": "Ausweis (RG oder CNH) und CPF"
+    },
+    {
+     "pt": "Certidão de casamento ou nascimento (estado civil)",
+     "en": "Marriage or birth certificate (civil status)",
+     "es": "Certificado de matrimonio o nacimiento (estado civil)",
+     "de": "Heirats- oder Geburtsurkunde (Familienstand)"
+    },
+    {
+     "pt": "Comprovante de residência",
+     "en": "Proof of address",
+     "es": "Comprobante de domicilio",
+     "de": "Wohnsitznachweis"
+    },
+    {
+     "pt": "Comprovante de renda, se for financiar",
+     "en": "Proof of income, if you finance",
+     "es": "Comprobante de ingresos, si financias",
+     "de": "Einkommensnachweis, falls du finanzierst"
+    },
+    {
+     "pt": "Extrato do FGTS, se quiser usar o saldo (regras: confirme com o banco)",
+     "en": "FGTS statement, if you want to use the balance (rules: confirm with the bank)",
+     "es": "Extracto del FGTS, si quieres usar el saldo (reglas: confirma con el banco)",
+     "de": "FGTS-Auszug, falls du das Guthaben nutzen willst (Regeln: bei der Bank prüfen)"
+    }
+   ]
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "De onde você vem?",
+    "en": "Where are you from?",
+    "es": "¿De dónde vienes?",
+    "de": "Woher kommst du?"
+   }
+  },
+  {
+   "t": "widget",
+   "x": "countrypick"
+  },
+  {
+   "t": "kp"
+  },
+  {
+   "t": "cards",
+   "x": [
+    {
+     "h": {
+      "pt": "Moro no exterior",
+      "en": "I live abroad",
+      "es": "Vivo en el exterior",
+      "de": "Ich wohne im Ausland"
+     },
+     "p": {
+      "pt": "As 12 etapas e a lista de documentos.",
+      "en": "The 12 steps and the document checklist.",
+      "es": "Los 12 pasos y la lista de documentos.",
+      "de": "Die 12 Schritte und die Dokumentenliste."
+     },
+     "url": "comprar-do-exterior",
+     "icon": "globe"
+    },
+    {
+     "h": {
+      "pt": "Moro no Brasil",
+      "en": "I live in Brazil",
+      "es": "Vivo en Brasil",
+      "de": "Ich wohne in Brasilien"
+     },
+     "p": {
+      "pt": "À vista, na planta ou financiado: como cada caminho funciona.",
+      "en": "Cash, off-plan or financed: how each path works.",
+      "es": "Al contado, sobre planos o financiada: cómo funciona cada camino.",
+      "de": "Bar, als Neubau vom Bauträger oder finanziert: So läuft jeder Weg."
+     },
+     "url": "caminhos",
+     "icon": "home"
+    },
+    {
+     "h": {
+      "pt": "Quanto custa?",
+      "en": "What does it cost?",
+      "es": "¿Cuánto cuesta?",
+      "de": "Was kostet es?"
+     },
+     "p": {
+      "pt": "Custos de compra e imposto sobre o ganho, com exemplo em reais.",
+      "en": "Closing costs and capital gains tax, with an example in reais.",
+      "es": "Costos de compra e impuesto sobre la ganancia, con ejemplo en reales.",
+      "de": "Kaufkosten und Steuer auf den Gewinn, mit Beispiel in Reais."
+     },
+     "url": "calculadoras",
+     "icon": "tag"
+    },
+    {
+     "h": {
+      "pt": "Compra segura",
+      "en": "Safe buying",
+      "es": "Compra segura",
+      "de": "Sicher kaufen"
+     },
+     "p": {
+      "pt": "Como reconhecer uma oferta séria, com lista de conferência.",
+      "en": "How to spot a legitimate offer, with a checklist.",
+      "es": "Cómo reconocer una oferta seria, con lista de verificación.",
+      "de": "So erkennst du ein seriöses Angebot, mit Checkliste."
+     },
+     "url": "golpes",
+     "icon": "shield"
+    },
+    {
+     "h": {
+      "pt": "Residência ao comprar",
+      "en": "Residency through a purchase",
+      "es": "Residencia al comprar",
+      "de": "Aufenthaltstitel durch den Kauf"
+     },
+     "p": {
+      "pt": "A partir de que valor a compra permite pedir residência.",
+      "en": "The minimum purchase amount that lets you apply for residency.",
+      "es": "Desde qué valor la compra permite pedir residencia.",
+      "de": "Ab welchem Wert der Kauf einen Antrag auf einen Aufenthaltstitel erlaubt."
+     },
+     "url": "residencia",
+     "icon": "user"
+    },
+    {
+     "h": {
+      "pt": "Tradução juramentada",
+      "en": "Sworn translation",
+      "es": "Traducción jurada",
+      "de": "Beeidigte Übersetzung"
+     },
+     "p": {
+      "pt": "Seus documentos em português, prontos para o cartório.",
+      "en": "Your documents in Portuguese, ready for the notary.",
+      "es": "Tus documentos en portugués, listos para la notaría.",
+      "de": "Deine Dokumente auf Portugiesisch, bereit fürs Cartório."
+     },
+     "url": "traducao",
+     "icon": "doc"
+    }
+   ]
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Perguntas frequentes",
+    "en": "Frequently asked questions",
+    "es": "Preguntas frecuentes",
+    "de": "Häufige Fragen"
+   }
+  },
+  {
+   "t": "faq",
+   "x": [
+    {
+     "q": {
+      "pt": "Estrangeiro pode comprar imóvel urbano?",
+      "en": "Can a foreigner buy urban property?",
+      "es": "¿Un extranjero puede comprar una propiedad urbana?",
+      "de": "Können Ausländer eine Immobilie im Stadtgebiet kaufen?"
+     },
+     "a": {
+      "pt": "Sim, em geral mesmo sem morar no Brasil. Há limites para imóvel rural, área de fronteira e terreno de marinha (área da União perto do mar). Confirme com um advogado.",
+      "en": "Yes, in general, and you do not need to live in Brazil. There are limits on rural property, border areas and terreno de marinha (federal land near the sea). Confirm with a lawyer.",
+      "es": "Sí, por lo general, sin necesidad de vivir en Brasil. Hay límites para inmuebles rurales, zonas de frontera y terrenos de marinha (área de la Unión cerca del mar). Confírmalo con un abogado.",
+      "de": "Ja, in der Regel auch ohne Wohnsitz in Brasilien. Für ländliche Immobilien, Grenzgebiete und Terreno de marinha (Küstengrundstück im Eigentum des Bundes, Nutzung gegen Gebühr) gibt es Grenzen. Lass es von einem Anwalt bestätigen."
+     }
+    },
+    {
+     "q": {
+      "pt": "Preciso viajar ao Brasil para comprar?",
+      "en": "Do I need to travel to Brazil to buy?",
+      "es": "¿Tengo que viajar a Brasil para comprar?",
+      "de": "Muss ich für den Kauf nach Brasilien reisen?"
+     },
+     "a": {
+      "pt": "Não necessariamente. Muitos dão uma procuração (documento que autoriza alguém a agir em seu nome) a uma pessoa de confiança. Veja as etapas.",
+      "en": "Not necessarily. Many buyers give a procuração (power of attorney) to a trusted person, who signs for them. See the steps.",
+      "es": "No necesariamente. Muchos dan un poder notarial (documento que autoriza a alguien a actuar por ti) a una persona de confianza. Mira los pasos.",
+      "de": "Nicht unbedingt. Viele geben einer Vertrauensperson eine Procuração (Vollmacht). Siehe die Schritte."
+     }
+    },
+    {
+     "q": {
+      "pt": "Quanto tempo leva?",
+      "en": "How long does it take?",
+      "es": "¿Cuánto tiempo lleva?",
+      "de": "Wie lange dauert das?"
+     },
+     "a": {
+      "pt": "À vista, imóvel usado: cerca de 60 a 90 dias. Na planta, depende da obra.",
+      "en": "Cash purchase of a resale property: about 60 to 90 days. Off-plan depends on the construction.",
+      "es": "Al contado, propiedad usada: unos 60 a 90 días. Sobre planos depende de la obra.",
+      "de": "Bar, gebrauchte Immobilie: etwa 60 bis 90 Tage. Beim Neubau vom Bauträger hängt es vom Baufortschritt ab."
+     }
+    },
+    {
+     "q": {
+      "pt": "Posso financiar o imóvel?",
+      "en": "Can I finance the property?",
+      "es": "¿Puedo financiar la propiedad?",
+      "de": "Kann ich die Immobilie finanzieren?"
+     },
+     "a": {
+      "pt": "Sim. Quem mora no Brasil e tem CPF pode pedir financiamento na Caixa ou em outro banco. O banco analisa sua renda e o imóvel. Faça a simulação antes de pagar qualquer sinal. Veja a página Caminhos de compra.",
+      "en": "Yes, if you live in Brazil and have a CPF: you can apply at Caixa or another bank. The bank assesses your income and the property. Run the simulation before paying any sinal. See the Ways to buy page.",
+      "es": "Sí, si vives en Brasil y tienes CPF: puedes pedir financiamiento en la Caixa u otro banco. El banco analiza tus ingresos y la propiedad. Haz la simulación antes de pagar cualquier seña. Mira la página Caminos de compra.",
+      "de": "Ja, wenn du in Brasilien wohnst und eine CPF hast: bei der Caixa oder einer anderen Bank. Die Bank prüft Einkommen und Immobilie. Lass dir von der Bank eine Probeberechnung machen, bevor du ein Sinal zahlst. Siehe die Seite Kaufwege."
+     }
+    },
+    {
+     "q": {
+      "pt": "Posso usar o FGTS?",
+      "en": "Can I use my FGTS?",
+      "es": "¿Puedo usar el FGTS?",
+      "de": "Kann ich den FGTS nutzen?"
+     },
+     "a": {
+      "pt": "Em alguns casos, sim, na compra ou na entrada. As regras mudam e dependem do imóvel e do seu histórico. Pergunte ao banco antes de fechar o contrato.",
+      "en": "FGTS (the Brazilian employee savings fund) can sometimes be used toward the purchase or down payment. Rules change and depend on the property and your record. Ask the bank before signing. This applies to Brazilian workers only.",
+      "es": "El FGTS (fondo de ahorro del trabajador brasileño) a veces puede usarse en la compra o en la entrada. Las reglas cambian y dependen del inmueble y de tu historial. Pregunta al banco antes de firmar. Solo vale para trabajadores brasileños.",
+      "de": "Der FGTS (Sparfonds brasilianischer Arbeitnehmer) lässt sich manchmal für Kauf oder Anzahlung nutzen. Die Regeln ändern sich und hängen von Objekt und deiner Vorgeschichte ab. Frag vor der Unterschrift die Bank. Gilt nur für brasilianische Arbeitnehmer."
+     }
+    },
+    {
+     "q": {
+      "pt": "Posso financiar sendo estrangeiro?",
+      "en": "Can I get financing as a foreigner?",
+      "es": "¿Puedo financiar siendo extranjero?",
+      "de": "Kann ich als Ausländer finanzieren?"
+     },
+     "a": {
+      "pt": "Quem mora fora costuma comprar à vista ou parcelado direto com a construtora.",
+      "en": "Buyers living abroad usually pay in full, or in installments paid directly to the developer.",
+      "es": "Quien vive fuera suele comprar al contado o en cuotas directamente con la constructora.",
+      "de": "Wer im Ausland lebt, kauft meist bar oder in Raten direkt beim Bauträger."
+     }
+    },
+    {
+     "q": {
+      "pt": "Como sei que a corretora é séria?",
+      "en": "How do I know the agent is legitimate?",
+      "es": "¿Cómo sé que la corredora es seria?",
+      "de": "Woran erkenne ich, dass die Maklerin seriös ist?"
+     },
+     "a": {
+      "pt": "Veja o CRECI no topo da página e confira o número no CRECI do estado. Mais na página de compra segura.",
+      "en": "The agent’s CRECI number is shown at the top of the page. Check it with the state CRECI. More on the safe-buying page.",
+      "es": "Mira el CRECI en la parte superior de la página y verifica el número en el CRECI del estado. Más en la página de compra segura.",
+      "de": "Sieh dir die CRECI-Nummer oben auf der Seite an und prüfe sie beim CRECI des Bundesstaates. Mehr auf der Seite „Sicher kaufen“."
+     }
+    }
+   ]
+  }
+ ],
+ "sources": [],
+ "icon": "globe"
+}

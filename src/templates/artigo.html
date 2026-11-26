@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block main %}
+<article>
+  <div class="wrap">
+    <ol class="crumbs"><li><a href="{{ url('home') }}">{{ t.navHome }}</a></li><li><a href="{{ url('blog') }}">{{ t.navGuide }}</a></li><li aria-current="page">{{ L(p.cat) }}</li></ol>
+    <header class="art-head">
+      <div class="post-meta" style="margin-bottom:12px"><b>{{ L(p.cat) }}</b><span>{{ fdate(p.date) }}</span><span>{{ p.read[lang] }} {{ t.minRead }}</span><span>{{ t.by }} {{ p.author }}</span></div>
+      <h1>{{ L(p.title) }}</h1>
+      <p>{{ L(p.excerpt) }}</p>
+    </header>
+    <div class="art-cover">{{ pic(p.img, '(min-width:1040px) 1000px, 100vw', L(p.title), '', true) }}</div>
+    <div class="art-body">
+      {% for para in p.body[lang] %}{% if para.startswith('## ') %}<h2>{{ para[3:] }}</h2>{% else %}<p>{{ para }}</p>{% endif %}{% endfor %}
+      <div class="art-box">
+        {{ m.agentbox() }}
+        <p class="muted" style="font-size:.9375rem">{{ t.artBox }}</p>
+        <div class="btn-row"><a class="btn btn-wa" href="{{ wa(t.waArticle ~ ' ' ~ L(p.title)) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.waWrite }}</a><a class="btn btn-line" href="{{ url('contato') }}">{{ t.navContact }}</a></div>
+        <p class="form-note">{{ t.artLegal }}</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.artRel }}</h2></div><a class="link" href="{{ url('imoveis') }}">{{ t.seeAll }} {{ icon('arrow') }}</a></div>
+    <div class="rail">{% for x in rel %}{{ m.card(x, false, loop.index, '(min-width:1000px) 380px, (min-width:640px) 46vw, 84vw') }}{% endfor %}</div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>{{ t.artMore }}</h2></div><a class="link" href="{{ url('blog') }}">{{ t.guideAll }} {{ icon('arrow') }}</a></div>
+    <div class="posts">{% for x in others %}{{ m.post(x) }}{% endfor %}</div>
+  </div>
+</section>
+{% endblock %}

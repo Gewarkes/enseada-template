@@ -1,0 +1,72 @@
+{
+ "slug": "terreno-ponta-da-lagoa",
+ "ref": "EN-1037",
+ "deal": "venda",
+ "type": "terreno",
+ "name": "Terreno Ponta da Lagoa",
+ "title": {
+  "pt": "Terreno de 3.900 m² com 42 m de frente para a lagoa",
+  "en": "3,900 m² plot with 42 m of lagoon frontage",
+  "es": "Terreno de 3.900 m² con 42 m de frente a la laguna",
+  "de": "Grundstück mit 3.900 m² und 42 m Frontlänge zur Lagune"
+ },
+ "loc": "Tibau do Sul",
+ "lat": -6.1876,
+ "lng": -35.0908,
+ "price": 1450000,
+ "condo": 0,
+ "iptu": 2600,
+ "beds": 0,
+ "suites": 0,
+ "baths": 0,
+ "parking": 0,
+ "area": 0,
+ "lot": 3900,
+ "year": 0,
+ "beach": 60,
+ "status": "novo",
+ "date": "2026-11-03",
+ "imgs": [
+  "77",
+  "53",
+  "80"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "deed",
+  "lagoon",
+  "power",
+  "water"
+ ],
+ "dist": {
+  "beach": "1 min",
+  "center": "12 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "42 m de frente para a lagoa",
+   "Terreno de marinha: taxa anual (foro) à SPU"
+  ],
+  "en": [
+   "42 m of lagoon frontage",
+   "Terreno de marinha: annual fee (foro) to the SPU"
+  ],
+  "es": [
+   "42 m de frente a la laguna",
+   "Terreno de marinha: tasa anual (foro) a la SPU"
+  ],
+  "de": [
+   "42 m Frontlänge zur Lagune",
+   "Terreno de marinha: jährliche Gebühr (Foro) an die SPU"
+  ]
+ },
+ "desc": {
+  "pt": "Em Tibau do Sul, na ponta onde a lagoa de Guaraíras encontra o mar. O acesso é por estrada de terra, a 300 m do calçamento.\n\nA faixa junto à margem é terreno de marinha (faixa junto à água que pertence à União; paga-se taxa anual, o foro, à SPU) e, em parte, área de preservação. Ali a construção é restrita. No restante, recuos, altura e uso devem ser confirmados na prefeitura. Na transferência incide laudêmio, cobrado pela SPU.",
+  "en": "In Tibau do Sul, at the point where the Guaraíras lagoon meets the sea. Access is via 300 m of dirt road.\n\nThe strip along the shore is terreno de marinha (federal land near the sea, for which an annual fee, the foro, is paid to the SPU) and is partly a protected area. Building there is restricted. On the rest of the plot, setbacks, height limits and permitted use must be confirmed with the town hall. A transfer fee (laudêmio) is due on sale and is charged by the SPU.",
+  "es": "En Tibau do Sul, en la punta donde la laguna de Guaraíras se encuentra con el mar. El acceso es por un camino de tierra, a 300 m del pavimento.\n\nLa franja junto a la orilla es terreno de marinha (terreno cerca del mar que pertenece a la Unión; se paga una tasa anual (foro) a la SPU) y en parte área de preservación. Allí la construcción está restringida. En el resto, los retiros, la altura y el uso deben confirmarse en la municipalidad. En la transferencia se aplica el laudêmio, que cobra la SPU.",
+  "de": "In Tibau do Sul, an der Landspitze, wo die Lagune von Guaraíras auf das Meer trifft. Die Zufahrt führt über 300 m Sandstraße.\n\nDer Uferstreifen ist Terreno de marinha (Küstenland, das dem Bund gehört; dafür zahlst du eine jährliche Gebühr, das Foro, an die SPU) und teilweise Schutzgebiet. Dort ist das Bauen eingeschränkt. Für den Rest sind Abstände, Höhe und Nutzung bei der Prefeitura zu bestätigen. Bei einem Eigentümerwechsel erhebt die SPU eine Abgabe, das Laudêmio."
+ },
+ "ordem": 9
+}

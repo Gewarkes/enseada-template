@@ -1,0 +1,165 @@
+{
+ "slug": "verificada",
+ "icon": "shield",
+ "nav": {
+  "pt": "Corretora com CRECI",
+  "en": "Agent with CRECI",
+  "es": "Corredora con CRECI",
+  "de": "Maklerin mit CRECI"
+ },
+ "h1": {
+  "pt": "O que significa “Corretora com CRECI”?",
+  "en": "What does “Agent with CRECI” mean?",
+  "es": "¿Qué significa “Corredora con CRECI”?",
+  "de": "Was bedeutet „Maklerin mit CRECI“?"
+ },
+ "lead": {
+  "pt": "Conferimos a pessoa, não o imóvel. Veja o que foi conferido.",
+  "en": "We verify the agent, not the property. Here is what we check.",
+  "es": "Verificamos a la persona, no la propiedad. Esto es lo que se verificó.",
+  "de": "Wir prüfen die Person, nicht die Immobilie. Hier siehst du, was geprüft wurde."
+ },
+ "meta": {
+  "pt": "O que significa o selo de corretora com CRECI e como conferir o CRECI.",
+  "en": "What the “Agent with CRECI” seal means and how to check a CRECI number.",
+  "es": "Qué significa el sello de corredora con CRECI y cómo verificar el CRECI.",
+  "de": "Was das Siegel „Maklerin mit CRECI“ bedeutet und wie du die CRECI-Nummer prüfst."
+ },
+ "stand": "17.11.2026",
+ "blocks": [
+  {
+   "t": "seal"
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Quatro conferências",
+    "en": "Four checks",
+    "es": "Cuatro verificaciones",
+    "de": "Vier Prüfungen"
+   }
+  },
+  {
+   "t": "steps",
+   "x": [
+    {
+     "h": {
+      "pt": "O nome",
+      "en": "The name",
+      "es": "El nombre",
+      "de": "Der Name"
+     },
+     "p": {
+      "pt": "Igual ao do registro oficial.",
+      "en": "Same as in the official register.",
+      "es": "Igual al del registro oficial.",
+      "de": "Wie im offiziellen Register."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "O número do CRECI",
+      "en": "The CRECI number",
+      "es": "El número de CRECI",
+      "de": "Die CRECI-Nummer"
+     },
+     "p": {
+      "pt": "Está no registro. CRECI é o conselho que autoriza corretores a trabalhar.",
+      "en": "It appears in the register. CRECI is the council that licenses real estate agents.",
+      "es": "Está en el registro. El CRECI es el consejo que autoriza a los corredores a trabajar.",
+      "de": "Steht im Register. Das CRECI ist die Berufskammer, die Makler zur Berufsausübung zulässt."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "A situação: ativa",
+      "en": "The status is active",
+      "es": "La situación: activa",
+      "de": "Der Status: aktiv"
+     },
+     "p": {
+      "pt": "Sem suspensão nem cancelamento.",
+      "en": "No suspension or cancellation.",
+      "es": "Sin suspensión ni cancelación.",
+      "de": "Nicht gesperrt und nicht gelöscht."
+     },
+     "n": null
+    },
+    {
+     "h": {
+      "pt": "A data da conferência",
+      "en": "The date of the check",
+      "es": "La fecha de la verificación",
+      "de": "Das Datum der Prüfung"
+     },
+     "p": {
+      "pt": "Mostramos o dia da última conferência. Se for antiga, peça nova conferência.",
+      "en": "We show the date of the last check. If it is old, ask for a new one.",
+      "es": "Mostramos el día de la última verificación. Si es antigua, pide una nueva.",
+      "de": "Wir zeigen den Tag der letzten Prüfung. Liegt er lange zurück, bitte um eine neue Prüfung."
+     },
+     "n": null
+    }
+   ]
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "O que o selo NÃO quer dizer",
+    "en": "What the seal does NOT mean",
+    "es": "Lo que el sello NO significa",
+    "de": "Was das Siegel NICHT bedeutet"
+   }
+  },
+  {
+   "t": "note",
+   "k": "warn",
+   "x": {
+    "pt": "O selo vale para a corretora, não para cada imóvel. Para o imóvel, veja a nota “Documentos conferidos pela corretora”. Antes de pagar, confira a matrícula (registro oficial do imóvel) e fale com seu advogado.",
+    "en": "The seal applies to the agent, not to each property. For a property, see the note “Documents checked by the agent.” Before paying, check the matrícula (the official property record) and talk to your own lawyer.",
+    "es": "El sello vale para la corredora, no para cada propiedad. Para la propiedad, mira la nota “Documentos verificados por la corredora”. Antes de pagar, verifica la matrícula (el registro oficial de la propiedad) y habla con tu abogado.",
+    "de": "Das Siegel gilt für die Maklerin, nicht für jede Immobilie. Für die Immobilie siehe den Hinweis „Von der Maklerin geprüfte Dokumente“. Prüfe vor dem Zahlen den Grundbuchauszug (Matrícula) und sprich mit deinem Anwalt."
+   }
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Confira você mesmo",
+    "en": "Check it yourself",
+    "es": "Verifícalo tú mismo",
+    "de": "Prüf es selbst"
+   }
+  },
+  {
+   "t": "p",
+   "x": {
+    "pt": "Anúncios de corretores devem trazer o número do CRECI. Confira no site do CRECI do estado (no RN, CRECI-RN): digite nome ou número e veja se está ativo. O selo não é uma certificação oficial, é a nossa conferência.",
+    "en": "Agents’ listings must show the CRECI number. Check it on the state CRECI website (in RN, CRECI-RN): enter the name or number and see whether the status is active. The seal is not an official certification; it is our own check.",
+    "es": "Los anuncios de corredores deben incluir el número de CRECI. Verifícalo en el sitio del CRECI del estado (en RN, CRECI-RN): escribe el nombre o número y mira si está activo. El sello no es una certificación oficial, es nuestra verificación.",
+    "de": "Anzeigen von Maklern müssen die CRECI-Nummer enthalten. Prüfe sie auf der Website des CRECI deines Bundesstaates (in RN: CRECI-RN): Name oder Nummer eingeben und schauen, ob der Status aktiv ist. Das Siegel ist keine amtliche Auszeichnung, sondern unsere eigene Prüfung."
+   }
+  },
+  {
+   "t": "wa",
+   "m": {
+    "pt": "Olá! Vi o selo de corretora com CRECI e quero conferir os dados da corretora.",
+    "en": "Hello! I saw the “Agent with CRECI” seal and would like to know the details.",
+    "es": "¡Hola! Vi el sello de corredora con CRECI y quiero verificar los datos.",
+    "de": "Hallo! Ich habe das Siegel „Maklerin mit CRECI“ gesehen und möchte meine Daten prüfen."
+   },
+   "b": {
+    "pt": "Perguntar pelo WhatsApp",
+    "en": "Ask on WhatsApp",
+    "es": "Preguntar por WhatsApp",
+    "de": "Per WhatsApp fragen"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "COFECI, consulta pública de corretores: https://www.cofeci.gov.br/ (link exato da consulta: não confirmado)"
+  ]
+ ]
+}

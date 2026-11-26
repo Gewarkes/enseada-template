@@ -1,0 +1,158 @@
+{
+ "slug": "traducao",
+ "nav": {
+  "pt": "Tradução juramentada",
+  "en": "Sworn translation",
+  "es": "Traducción jurada",
+  "de": "Beeidigte Übersetzung"
+ },
+ "h1": {
+  "pt": "Seus documentos em português, prontos para o cartório",
+  "en": "Your documents in Portuguese, ready for the notary",
+  "es": "Tus documentos en portugués, listos para la notaría",
+  "de": "Deine Dokumente auf Portugiesisch, fertig für das Notariat (Cartório)"
+ },
+ "lead": {
+  "pt": "Serviço de parceiro (Traduzme) para compradores estrangeiros.",
+  "en": "Partner service (Traduzme) for foreign buyers.",
+  "es": "Servicio de un socio (Traduzme) para compradores extranjeros.",
+  "de": "Partnerservice (Traduzme) für ausländische Käufer."
+ },
+ "meta": {
+  "pt": "Tradução juramentada de documentos para compra de imóvel no Brasil.",
+  "en": "Sworn translation of documents for buying property in Brazil.",
+  "es": "Traducción jurada de documentos para comprar una propiedad en Brasil.",
+  "de": "Beeidigte Übersetzung von Dokumenten für den Immobilienkauf in Brasilien."
+ },
+ "stand": "17.11.2026",
+ "blocks": [
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Quais documentos",
+    "en": "Which documents",
+    "es": "Qué documentos",
+    "de": "Welche Dokumente"
+   }
+  },
+  {
+   "t": "ul",
+   "x": [
+    {
+     "pt": "Passaporte e certidões de nascimento ou casamento",
+     "en": "Passport and birth or marriage certificates",
+     "es": "Pasaporte y certificados de nacimiento o de matrimonio",
+     "de": "Reisepass und Geburts- oder Heiratsurkunden"
+    },
+    {
+     "pt": "Procuração",
+     "en": "Power of attorney",
+     "es": "Poder notarial (procuração)",
+     "de": "Vollmacht (Procuração)"
+    },
+    {
+     "pt": "Comprovantes de renda ou de origem do dinheiro, quando pedidos",
+     "en": "Proof of income or source of funds, if requested",
+     "es": "Comprobantes de ingresos o del origen del dinero, cuando los piden",
+     "de": "Einkommensnachweise oder Nachweise über die Herkunft des Geldes, wenn verlangt"
+    }
+   ]
+  },
+  {
+   "t": "h2",
+   "x": {
+    "pt": "Preços",
+    "en": "Prices",
+    "es": "Precios",
+    "de": "Preise"
+   }
+  },
+  {
+   "t": "table",
+   "head": [
+    {
+     "pt": "Idioma do documento",
+     "en": "Document language",
+     "es": "Idioma del documento",
+     "de": "Sprache des Dokuments"
+    },
+    {
+     "pt": "Por documento, a partir de (R$)",
+     "en": "Per document, from (R$)",
+     "es": "Por documento, desde (R$)",
+     "de": "Pro Dokument, ab (R$)"
+    }
+   ],
+   "rows": [
+    [
+     {
+      "pt": "Espanhol, francês, italiano",
+      "en": "Spanish, French, Italian",
+      "es": "Español, francés, italiano",
+      "de": "Spanisch, Französisch, Italienisch"
+     },
+     "119"
+    ],
+    [
+     {
+      "pt": "Inglês",
+      "en": "English",
+      "es": "Inglés",
+      "de": "Englisch"
+     },
+     "129"
+    ],
+    [
+     {
+      "pt": "Alemão",
+      "en": "German",
+      "es": "Alemán",
+      "de": "Deutsch"
+     },
+     "149"
+    ]
+   ]
+  },
+  {
+   "t": "note",
+   "k": "info",
+   "x": {
+    "pt": "Preço fixo por documento. O valor final aparece na oferta online da Traduzme (traduzme.com.br). Pagamento só por Pix.",
+    "en": "Fixed price per document. You will see the final price in Traduzme’s online quote (traduzme.com.br). Payment by Pix (Brazilian instant payment) only.",
+    "es": "Precio fijo por documento. El valor final aparece en la oferta en línea de Traduzme (traduzme.com.br). Pago solo por Pix (transferencia instantánea de Brasil).",
+    "de": "Festpreis pro Dokument. Der Endpreis steht im Online-Angebot von Traduzme (traduzme.com.br). Zahlung nur per Pix (brasilianisches Sofortzahlungssystem)."
+   }
+  },
+  {
+   "t": "p",
+   "x": {
+    "pt": "A apostila é um carimbo do país de origem que confirma que o documento é autêntico. Depois, um tradutor juramentado faz a tradução.",
+    "en": "An apostille is a stamp from the issuing country that confirms the document is authentic. A sworn translator then translates it.",
+    "es": "La apostilla es un sello del país de origen que confirma que el documento es auténtico. Después, un traductor jurado hace la traducción.",
+    "de": "Die Apostille ist ein Stempel des Herkunftslands, der die Echtheit des Dokuments bestätigt. Danach übersetzt ein beeidigter Übersetzer."
+   }
+  },
+  {
+   "t": "wa",
+   "m": {
+    "pt": "Olá! Preciso de tradução juramentada para a compra de um imóvel.",
+    "en": "Hello! I need a sworn translation for a property purchase.",
+    "es": "¡Hola! Necesito traducción jurada para comprar una propiedad.",
+    "de": "Hallo! Ich brauche eine beeidigte Übersetzung für den Kauf einer Immobilie."
+   },
+   "b": {
+    "pt": "Pedir tradução",
+    "en": "Request translation",
+    "es": "Pedir traducción",
+    "de": "Übersetzung anfragen"
+   }
+  }
+ ],
+ "sources": [
+  [
+   "Traduzme (traduzme.com.br), consulta em 16/11/2026",
+   "https://traduzme.com.br/"
+  ]
+ ],
+ "icon": "doc"
+}

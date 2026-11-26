@@ -1,0 +1,1142 @@
+{
+ "fMore": {
+  "pt": "Mais filtros",
+  "en": "More filters",
+  "es": "Más filtros",
+  "de": "Mehr Filter"
+ },
+ "fLess": {
+  "pt": "Menos filtros",
+  "en": "Fewer filters",
+  "es": "Menos filtros",
+  "de": "Weniger Filter"
+ },
+ "fPrice": {
+  "pt": "Preço até",
+  "en": "Price up to",
+  "es": "Precio hasta",
+  "de": "Preis bis"
+ },
+ "fBaths": {
+  "pt": "Banheiros",
+  "en": "Bathrooms",
+  "es": "Baños",
+  "de": "Badezimmer"
+ },
+ "fBeach": {
+  "pt": "Distância da praia",
+  "en": "Distance to the beach",
+  "es": "Distancia a la playa",
+  "de": "Entfernung zum Strand"
+ },
+ "fBeach1": {
+  "pt": "até 200 m",
+  "en": "up to 200 m",
+  "es": "hasta 200 m",
+  "de": "bis 200 m"
+ },
+ "fBeach2": {
+  "pt": "até 500 m",
+  "en": "up to 500 m",
+  "es": "hasta 500 m",
+  "de": "bis 500 m"
+ },
+ "fBeach3": {
+  "pt": "até 1 km",
+  "en": "up to 1 km",
+  "es": "hasta 1 km",
+  "de": "bis 1 km"
+ },
+ "fSea": {
+  "pt": "Vista para o mar",
+  "en": "Sea view",
+  "es": "Vista al mar",
+  "de": "Meerblick"
+ },
+ "fPool": {
+  "pt": "Piscina",
+  "en": "Pool",
+  "es": "Piscina",
+  "de": "Pool"
+ },
+ "fFurn": {
+  "pt": "Mobiliado",
+  "en": "Furnished",
+  "es": "Amueblado",
+  "de": "Möbliert"
+ },
+ "fPark": {
+  "pt": "Garagem",
+  "en": "Parking",
+  "es": "Cochera",
+  "de": "Garage"
+ },
+ "fNew": {
+  "pt": "Novo",
+  "en": "New",
+  "es": "Nuevo",
+  "de": "Neu"
+ },
+ "fRed": {
+  "pt": "Preço reduzido",
+  "en": "Price reduced",
+  "es": "Precio rebajado",
+  "de": "Preis gesenkt"
+ },
+ "fDocs": {
+  "pt": "Com documentos",
+  "en": "With documents",
+  "es": "Con documentos",
+  "de": "Mit Unterlagen"
+ },
+ "fRes": {
+  "pt": "Permite residência",
+  "en": "Residency possible",
+  "es": "Permite residencia",
+  "de": "Aufenthaltstitel möglich"
+ },
+ "fTemp": {
+  "pt": "Aluguel por temporada",
+  "en": "Vacation rental",
+  "es": "Alquiler por temporada",
+  "de": "Ferienvermietung"
+ },
+ "stRed": {
+  "pt": "Preço reduzido",
+  "en": "Price reduced",
+  "es": "Precio rebajado",
+  "de": "Preis gesenkt"
+ },
+ "viewList": {
+  "pt": "Lista",
+  "en": "List",
+  "es": "Lista",
+  "de": "Liste"
+ },
+ "viewMap": {
+  "pt": "Mapa",
+  "en": "Map",
+  "es": "Mapa",
+  "de": "Karte"
+ },
+ "fHow": {
+  "pt": "Toque para escolher",
+  "en": "Tap to choose",
+  "es": "Toca para elegir",
+  "de": "Zum Auswählen tippen"
+ },
+ "wH": {
+  "pt": "Conte o que você procura",
+  "en": "Tell us what you are looking for",
+  "es": "Cuéntanos qué estás buscando",
+  "de": "Sag uns, was du suchst"
+ },
+ "wP": {
+  "pt": "Escolha com um toque. Depois, o WhatsApp abre com tudo pronto. É só enviar.",
+  "en": "Choose with a tap. WhatsApp opens with your message ready. Just hit send.",
+  "es": "Elige con un toque. Después se abre WhatsApp con todo listo. Solo tienes que enviarlo.",
+  "de": "Wähle mit einem Tipp aus. Dann öffnet sich WhatsApp, und alles ist schon ausgefüllt. Du musst nur noch senden."
+ },
+ "wDeal": {
+  "pt": "Quero",
+  "en": "I want to",
+  "es": "Quiero",
+  "de": "Ich möchte"
+ },
+ "wBuy": {
+  "pt": "Comprar",
+  "en": "Buy",
+  "es": "Comprar",
+  "de": "Kaufen"
+ },
+ "wRent": {
+  "pt": "Alugar",
+  "en": "Rent",
+  "es": "Alquilar",
+  "de": "Mieten"
+ },
+ "wWhere": {
+  "pt": "Onde?",
+  "en": "Where?",
+  "es": "¿Dónde?",
+  "de": "Wo?"
+ },
+ "wAny": {
+  "pt": "Tanto faz",
+  "en": "Anywhere",
+  "es": "Cualquiera",
+  "de": "Egal"
+ },
+ "wPrice": {
+  "pt": "Até quanto?",
+  "en": "Maximum budget?",
+  "es": "¿Hasta cuánto?",
+  "de": "Bis wie viel?"
+ },
+ "wBeds": {
+  "pt": "Quartos",
+  "en": "Bedrooms",
+  "es": "Dormitorios",
+  "de": "Schlafzimmer"
+ },
+ "wFrom": {
+  "pt": "De onde você é? (opcional)",
+  "en": "Where are you from? (optional)",
+  "es": "¿De dónde eres? (opcional)",
+  "de": "Woher kommst du? (optional)"
+ },
+ "wSend": {
+  "pt": "Enviar pelo WhatsApp",
+  "en": "Send via WhatsApp",
+  "es": "Enviar por WhatsApp",
+  "de": "Per WhatsApp senden"
+ },
+ "wMsg": {
+  "pt": "Olá! Estou procurando um imóvel em Pipa.",
+  "en": "Hello! I am looking for a property in Pipa.",
+  "es": "¡Hola! Estoy buscando una propiedad en Pipa.",
+  "de": "Hallo! Ich suche eine Immobilie in Pipa."
+ },
+ "wMsgDeal": {
+  "pt": "Quero",
+  "en": "I want to",
+  "es": "Quiero",
+  "de": "Ich möchte"
+ },
+ "wMsgWhere": {
+  "pt": "Região",
+  "en": "Area",
+  "es": "Zona",
+  "de": "Gegend"
+ },
+ "wMsgPrice": {
+  "pt": "Até",
+  "en": "Up to",
+  "es": "Hasta",
+  "de": "Bis"
+ },
+ "wMsgBeds": {
+  "pt": "Quartos",
+  "en": "Bedrooms",
+  "es": "Dormitorios",
+  "de": "Schlafzimmer"
+ },
+ "wMsgFrom": {
+  "pt": "País",
+  "en": "Country",
+  "es": "País",
+  "de": "Land"
+ },
+ "wMsgEnd": {
+  "pt": "Podem me avisar quando surgir algo assim?",
+  "en": "Can you let me know when something like this comes up?",
+  "es": "¿Me pueden avisar cuando aparezca algo así?",
+  "de": "Meldet ihr euch, wenn etwas Passendes reinkommt?"
+ },
+ "chH": {
+  "pt": "Receba novos imóveis no WhatsApp",
+  "en": "Get new listings on WhatsApp",
+  "es": "Recibe nuevas propiedades por WhatsApp",
+  "de": "Neue Immobilien per WhatsApp bekommen"
+ },
+ "chP": {
+  "pt": "Siga o canal da corretora. Cada imóvel novo chega no seu celular. Grátis, sem cadastro.",
+  "en": "Follow the agent’s channel and get every new listing on your phone. Free, no sign-up.",
+  "es": "Sigue el canal de la corredora inmobiliaria. Cada propiedad nueva llega a tu celular. Gratis, sin registro.",
+  "de": "Folge dem Kanal der Maklerin. Jede neue Immobilie kommt direkt auf dein Handy. Kostenlos, ohne Anmeldung."
+ },
+ "chBtn": {
+  "pt": "Seguir o canal",
+  "en": "Follow the channel",
+  "es": "Seguir el canal",
+  "de": "Dem Kanal folgen"
+ },
+ "chSoon": {
+  "pt": "Canal em breve",
+  "en": "Channel coming soon",
+  "es": "Canal próximamente",
+  "de": "Kanal bald verfügbar"
+ },
+ "mlAdd": {
+  "pt": "Guardar",
+  "en": "Save",
+  "es": "Guardar",
+  "de": "Merken"
+ },
+ "mlDel": {
+  "pt": "Guardado",
+  "en": "Saved",
+  "es": "Guardado",
+  "de": "Gemerkt"
+ },
+ "mlH": {
+  "pt": "Meus favoritos",
+  "en": "My favorites",
+  "es": "Mis favoritos",
+  "de": "Meine Favoriten"
+ },
+ "mlEmpty": {
+  "pt": "Você ainda não guardou nenhum imóvel. Toque no coração de um imóvel para guardá-lo.",
+  "en": "You have not saved any properties yet. Tap the heart on a listing.",
+  "es": "Todavía no has guardado ninguna propiedad. Toca el corazón de la propiedad que te guste.",
+  "de": "Du hast noch keine Immobilie gemerkt. Tippe bei einer Immobilie auf das Herz."
+ },
+ "mlSend": {
+  "pt": "Enviar minha lista pelo WhatsApp",
+  "en": "Send my list via WhatsApp",
+  "es": "Enviar mi lista por WhatsApp",
+  "de": "Meine Liste per WhatsApp senden"
+ },
+ "mlNote": {
+  "pt": "Fica salvo só neste celular. Se você limpar o navegador, a lista some. Por isso, envie a lista pelo WhatsApp.",
+  "en": "Saved on this device only. If you clear your browser data, the list is lost, so send it on WhatsApp.",
+  "es": "Queda guardado solo en este celular. Si borras los datos del navegador, la lista desaparece. Por eso, te conviene enviarla por WhatsApp.",
+  "de": "Die Liste ist nur auf diesem Handy gespeichert. Wenn du die Browserdaten löschst, ist sie weg. Schick sie deshalb am besten per WhatsApp."
+ },
+ "mlMsg": {
+  "pt": "Olá! Estes são os imóveis de que eu gostei:",
+  "en": "Hello! These are the properties I liked:",
+  "es": "¡Hola! Estas son las propiedades que me gustaron:",
+  "de": "Hallo! Diese Immobilien gefallen mir:"
+ },
+ "mlClose": {
+  "pt": "Fechar",
+  "en": "Close",
+  "es": "Cerrar",
+  "de": "Schließen"
+ },
+ "slSeal": {
+  "pt": "Corretora com CRECI",
+  "en": "Agent with CRECI",
+  "es": "Corredora con CRECI",
+  "de": "Maklerin mit CRECI"
+ },
+ "slSealW": {
+  "pt": "O que isso significa?",
+  "en": "What does this mean?",
+  "es": "¿Qué significa?",
+  "de": "Was bedeutet das?"
+ },
+ "slDate": {
+  "pt": "Última conferência",
+  "en": "Last check",
+  "es": "Última verificación",
+  "de": "Zuletzt geprüft"
+ },
+ "slName": {
+  "pt": "Nome",
+  "en": "Name",
+  "es": "Nombre",
+  "de": "Name"
+ },
+ "slNum": {
+  "pt": "Número do CRECI",
+  "en": "CRECI number",
+  "es": "Número de CRECI",
+  "de": "CRECI-Nummer"
+ },
+ "slStatus": {
+  "pt": "Situação",
+  "en": "Status",
+  "es": "Situación",
+  "de": "Status"
+ },
+ "slActive": {
+  "pt": "Ativa",
+  "en": "Active",
+  "es": "Activo",
+  "de": "Aktiv"
+ },
+ "slOpen": {
+  "pt": "Conferir você mesmo no site do CRECI",
+  "en": "Check it yourself on the CRECI website",
+  "es": "Verifícalo tú mismo en el sitio del CRECI",
+  "de": "Selbst auf der CRECI-Website prüfen"
+ },
+ "slDemo": {
+  "pt": "Atenção: este é um site de demonstração. O número do CRECI é um exemplo.",
+  "en": "Note: this is a demo site. The CRECI number is an example.",
+  "es": "Atención: este es un sitio de demostración. El número de CRECI es un ejemplo.",
+  "de": "Achtung: Das ist eine Demo-Website. Die CRECI-Nummer ist nur ein Beispiel."
+ },
+ "cpH": {
+  "pt": "De onde você vem?",
+  "en": "Where are you from?",
+  "es": "¿De dónde vienes?",
+  "de": "Woher kommst du?"
+ },
+ "cpP": {
+  "pt": "Escolha seu país. Mostramos a sua lista de documentos.",
+  "en": "Choose your country. We will show you your personal document list.",
+  "es": "Elige tu país. Te mostramos tu lista personal de documentos.",
+  "de": "Wähle dein Land. Wir zeigen dir deine persönliche Liste mit Unterlagen."
+ },
+ "cpSel": {
+  "pt": "Escolha o país",
+  "en": "Choose the country",
+  "es": "Elige el país",
+  "de": "Land auswählen"
+ },
+ "cpState": {
+  "pt": "Em qual estado você mora?",
+  "en": "Which state do you live in?",
+  "es": "¿En qué estado vives?",
+  "de": "In welchem Bundesland wohnst du?"
+ },
+ "cpCity": {
+  "pt": "Cidade (opcional)",
+  "en": "City (optional)",
+  "es": "Ciudad (opcional)",
+  "de": "Stadt (optional)"
+ },
+ "cpBr": {
+  "pt": "Mora no Brasil? Você não precisa de apostila nem de tradução. Leve:",
+  "en": "I live in Brazil. You do not need an apostille or translation. Bring the following:",
+  "es": "Vivo en Brasil. No necesitas apostilla ni traducción. Lleva:",
+  "de": "Ich wohne in Brasilien. Du brauchst keine Apostille (Apostila) und keine Übersetzung. Bring mit:"
+ },
+ "cpBr1": {
+  "pt": "RG ou CNH e CPF",
+  "en": "ID (RG or CNH) and CPF",
+  "es": "Documento (RG o CNH) y CPF",
+  "de": "RG oder CNH (Ausweis oder Führerschein) und CPF"
+ },
+ "cpBr2": {
+  "pt": "Certidão de casamento (se for casado) ou de nascimento",
+  "en": "Birth certificate, or marriage certificate if married",
+  "es": "Certificado de matrimonio o nacimiento (si estás casado)",
+  "de": "Heirats- oder Geburtsurkunde (Certidão), falls du verheiratet bist"
+ },
+ "cpBr3": {
+  "pt": "Comprovante de endereço",
+  "en": "Proof of address",
+  "es": "Comprobante de domicilio",
+  "de": "Adressnachweis"
+ },
+ "cpBr4": {
+  "pt": "Comprovante de renda, só se for financiar",
+  "en": "Proof of income, only if you are financing",
+  "es": "Comprobante de ingresos, solo si financias",
+  "de": "Einkommensnachweis, nur wenn du finanzierst"
+ },
+ "cpAp": {
+  "pt": "Seu país assinou a Convenção da Apostila. Isso é bom. Basta o carimbo da apostila (ele prova que o documento é autêntico), sem passar pelo consulado.",
+  "en": "Your country is a party to the Apostille Convention. Good news: an apostille is enough, and you do not need to go through the consulate.",
+  "es": "Tu país firmó la Convención de la Apostilla. Eso es bueno: basta con el sello de la apostilla (prueba que el documento es auténtico), sin pasar por el consulado.",
+  "de": "Dein Land ist Vertragsstaat des Apostille-Übereinkommens (Convenção da Apostila). Das ist gut: Der Apostille-Stempel (er beweist, dass das Dokument echt ist) genügt, ein Umweg über das Konsulat ist nicht nötig."
+ },
+ "cpNoAp": {
+  "pt": "Seu país não aparece na lista da Apostila para o Brasil. Por isso, em geral, os documentos precisam ser legalizados no consulado do Brasil. Confirme antes com a corretora. (Lista de 17/11/2026)",
+  "en": "Your country is not on Brazil’s apostille list. Your documents will usually need to be legalized at a Brazilian consulate. Please confirm with the agent first. (List as of Nov 17, 2026)",
+  "es": "Tu país no figura en la lista de la Apostilla para Brasil. Por eso, en general, los documentos tienen que pasar por el consulado de Brasil. Confírmalo antes con la corredora. (Lista del 17/11/2026)",
+  "de": "Dein Land steht nicht auf der Apostille-Liste für Brasilien. Deshalb müssen die Dokumente meistens beim brasilianischen Konsulat legalisiert werden. Frag vorher bei der Maklerin nach. (Liste vom 17.11.2026)"
+ },
+ "cpL1": {
+  "pt": "Passaporte (cópia)",
+  "en": "Passport (copy)",
+  "es": "Pasaporte (copia)",
+  "de": "Reisepass (Kopie)"
+ },
+ "cpL2": {
+  "pt": "CPF brasileiro, o cadastro de pessoa física na Receita Federal (a corretora explica como pedir)",
+  "en": "Brazilian CPF (tax number); the agent explains how to get one",
+  "es": "CPF brasileño, el número fiscal (la corredora te explica cómo pedirlo)",
+  "de": "CPF (brasilianische Steuernummer); die Maklerin erklärt dir, wie du sie beantragst"
+ },
+ "cpL3": {
+  "pt": "Certidão de casamento (se for casado) ou de nascimento, com apostila",
+  "en": "Birth certificate, or marriage certificate if married, with apostille",
+  "es": "Certificado de matrimonio o nacimiento, si estás casado, con apostilla",
+  "de": "Heirats- oder Geburtsurkunde (Certidão), falls du verheiratet bist, mit Apostille"
+ },
+ "cpL4": {
+  "pt": "Procuração, se você não puder vir ao Brasil, com apostila",
+  "en": "Power of attorney (if you cannot come to Brazil), with apostille",
+  "es": "Poder notarial (procuração), si no puedes viajar a Brasil, con apostilla",
+  "de": "Vollmacht (Procuração), falls du nicht nach Brasilien kommen kannst, mit Apostille"
+ },
+ "cpL4n": {
+  "pt": "Procuração, se você não puder vir ao Brasil, legalizada no consulado do Brasil",
+  "en": "Power of attorney (if you cannot come to Brazil), legalized at the Brazilian consulate",
+  "es": "Poder notarial (procuração), si no puedes viajar a Brasil, legalizado en el consulado de Brasil",
+  "de": "Vollmacht (Procuração), falls du nicht nach Brasilien kommen kannst, beim brasilianischen Konsulat legalisiert"
+ },
+ "cpL3n": {
+  "pt": "Certidão de casamento (se for casado) ou de nascimento, legalizada no consulado do Brasil",
+  "en": "Birth certificate, or marriage certificate if married, legalized at the Brazilian consulate",
+  "es": "Certificado de matrimonio o nacimiento, si estás casado, legalizado en el consulado de Brasil",
+  "de": "Heirats- oder Geburtsurkunde (Certidão), falls du verheiratet bist, beim brasilianischen Konsulat legalisiert"
+ },
+ "cpL5": {
+  "pt": "Tradução juramentada para o português dos documentos estrangeiros",
+  "en": "Sworn translation of your foreign documents into Portuguese",
+  "es": "Traducción jurada al portugués de los documentos extranjeros",
+  "de": "Beeidigte Übersetzung (Tradução juramentada) der ausländischen Dokumente ins Portugiesische"
+ },
+ "cpL6": {
+  "pt": "Comprovante de que o dinheiro veio do exterior pelo câmbio oficial",
+  "en": "Proof that the money was brought in through an official currency exchange",
+  "es": "Comprobante de que el dinero vino del exterior por el cambio oficial",
+  "de": "Nachweis, dass das Geld auf dem offiziellen Weg (Devisenvertrag) aus dem Ausland kam"
+ },
+ "cpUn": {
+  "pt": "Ainda não confirmado: detalhes do seu país. Pergunte à corretora.",
+  "en": "Not yet confirmed: details for your country. Ask the agent.",
+  "es": "Todavía sin confirmar: detalles de tu país. Pregúntale a la corredora.",
+  "de": "Noch nicht bestätigt: Einzelheiten zu deinem Land. Frag die Maklerin."
+ },
+ "cpAR": {
+  "pt": "Argentina: a apostila das certidões (de nascimento e casamento) sai pela Cancillería, online, no sistema TAD. Para procuração em cartório argentino, primeiro o Colegio de Escribanos legaliza o documento. Depois vem a apostila. Regra válida em 17/11/2026 (Cancillería, a partir de 03/06/2025). A tradução juramentada deve ser feita no Brasil: fonte não confirmada.",
+  "en": "Argentina: the Cancillería issues the apostille for birth and marriage certificates online, through the TAD system. For a power of attorney signed before an Argentine notary, the Colegio de Escribanos legalizes it first, and then it gets the apostille. This rule applies as of Nov 17, 2026 (Cancillería, since Jun 3, 2025). The sworn translation must be done in Brazil (source not confirmed).",
+  "es": "Argentina: la apostilla de certificados (actas de nacimiento y matrimonio) la emite la Cancillería, en línea, por el sistema TAD. Para un poder otorgado ante escribano público argentino, primero lo legaliza el Colegio de Escribanos y después se apostilla. Al 17/11/2026 esta regla está vigente (Cancillería, desde el 03/06/2025). La traducción jurada debe hacerse en Brasil: fuente no confirmada.",
+  "de": "Argentinien: Die Apostille für Urkunden (Geburts- und Heiratsurkunde) gibt es online bei der Cancillería, im System TAD. Bei einer Vollmacht von einem argentinischen Notar legalisiert zuerst das Colegio de Escribanos das Dokument, danach folgt die Apostille. Stand dieser Regel: 17.11.2026 (Cancillería, seit 03.06.2025). Dass die beeidigte Übersetzung in Brasilien gemacht werden muss, ist nicht durch eine Quelle bestätigt."
+ },
+ "cpSend": {
+  "pt": "Enviar minha lista pelo WhatsApp",
+  "en": "Send my list via WhatsApp",
+  "es": "Enviar mi lista por WhatsApp",
+  "de": "Meine Liste per WhatsApp senden"
+ },
+ "cpMsg": {
+  "pt": "Olá! Meu país:",
+  "en": "Hello! My country:",
+  "es": "¡Hola! Mi país:",
+  "de": "Hallo! Mein Land:"
+ },
+ "cpMsgEnd": {
+  "pt": "Quero comprar um imóvel em Pipa. Pode me ajudar com os documentos?",
+  "en": "I want to buy a property in Pipa. Can you help me with the documents?",
+  "es": "Quiero comprar una propiedad en Pipa. ¿Me puedes ayudar con los documentos?",
+  "de": "Ich möchte eine Immobilie in Pipa kaufen. Könnt ihr mir bei den Unterlagen helfen?"
+ },
+ "cpTr": {
+  "pt": "Precisa de tradução juramentada? Com a Traduzme, a partir de R$ 119 por documento (preço de 16/11/2026).",
+  "en": "Need a sworn translation? Traduzme charges from R$ 119 per document (price as of Nov 16, 2026).",
+  "es": "¿Necesitas traducción jurada? Con Traduzme, desde R$ 119 por documento (precio al 16/11/2026).",
+  "de": "Brauchst du eine beeidigte Übersetzung? Bei Traduzme ab R$ 119 pro Dokument (Preis vom 16.11.2026)."
+ },
+ "suH": {
+  "pt": "Envie seus documentos e fotos",
+  "en": "Send your documents and photos",
+  "es": "Envía tus documentos y fotos",
+  "de": "Schick deine Unterlagen und Fotos"
+ },
+ "suP": {
+  "pt": "Escolha o que você tem. Não precisa estar tudo completo. A corretora pede o resto depois.",
+  "en": "Choose what you have. It does not need to be complete. The agent will ask for the rest later.",
+  "es": "Elige lo que tengas. No hace falta que esté todo. La corredora pide el resto después.",
+  "de": "Wähle aus, was du hast. Es muss nicht alles vollständig sein. Den Rest fragt die Maklerin später an."
+ },
+ "suStep1": {
+  "pt": "1. Seu nome e telefone",
+  "en": "1. Your name and phone",
+  "es": "1. Tu nombre y teléfono",
+  "de": "1. Dein Name und deine Telefonnummer"
+ },
+ "suStep2": {
+  "pt": "2. Fotos do imóvel",
+  "en": "2. Photos of the property",
+  "es": "2. Fotos de la propiedad",
+  "de": "2. Fotos der Immobilie"
+ },
+ "suStep3": {
+  "pt": "3. Documentos (foto do celular serve)",
+  "en": "3. Documents (a phone photo is fine)",
+  "es": "3. Documentos (sirve una foto del celular)",
+  "de": "3. Unterlagen (ein Handyfoto reicht)"
+ },
+ "suStep4": {
+  "pt": "4. Detalhes (opcional)",
+  "en": "4. Details (optional)",
+  "es": "4. Detalles (opcional)",
+  "de": "4. Einzelheiten (optional)"
+ },
+ "suPhotos": {
+  "pt": "Tocar para escolher fotos",
+  "en": "Tap to choose photos",
+  "es": "Toca para elegir fotos",
+  "de": "Tippen, um Fotos auszuwählen"
+ },
+ "suDocs": {
+  "pt": "Tocar para escolher documentos",
+  "en": "Tap to choose documents",
+  "es": "Toca para elegir documentos",
+  "de": "Tippen, um Unterlagen auszuwählen"
+ },
+ "suSize": {
+  "pt": "Tamanho em m² (opcional)",
+  "en": "Size in m² (optional)",
+  "es": "Tamaño en m² (opcional)",
+  "de": "Größe in m² (optional)"
+ },
+ "suPrice": {
+  "pt": "Quanto você quer pedir? (opcional)",
+  "en": "Asking price (optional)",
+  "es": "¿Cuánto quieres pedir? (opcional)",
+  "de": "Welchen Preis möchtest du verlangen? (optional)"
+ },
+ "suWhere": {
+  "pt": "Onde fica o imóvel?",
+  "en": "Where is the property?",
+  "es": "¿Dónde está la propiedad?",
+  "de": "Wo liegt die Immobilie?"
+ },
+ "suSend": {
+  "pt": "Enviar para a corretora",
+  "en": "Send to the agent",
+  "es": "Enviar a la corredora",
+  "de": "An die Maklerin senden"
+ },
+ "suWaMsg": {
+  "pt": "Olá! Quero vender meu imóvel em Pipa.",
+  "en": "Hello! I want to sell my property in Pipa.",
+  "es": "¡Hola! Quiero vender mi propiedad en Pipa.",
+  "de": "Hallo! Ich möchte meine Immobilie in Pipa verkaufen."
+ },
+ "suOr": {
+  "pt": "ou",
+  "en": "or",
+  "es": "o",
+  "de": "oder"
+ },
+ "suWa": {
+  "pt": "Prefiro falar pelo WhatsApp",
+  "en": "I prefer WhatsApp",
+  "es": "Prefiero hablar por WhatsApp",
+  "de": "Ich schreibe lieber per WhatsApp"
+ },
+ "suOk": {
+  "pt": "Recebemos! A corretora vai chamar você no WhatsApp.",
+  "en": "Received! The agent will message you on WhatsApp.",
+  "es": "¡Recibido! La corredora te escribe por WhatsApp.",
+  "de": "Angekommen! Die Maklerin meldet sich bei dir per WhatsApp."
+ },
+ "suErr": {
+  "pt": "Não conseguimos enviar agora. Use o botão do WhatsApp.",
+  "en": "We could not send your files right now. Please use the WhatsApp button.",
+  "es": "No pudimos enviar ahora. Usa el botón de WhatsApp.",
+  "de": "Wir konnten gerade nicht senden. Nutze den WhatsApp-Button."
+ },
+ "suDemo": {
+  "pt": "Demonstração: o envio de arquivos ainda não está ligado. Use o WhatsApp.",
+  "en": "Demo: file upload is not connected yet. Please use WhatsApp.",
+  "es": "Demostración: el envío de archivos todavía no está conectado. Usa WhatsApp.",
+  "de": "Demo: Das Senden von Dateien ist noch nicht eingeschaltet. Nutze WhatsApp."
+ },
+ "suFiles": {
+  "pt": "arquivo(s) escolhido(s)",
+  "en": "file(s) selected",
+  "es": "archivo(s) elegido(s)",
+  "de": "Datei(en) ausgewählt"
+ },
+ "suMax": {
+  "pt": "Máximo de 20 arquivos, até 10 MB cada.",
+  "en": "Up to 20 files, 10 MB each.",
+  "es": "Máximo 20 archivos, hasta 10 MB cada uno.",
+  "de": "Höchstens 20 Dateien, jeweils bis 10 MB."
+ },
+ "suPriv": {
+  "pt": "Seus arquivos vão só para a corretora. Não ficam públicos.",
+  "en": "Your files go only to the agent. They are not public.",
+  "es": "Tus archivos van solo a la corredora. No son públicos.",
+  "de": "Deine Dateien gehen nur an die Maklerin. Sie sind nicht öffentlich."
+ },
+ "tlTime": {
+  "pt": "Prazo",
+  "en": "Timeframe",
+  "es": "Plazo",
+  "de": "Dauer"
+ },
+ "tlRef": {
+  "pt": "Prazos de referência; variam conforme o cartório. Fonte abaixo.",
+  "en": "Typical timeframes; they vary by notary office. Source below.",
+  "es": "Plazos de referencia; varían según la notaría. Fuente: más abajo.",
+  "de": "Richtwerte. Die Dauer ist je nach Notariat (Cartório) verschieden. Quelle: siehe unten."
+ },
+ "pdfBtn": {
+  "pt": "Baixar ficha",
+  "en": "Download brochure",
+  "es": "Descargar ficha",
+  "de": "Exposé herunterladen"
+ },
+ "pdfNote": {
+  "pt": "PDF com todas as informações, para enviar ao banco ou a quem você quiser.",
+  "en": "A PDF with all the details, to share with a bank or anyone else.",
+  "es": "PDF con toda la información, para enviar al banco o a quien quieras.",
+  "de": "PDF mit allen Infos, zum Weiterschicken an die Bank oder an wen du willst."
+ },
+ "pdfRef": {
+  "pt": "Ref.",
+  "en": "Ref.",
+  "es": "Ref.",
+  "de": "Ref."
+ },
+ "pdfAgent": {
+  "pt": "Corretora",
+  "en": "Agent",
+  "es": "Corredora",
+  "de": "Maklerin"
+ },
+ "pdfPrice": {
+  "pt": "Preço",
+  "en": "Price",
+  "es": "Precio",
+  "de": "Preis"
+ },
+ "pdfData": {
+  "pt": "Dados do imóvel",
+  "en": "Property data",
+  "es": "Datos de la propiedad",
+  "de": "Daten der Immobilie"
+ },
+ "pdfDist": {
+  "pt": "Distâncias",
+  "en": "Distances",
+  "es": "Distancias",
+  "de": "Entfernungen"
+ },
+ "pdfDocs": {
+  "pt": "Documentos",
+  "en": "Documents",
+  "es": "Documentos",
+  "de": "Unterlagen"
+ },
+ "pdfDocsOk": {
+  "pt": "Matrícula e dívidas conferidas pela corretora em",
+  "en": "Title record and outstanding debts checked by the agent on",
+  "es": "Matrícula y deudas revisadas por la corredora el",
+  "de": "Grundbuchauszug (Matrícula) und Schulden von der Maklerin geprüft am"
+ },
+ "pdfDocsNo": {
+  "pt": "Documentos ainda não conferidos. Peça a conferência à corretora.",
+  "en": "Documents not yet checked. Ask the agent to check them.",
+  "es": "Documentos todavía sin revisar. Pide la revisión a la corredora.",
+  "de": "Unterlagen noch nicht geprüft. Bitte die Maklerin um die Prüfung."
+ },
+ "pdfFoot": {
+  "pt": "Informações sem garantia. Valores e disponibilidade podem mudar. Gerado em",
+  "en": "Information is provided without guarantee. Prices and availability may change. Generated on",
+  "es": "Información sin garantía. Valores y disponibilidad pueden cambiar. Generado el",
+  "de": "Angaben ohne Gewähr. Preise und Verfügbarkeit können sich ändern. Erstellt am"
+ },
+ "pdfLot": {
+  "pt": "Terreno",
+  "en": "Plot",
+  "es": "Terreno",
+  "de": "Grundstück"
+ },
+ "pdfSuites": {
+  "pt": "Suítes",
+  "en": "En-suites",
+  "es": "Suites",
+  "de": "Suiten"
+ },
+ "pdfLoc": {
+  "pt": "Localização",
+  "en": "Location",
+  "es": "Ubicación",
+  "de": "Lage"
+ },
+ "kpH": {
+  "pt": "A corretora sabe o que você precisa",
+  "en": "The agent knows what you need",
+  "es": "La corredora sabe lo que necesitas",
+  "de": "Die Maklerin weiß, was du brauchst"
+ },
+ "kpP": {
+  "pt": "Você não precisa descobrir tudo sozinho. Quando você conta de onde vem e o que quer, a corretora diz exatamente de quais documentos e passos você precisa.",
+  "en": "You do not have to figure it all out alone. Tell us where you are from and what you want, and the agent will tell you exactly which documents and steps you need.",
+  "es": "No tienes que averiguar todo solo. Cuando cuentas de dónde vienes y qué quieres, la corredora te dice exactamente qué documentos y pasos necesitas.",
+  "de": "Du musst nicht alles allein herausfinden. Wenn du sagst, woher du kommst und was du willst, sagt dir die Maklerin genau, welche Unterlagen und Schritte du brauchst."
+ },
+ "kp1": {
+  "pt": "Lista de documentos para o seu país",
+  "en": "Document list for your country",
+  "es": "Lista de documentos para tu país",
+  "de": "Liste der Unterlagen für dein Land"
+ },
+ "kp2": {
+  "pt": "Passo a passo com prazo",
+  "en": "Step by step with timeline",
+  "es": "Paso a paso con plazos",
+  "de": "Schritt für Schritt mit Dauer"
+ },
+ "kp3": {
+  "pt": "Tradução juramentada com a Traduzme",
+  "en": "Sworn translation with Traduzme",
+  "es": "Traducción jurada con Traduzme",
+  "de": "Beeidigte Übersetzung mit Traduzme"
+ },
+ "kp4": {
+  "pt": "Residência: a partir de R$ 700.000 no Nordeste é possível pedir a autorização de residência, com advogado de imigração.",
+  "en": "Residency: from R$ 700,000 in the Northeast, you can apply for a residence permit with an immigration lawyer.",
+  "es": "Residencia: desde R$ 700.000 en el Nordeste se puede pedir la autorización de residencia, con un abogado de inmigración.",
+  "de": "Aufenthaltstitel: Ab R$ 700.000 im Nordosten kannst du ihn mit einem Einwanderungsanwalt beantragen."
+ },
+ "kp4n": {
+  "pt": "Regra de 17/11/2026 (RN CNIg 36/2018, alterada pela RN 46/2021). Detalhes: página de residência.",
+  "en": "Rule as of Nov 17, 2026 (CNIg Resolution 36/2018, amended by Resolution 46/2021). Details: residency page.",
+  "es": "Regla al 17/11/2026 (RN CNIg 36/2018, modificada por la RN 46/2021). Detalles: página de residencia.",
+  "de": "Stand: 17.11.2026 (RN CNIg 36/2018, geändert durch RN 46/2021). Details: Seite zum Aufenthaltstitel."
+ },
+ "kpNo": {
+  "pt": "Bancos, contador e seguros: a corretora não faz. Procure por conta própria.",
+  "en": "Banks, accountants and insurance: the agent does not provide these services, so you will need to find them yourself.",
+  "es": "Bancos, contador y seguros: la corredora no los ofrece. Búscalos por tu cuenta.",
+  "de": "Banken, Steuerberater und Versicherungen: Das macht die Maklerin nicht. Darum kümmerst du dich selbst."
+ },
+ "ansH": {
+  "pt": "Bom saber",
+  "en": "Good to know",
+  "es": "Es bueno saberlo",
+  "de": "Gut zu wissen"
+ },
+ "ansP": {
+  "pt": "Olhe primeiro aqui: a resposta aparece na hora. Só escreva para a corretora se não encontrar.",
+  "en": "Look here first for instant answers. Write to the agent only if you cannot find yours.",
+  "es": "Mira primero aquí: la respuesta es inmediata. Escribe a la corredora solo si no la encuentras.",
+  "de": "Schau zuerst hier: Die Antwort steht sofort da. Schreib der Maklerin nur, wenn du nichts findest."
+ },
+ "ansL1": {
+  "pt": "Todos os custos",
+  "en": "All costs",
+  "es": "Todos los costos",
+  "de": "Alle Kosten"
+ },
+ "ansL2": {
+  "pt": "Documentos",
+  "en": "Documents",
+  "es": "Documentos",
+  "de": "Unterlagen"
+ },
+ "ansL3": {
+  "pt": "Estrangeiro pode comprar?",
+  "en": "Can a foreigner buy?",
+  "es": "¿Un extranjero puede comprar?",
+  "de": "Dürfen Ausländer kaufen?"
+ },
+ "ansL4": {
+  "pt": "Residência no Brasil",
+  "en": "Residence in Brazil",
+  "es": "Residencia en Brasil",
+  "de": "Aufenthaltstitel in Brasilien"
+ },
+ "ansL5": {
+  "pt": "Como identificar uma oferta confiável",
+  "en": "Spot a trustworthy offer",
+  "es": "Cómo identificar una oferta confiable",
+  "de": "Seriöse Angebote erkennen"
+ },
+ "ansL6": {
+  "pt": "Passo a passo",
+  "en": "Step by step",
+  "es": "Paso a paso",
+  "de": "Schritt für Schritt"
+ },
+ "ansL7": {
+  "pt": "Perguntas frequentes",
+  "en": "FAQ",
+  "es": "Preguntas frecuentes",
+  "de": "Häufige Fragen"
+ },
+ "fgA": {
+  "pt": "Características",
+  "en": "Features",
+  "es": "Características",
+  "de": "Ausstattung"
+ },
+ "fgB": {
+  "pt": "Ofertas",
+  "en": "Offers",
+  "es": "Ofertas",
+  "de": "Angebote"
+ },
+ "fgC": {
+  "pt": "Documentos e regras",
+  "en": "Paperwork and rules",
+  "es": "Documentos y reglas",
+  "de": "Unterlagen und Recht"
+ },
+ "fgD": {
+  "pt": "Tamanho e localização",
+  "en": "Size and location",
+  "es": "Tamaño y ubicación",
+  "de": "Größe und Lage"
+ },
+ "suOpt": {
+  "pt": "Fotos e documentos (opcional)",
+  "en": "Photos and documents (optional)",
+  "es": "Fotos y documentos (opcional)",
+  "de": "Fotos und Unterlagen (optional)"
+ },
+ "suGo": {
+  "pt": "Tire fotos dos papéis ou escolha os arquivos. Pronto.",
+  "en": "Take photos of the papers or pick the files. That’s it.",
+  "es": "Toma fotos de los papeles o elige los archivos. Listo.",
+  "de": "Papiere fotografieren oder Dateien auswählen. Fertig."
+ },
+ "fArea": {
+  "pt": "Área construída",
+  "en": "Built area",
+  "es": "Área construida",
+  "de": "Wohnfläche"
+ },
+ "fLot": {
+  "pt": "Terreno",
+  "en": "Plot size",
+  "es": "Terreno",
+  "de": "Grundstück"
+ },
+ "fAreaN": {
+  "pt": "a partir de {n} m²",
+  "en": "from {n} m²",
+  "es": "desde {n} m²",
+  "de": "ab {n} m²"
+ },
+ "trK": {
+  "pt": "Segurança",
+  "en": "Safety",
+  "es": "Seguridad",
+  "de": "Sicherheit"
+ },
+ "trH": {
+  "pt": "Como comprar com segurança",
+  "en": "How to buy safely",
+  "es": "Cómo comprar con seguridad",
+  "de": "So kaufst du sicher"
+ },
+ "trP": {
+  "pt": "Quatro coisas que você pode conferir sozinho, a qualquer hora.",
+  "en": "Four things you can check yourself, any time.",
+  "es": "Cuatro cosas que puedes comprobar tú mismo, en cualquier momento.",
+  "de": "Vier Dinge, die du jederzeit selbst prüfen kannst."
+ },
+ "trC1h": {
+  "pt": "Corretora com CRECI",
+  "en": "Agent with CRECI license",
+  "es": "Corredora con CRECI",
+  "de": "Maklerin mit CRECI-Nummer"
+ },
+ "trC1p": {
+  "pt": "É o registro profissional do corretor. Fica no rodapé de cada página e você pode conferir no conselho.",
+  "en": "This is the official real estate broker license. You will find it in the footer of every page and can verify it with the regional council (CRECI).",
+  "es": "Es la licencia oficial de corredor. Está al pie de cada página y puedes verificarla en el consejo regional (CRECI).",
+  "de": "Das ist die staatliche Maklerlizenz. Sie steht in der Fußzeile jeder Seite und lässt sich bei der Berufskammer prüfen."
+ },
+ "trC2h": {
+  "pt": "Documentos à vista",
+  "en": "Papers in plain sight",
+  "es": "Documentos a la vista",
+  "de": "Unterlagen sichtbar"
+ },
+ "trC2p": {
+  "pt": "Em cada imóvel você vê quais documentos existem e quais ainda faltam. Também em PDF para enviar.",
+  "en": "Every property shows which documents exist and which are still missing. Also available as a PDF you can forward.",
+  "es": "Cada inmueble muestra qué documentos existen y cuáles faltan. También en PDF para reenviar.",
+  "de": "Bei jeder Immobilie steht, welche Unterlagen vorhanden sind und welche noch fehlen. Auch als PDF zum Weiterschicken."
+ },
+ "trC3h": {
+  "pt": "Como identificar uma oferta confiável",
+  "en": "Spot a trustworthy offer",
+  "es": "Cómo identificar una oferta confiable",
+  "de": "Seriöse Angebote erkennen"
+ },
+ "trC3p": {
+  "pt": "Uma página mostra lado a lado como é uma compra séria e o que não é normal.",
+  "en": "One page compares a legitimate purchase with warning signs, side by side.",
+  "es": "Una página muestra lado a lado cómo es una compra seria y qué no es normal.",
+  "de": "Eine Seite zeigt nebeneinander, wie ein seriöser Kauf abläuft und was nicht normal ist."
+ },
+ "trC4h": {
+  "pt": "Passo a passo",
+  "en": "Step by step",
+  "es": "Paso a paso",
+  "de": "Schritt für Schritt"
+ },
+ "trC4p": {
+  "pt": "Do primeiro contato até a chave, com fonte. O que ainda não está confirmado aparece marcado como em aberto.",
+  "en": "From first contact to getting the keys, with sources. Anything still unconfirmed is marked as such.",
+  "es": "Del primer contacto a las llaves, con fuentes. Lo que sigue abierto aparece como abierto.",
+  "de": "Vom ersten Kontakt bis zum Schlüssel, mit Quellen. Was noch offen ist, ist als offen markiert."
+ },
+ "trRule": {
+  "pt": "Regra de ouro: primeiro conferir, depois pagar. Transfira só para a conta que está no contrato.",
+  "en": "Golden rule: check first, pay after. Transfer only to the account named in the contract.",
+  "es": "Regla de oro: primero comprobar, después pagar. Transfiere solo a la cuenta que figura en el contrato.",
+  "de": "Faustregel: erst prüfen, dann zahlen. Überweise nur auf das Konto, das im Vertrag steht."
+ },
+ "fq6": {
+  "pt": "Como reconheço uma oferta séria?",
+  "en": "How do I spot a legitimate offer?",
+  "es": "¿Cómo reconozco una oferta seria?",
+  "de": "Woran erkenne ich ein seriöses Angebot?"
+ },
+ "fq6a": {
+  "pt": "Documentos à vista, corretora com CRECI ativo e pagamento só depois da conferência. Veja a página “Compra segura”.",
+  "en": "Look for documents shown upfront, an agent with an active CRECI license, and payment only after the checks. See the “Safe buying” page.",
+  "es": "Documentos a la vista, corredora con CRECI activo y pago solo tras la revisión. Mira la página “Compra segura”.",
+  "de": "Unterlagen werden offen gezeigt, die Maklerin hat eine aktive CRECI-Registrierung, und gezahlt wird erst nach der Prüfung. Siehe Seite „Seriöse Angebote erkennen“."
+ },
+ "fq7": {
+  "pt": "Preciso de um advogado?",
+  "en": "Do I need a lawyer?",
+  "es": "¿Necesito un abogado?",
+  "de": "Brauche ich einen Anwalt?"
+ },
+ "fq7a": {
+  "pt": "Recomendamos que sim. A análise jurídica final cabe ao advogado do comprador, não à corretora.",
+  "en": "We recommend one. The final legal review is the job of the buyer’s lawyer, not the agent.",
+  "es": "Lo recomendamos. El análisis jurídico final le corresponde al abogado del comprador, no a la corredora.",
+  "de": "Wir empfehlen es. Die abschließende rechtliche Prüfung ist Sache des Anwalts des Käufers, nicht der Maklerin."
+ },
+ "fq8": {
+  "pt": "Comprar dá direito a residência?",
+  "en": "Does buying give me residence?",
+  "es": "¿Comprar da derecho a residencia?",
+  "de": "Bekomme ich durch den Kauf einen Aufenthaltstitel?"
+ },
+ "fq8a": {
+  "pt": "A partir de R$ 700.000 (Nordeste) é possível pedir autorização de residência. Não é automático e o pedido é feito com advogado de imigração. Veja a página de residência.",
+  "en": "From R$ 700,000 (Northeast), you can apply for a residence permit. It is not automatic, and you apply with an immigration lawyer. See the residency page.",
+  "es": "Desde R$ 700.000 (Nordeste) se puede pedir autorización de residencia. No es automático y el trámite se hace con un abogado de inmigración. Mira la página de residencia.",
+  "de": "Ab R$ 700.000 (Nordosten) kannst du einen Aufenthaltstitel beantragen. Automatisch ist das nicht: Den Antrag stellst du mit einem Einwanderungsanwalt. Siehe Seite zum Aufenthaltstitel."
+ },
+ "fq9": {
+  "pt": "Quanto tempo leva a compra?",
+  "en": "How long does the purchase take?",
+  "es": "¿Cuánto tarda la compra?",
+  "de": "Wie lange dauert der Kauf?"
+ },
+ "fq9a": {
+  "pt": "Em geral de 60 a 90 dias a partir da proposta. Veja o passo a passo.",
+  "en": "Usually 60 to 90 days from the offer. See the step-by-step guide.",
+  "es": "Por lo general de 60 a 90 días desde la oferta. Mira el paso a paso.",
+  "de": "Meist 60 bis 90 Tage ab dem Angebot. Siehe die Schritt-für-Schritt-Anleitung."
+ },
+ "fq10": {
+  "pt": "Como mando o dinheiro do exterior?",
+  "en": "How do I send the money from abroad?",
+  "es": "¿Cómo envío el dinero desde el exterior?",
+  "de": "Wie überweise ich das Geld aus dem Ausland?"
+ },
+ "fq10a": {
+  "pt": "Por transferência internacional com contrato de câmbio. Taxas e passos estão no guia de compra do exterior; o que ainda não está confirmado está marcado.",
+  "en": "By international transfer with an exchange contract. Fees and steps are in our guide to buying from abroad; anything not yet confirmed is marked.",
+  "es": "Por transferencia internacional con contrato de cambio. Las tarifas y los pasos están en la guía de compra desde el exterior; lo que aún no está confirmado está marcado.",
+  "de": "Per internationaler Überweisung mit Devisenvertrag (Contrato de câmbio). Kosten und Schritte stehen im Leitfaden für den Kauf aus dem Ausland; Unbestätigtes ist markiert."
+ },
+ "fq11": {
+  "pt": "Posso ver os documentos do imóvel?",
+  "en": "Can I see the property’s papers?",
+  "es": "¿Puedo ver los documentos de la propiedad?",
+  "de": "Kann ich die Unterlagen der Immobilie sehen?"
+ },
+ "fq11a": {
+  "pt": "Sim. Cada anúncio mostra o status dos documentos e tem um PDF completo para baixar e enviar ao seu banco ou advogado.",
+  "en": "Yes. Every listing shows the status of the papers and has a full PDF to download and send to your bank or lawyer.",
+  "es": "Sí. Cada anuncio muestra el estado de los documentos y tiene un PDF completo para descargar y enviar a tu banco o abogado.",
+  "de": "Ja. Jede Anzeige zeigt den Stand der Unterlagen und hat ein vollständiges PDF zum Herunterladen und Weiterschicken an Bank oder Anwalt."
+ },
+ "fq12": {
+  "pt": "Vocês fazem financiamento?",
+  "en": "Do you arrange financing?",
+  "es": "¿Gestionan financiamiento?",
+  "de": "Vermittelt ihr Finanzierung?"
+ },
+ "fq12a": {
+  "pt": "Não. Bancos brasileiros raramente financiam não residentes. O simulador mostra só um exemplo de cálculo.",
+  "en": "No. Brazilian banks rarely finance non-residents. The calculator shows only an example.",
+  "es": "No. Los bancos brasileños rara vez financian a no residentes. El simulador muestra solo un ejemplo de cálculo.",
+  "de": "Nein. Brasilianische Banken finanzieren Käufer ohne Wohnsitz in Brasilien selten. Der Rechner zeigt nur ein Rechenbeispiel."
+ },
+ "sell4": {
+  "pt": "Conferimos os documentos com você antes de anunciar; o pagamento segue o contrato e o registro",
+  "en": "We check the documents with you before listing; payment follows the contract and registration",
+  "es": "Revisamos los documentos contigo antes de publicar; el pago se hace según el contrato y el registro",
+  "de": "Wir prüfen die Unterlagen vorab mit dir. Gezahlt wird erst nach Vertrag und Eintragung."
+ },
+ "rqSafeH": {
+  "pt": "Compra segura",
+  "en": "Safe buying",
+  "es": "Compra segura",
+  "de": "Sicher kaufen"
+ },
+ "inqMore": {
+  "pt": "Adicionar mensagem (opcional)",
+  "en": "Add a message (optional)",
+  "es": "Añadir mensaje (opcional)",
+  "de": "Nachricht hinzufügen (optional)"
+ },
+ "kCardH": {
+  "pt": "Quanto vou pagar por mês, se financiar?",
+  "en": "What would the monthly payment be with a loan?",
+  "es": "¿Cuánto cuesta en total?",
+  "de": "Was kostet es insgesamt?"
+ },
+ "kCardP": {
+  "pt": "Só serve se você for pedir empréstimo no banco. Mude a entrada e veja a parcela.",
+  "en": "Only relevant if you take out a bank loan. Change the down payment to see the monthly installment.",
+  "es": "Cambia el valor y la entrada: el cálculo se actualiza al instante.",
+  "de": "Preis und Anzahlung ändern: Das Ergebnis aktualisiert sich sofort."
+ },
+ "sellSafeH": {
+  "pt": "Venda com acompanhamento",
+  "en": "Selling with support",
+  "es": "Venta con acompañamiento",
+  "de": "Verkaufen mit Begleitung"
+ },
+ "readMore": {
+  "pt": "Ler mais",
+  "en": "Read more",
+  "es": "Leer más",
+  "de": "Mehr lesen"
+ },
+ "glH": {
+  "pt": "Comodidades",
+  "en": "Amenities",
+  "es": "Comodidades",
+  "de": "Ausstattung"
+ },
+ "distH": {
+  "pt": "Distâncias",
+  "en": "Distances",
+  "es": "Distancias",
+  "de": "Entfernungen"
+ },
+ "trustNo": {
+  "pt": "Corretora inscrita no CRECI-RN",
+  "en": "Agent registered with CRECI-RN",
+  "es": "Corredora inscrita en el CRECI-RN",
+  "de": "Maklerin, eingetragen im CRECI-RN"
+ },
+ "suWaT": {
+  "pt": "Quero vender meu imóvel:",
+  "en": "I want to sell my property:",
+  "es": "Quiero vender mi propiedad:",
+  "de": "Ich möchte meine Immobilie verkaufen:"
+ },
+ "suWaGo": {
+  "pt": "Abrindo o WhatsApp: é só enviar a mensagem.",
+  "en": "Opening WhatsApp: just send the message.",
+  "es": "Abriendo WhatsApp: solo tienes que enviar el mensaje.",
+  "de": "WhatsApp öffnet sich: Nachricht einfach abschicken."
+ },
+ "ctaHG": {
+  "pt": "Procurando algo em Pipa?",
+  "en": "Looking for something in Pipa?",
+  "es": "¿Buscas algo en Pipa?",
+  "de": "Du suchst etwas in Pipa?"
+ },
+ "ctaPG": {
+  "pt": "Escreva pelo WhatsApp ou marque uma conversa. Respondemos no mesmo dia.",
+  "en": "Message us on WhatsApp or book a chat. We reply the same day.",
+  "es": "Escribe por WhatsApp o agenda una charla. Respondemos el mismo día.",
+  "de": "Schreib uns per WhatsApp oder vereinbare ein Gespräch. Wir antworten am selben Tag."
+ },
+ "priceOnReq": {
+  "pt": "Preço sob consulta",
+  "en": "Price on request",
+  "es": "Precio a consultar",
+  "de": "Preis auf Anfrage"
+ }
+}

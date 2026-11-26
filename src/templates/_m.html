@@ -1,0 +1,166 @@
+{# Bausteine, die auf mehreren Seiten vorkommen #}
+
+{% macro card(l, swipe=false, order=0, sizes='(min-width:1000px) 380px, (min-width:640px) 50vw, 100vw') %}
+<article class="card{% if l.status == 'reservado' %} is-res{% endif %}" data-card data-cat="{{ l.cat }}" data-loc="{{ l.locslug }}" data-type="{{ l.type }}" data-price="{{ l.price | int }}" data-beds="{{ l.beds }}" data-area="{{ l.area | int }}" data-lot="{{ l.lot | int }}" data-date="{{ l.date }}" data-order="{{ order }}" data-slug="{{ l.slug }}" data-baths="{{ l.baths }}" data-beach="{{ l.beach }}" data-parking="{{ l.parking }}" data-feats="{{ l.feats | join(' ') }}" data-new="{{ 1 if l.status == 'novo' else 0 }}" data-red="{{ 1 if l.priceBefore else 0 }}" data-docs="{{ 1 if l.checks.matricula and l.checks.debts else 0 }}" data-res="{{ 1 if l.cat == 'venda' and l.price >= taxes.residence.northeast else 0 }}" data-temp="{{ 1 if l.temporada == 'sim' else 0 }}" data-name="{{ l.name }}">
+  <div class="card-media">
+    <div class="card-photos"{% if swipe %} data-swipe{% endif %}>
+      {% for k in (l.imgs[:5] if swipe else l.imgs[:1]) %}
+      <a href="{{ url('imovel-' + l.slug) }}" tabindex="-1" aria-hidden="true">{{ pic(k, sizes, '', '', false, not loop.first) }}</a>
+      {% endfor %}
+    </div>
+    <div class="badges">
+      {% if l.priceBefore %}<span class="badge badge-red">{{ t.stRed }}</span>{% endif %}{% if l.status == 'novo' %}<span class="badge badge-new">{{ t.stNew }}</span>{% elif l.status == 'reservado' %}<span class="badge badge-res">{{ t.stRes }}</span>{% endif %}
+      <span class="badge">{{ t.dealRent if l.deal == 'aluguel' else t.dealSale }}</span>
+    </div>
+    {% if l.imgs | length > 1 %}
+    <button class="card-fav" type="button" data-fav data-slug="{{ l.slug }}" data-name="{{ l.name }}" data-url="{{ url('imovel-' + l.slug) }}" data-price="{{ l.price | int }}" aria-pressed="false" aria-label="{{ t.mlAdd }}">{{ icon('heart') }}</button>
+    <span class="card-count">{{ icon('camera') }}<span data-count>{{ l.imgs | length }}</span></span>
+    {% if swipe %}
+    <button class="card-arrow prev" type="button" data-step="-1" aria-label="{{ t.prev }}">{{ icon('arrow') }}</button>
+    <button class="card-arrow next" type="button" data-step="1" aria-label="{{ t.next }}">{{ icon('arrow') }}</button>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="card-body">
+    <span class="card-loc">{{ icon('pin') }}{{ l.loc }}</span>
+    <h3 class="card-title"><a href="{{ url('imovel-' + l.slug) }}">{{ l.name }}</a></h3>
+    <p class="card-sub">{{ L(l.highlights)[:2] | join(" · ") if L(l.highlights) else L(l.title) }}</p>
+    <p class="card-price">{{ price(l) }}{% if l.priceBefore %} <s class="was" data-brl="{{ l.priceBefore | int }}">{{ money(l.priceBefore) }}</s>{% endif %}</p>
+    <ul class="facts">
+      {% for ic, n, w in facts(l) %}<li>{{ icon(ic) }}<span><b>{{ n }}</b> {{ w }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</article>
+{% endmacro %}
+
+
+{% macro wishbox() %}
+<section class="sec sec-soft wish-sec"><div class="wrap"><div class="wish" data-wish>
+  <h2>{{ t.wH }}</h2><p>{{ t.wP }}</p>
+  <div class="wish-g">
+    <label class="field"><span>{{ t.wDeal }}</span><select data-wg="deal"><option value="buy">{{ t.wBuy }}</option><option value="rent">{{ t.wRent }}</option></select></label>
+    <label class="field"><span>{{ t.wWhere }}</span><select data-wg="where"><option value="">{{ t.wAny }}</option>{% for x in locs %}<option value="{{ x.name }}">{{ x.name }}</option>{% endfor %}</select></label>
+    <label class="field" data-wp="buy"><span>{{ t.wPrice }}</span><select data-wg="price"><option value="">{{ t.wAny }}</option>{% for v in [500000, 1000000, 2000000, 5000000] %}<option value="{{ v }}">{{ money(v) }}</option>{% endfor %}</select></label>
+    <label class="field" data-wp="rent" hidden><span>{{ t.wPrice }}</span><select data-wg="price"><option value="">{{ t.wAny }}</option>{% for v in [3000, 5000, 10000] %}<option value="{{ v }}">{{ money(v) }}</option>{% endfor %}</select></label>
+    <label class="field"><span>{{ t.wBeds }}</span><select data-wg="beds"><option value="">{{ t.wAny }}</option>{% for n in [1, 2, 3, 4] %}<option value="{{ n }}">{{ n }}+</option>{% endfor %}</select></label>
+    <label class="field wf"><span>{{ t.wFrom }}</span><select data-wish-from><option value="">{{ t.wAny }}</option></select></label>
+  </div>
+  <a class="btn btn-wa btn-block btn-lg" data-wish-wa href="#" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.wSend }}</a>
+  {% if site.channelUrl %}<div class="chan"><div><b>{{ t.chH }}</b><span>{{ t.chP }}</span></div>
+    <a class="btn btn-line" href="{{ site.channelUrl }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.chBtn }}</a></div>{% endif %}
+</div></div></section>
+{% endmacro %}
+
+{% macro post(p, sizes='(min-width:1000px) 380px, (min-width:700px) 50vw, 100vw') %}
+<article class="post">
+  <div class="post-media">{{ pic(p.img, sizes, '') }}</div>
+  <div class="post-body">
+    <div class="post-meta"><b>{{ L(p.cat) }}</b><span>{{ fdate(p.date) }}</span><span>{{ p.read[lang] }} {{ t.minRead }}</span></div>
+    <h3><a href="{{ url('artigo-' + p.slug) }}">{{ L(p.title) }}</a></h3>
+    <p>{{ L(p.excerpt) }}</p>
+  </div>
+</article>
+{% endmacro %}
+
+{% macro calc(start) %}
+<div class="calc" data-calc>
+  <div class="calc-box">
+    <div class="calc-row">
+      <label for="k-price">{{ t.kPrice }}</label>
+      <input class="inp" id="k-price" type="number" inputmode="numeric" min="50000" step="10000" value="{{ start }}" data-k="price">
+    </div>
+    <div class="calc-row">
+      <label for="k-down">{{ t.kDown }} <output data-o="down"></output></label>
+      <input id="k-down" type="range" min="10" max="80" step="5" value="30" data-k="down">
+    </div>
+    <div class="calc-row">
+      <label for="k-years">{{ t.kYears }} <output data-o="years"></output></label>
+      <input id="k-years" type="range" min="5" max="35" step="1" value="20" data-k="years">
+    </div>
+    <div class="calc-row">
+      <label for="k-rate">{{ t.kRate }}</label>
+      <input class="inp" id="k-rate" type="number" inputmode="decimal" min="1" max="30" step="0.1" value="{{ site.rate }}" data-k="rate">
+    </div>
+    <div class="calc-row">
+      <span class="calc-lab">{{ t.kSys }}</span>
+      <div class="tabs">
+        <label><input type="radio" name="k-sys" value="sac" checked data-k="sys"><span>SAC</span></label>
+        <label><input type="radio" name="k-sys" value="price" data-k="sys"><span>Price</span></label>
+      </div>
+      <p class="form-note" style="margin-top:8px" data-o="sysnote" data-sac="{{ t.kSac }}" data-price="{{ t.kPriceSys }}">{{ t.kSac }}</p>
+    </div>
+  </div>
+  <div class="calc-res" aria-live="polite">
+    <div><small>{{ t.kFirst }}</small><div class="calc-big" data-o="first">–</div><small data-o="firstfx"></small></div>
+    <div class="calc-grid">
+      <div><small>{{ t.kLast }}</small><b data-o="last">–</b></div>
+      <div><small>{{ t.kLoan }}</small><b data-o="loan">–</b></div>
+      <div><small>{{ t.kInterest }}</small><b data-o="interest">–</b></div>
+      <div><small>{{ t.kCosts }}</small><b data-o="costs">–</b></div>
+    </div>
+    <p class="calc-note">{{ t.kNote }}</p>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro inquiry(subject='', msg='', id='f', subjects=false) %}
+<form class="form" data-form="contact" data-subject="{{ subject }}" novalidate>
+  <label>{{ t.fName }}<input class="inp" name="name" autocomplete="name" required></label>
+  <label>{{ t.fPhone }}<input class="inp" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+  {% if subjects %}
+  <label>{{ t.fSubject }}
+    <select class="inp" name="subject">
+      {% for v, k in [('comprar','sBuy'),('alugar','sRent'),('vender','sSell'),('visita','sVisit'),('outro','sOther')] %}<option value="{{ t[k] }}" data-v="{{ v }}">{{ t[k] }}</option>{% endfor %}
+    </select>
+  </label>
+  {% endif %}
+  <details class="inq-more"><summary>{{ t.inqMore }}</summary>
+    <label>{{ t.fEmail }}<input class="inp" name="email" type="email" autocomplete="email"></label>
+    <label>{{ t.fMsg }}<textarea class="inp" name="message" rows="3">{{ msg }}</textarea></label>
+  </details>
+  <button class="btn btn-primary btn-block" type="submit">{{ t.fSend }}</button>
+  <p class="form-msg" role="status"></p>
+  <p class="form-note">{{ t.fNote }} <a href="{{ url('privacidade') }}">{{ t.privH }}</a>.</p>
+</form>
+{% endmacro %}
+
+{% macro agentbox() %}
+<div class="agent-top">
+  <span class="avatar">{% if site.agent.photo %}{{ pic(site.agent.photo, '56px', site.agent.name) }}{% else %}{{ site.agent.initials }}{% endif %}</span>
+  <div><b>{{ site.agent.name }}</b><span>{{ L(site.agent.role) }}{% if site.agent.creci %} · {{ site.agent.creci }}{% endif %}</span></div>
+</div>
+{% endmacro %}
+
+{% macro answers() %}
+<aside class="know" aria-labelledby="ans-h">
+  <b class="know-t" id="ans-h">{{ t.ansH }}</b>
+  <div class="know-g">
+    <a href="{{ url('calculadoras') }}"><span class="know-i">{{ icon('tag') }}</span><span>{{ t.ansL1 }}</span></a>
+    <a href="{{ url('comprar' if lang == 'pt' else 'comprar-do-exterior') }}"><span class="know-i">{{ icon('doc') }}</span><span>{{ t.ansL2 }}</span></a>
+    <a href="{{ url('comprar' if lang == 'pt' else 'comprar-do-exterior') }}"><span class="know-i">{{ icon('check') }}</span><span>{{ t.ansL6 }}</span></a>
+    <a href="{{ url('home') }}#faq"><span class="know-i">{{ icon('info') }}</span><span>{{ t.ansL7 }}</span></a>
+  </div>
+</aside>
+{% endmacro %}
+{% macro ctaband(h, p, imgkey) %}
+<section class="sec">
+  <div class="wrap">
+    <div class="cta">
+      {{ pic(imgkey, '100vw', '', 'cta-bg') }}
+      <div><h2>{{ h }}</h2><p>{{ p }}</p></div>
+      <div class="btn-row">
+        <a class="btn btn-wa" href="{{ wa(t.waHello) }}" target="_blank" rel="noopener">{{ wa_icon() }} {{ t.waWrite }}</a>
+        <a class="btn btn-ghost" href="{{ url('contato') }}">{{ t.ctaVisit }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro faq(n=5) %}
+<div class="faq">
+  {% for i in range(1, n + 1) %}
+  <details><summary>{{ t['fq' ~ i] }}</summary><p>{{ t['fq' ~ i ~ 'a'] }}</p></details>
+  {% endfor %}
+</div>
+{% endmacro %}

@@ -1,0 +1,76 @@
+{
+ "slug": "terreno-das-dunas",
+ "ref": "EN-1012",
+ "deal": "venda",
+ "type": "terreno",
+ "name": "Terreno das Dunas",
+ "title": {
+  "pt": "Terreno plano de 2.400 m² em Sibaúma",
+  "en": "Level 2,400 m² plot in Sibaúma",
+  "es": "Terreno plano de 2.400 m² en Sibaúma",
+  "de": "Ebenes Grundstück mit 2.400 m² in Sibaúma"
+ },
+ "loc": "Sibaúma",
+ "lat": -6.2808,
+ "lng": -35.0362,
+ "price": 780000,
+ "condo": 0,
+ "iptu": 1400,
+ "beds": 0,
+ "suites": 0,
+ "baths": 0,
+ "parking": 0,
+ "area": 0,
+ "lot": 2400,
+ "year": 0,
+ "beach": 350,
+ "status": "disponivel",
+ "date": "2026-08-25",
+ "imgs": [
+  "76",
+  "51",
+  "10"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "deed",
+  "paved",
+  "power",
+  "water"
+ ],
+ "dist": {
+  "beach": "5 min",
+  "center": "20-25 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "Atrás da faixa de dunas",
+   "Levantamento topográfico de 2024",
+   "Matrícula e certidões solicitadas"
+  ],
+  "en": [
+   "Behind the dune belt",
+   "Topographic survey dated 2024",
+   "Matrícula and certificates requested"
+  ],
+  "es": [
+   "Detrás de la franja de dunas",
+   "Levantamiento topográfico de 2024",
+   "Matrícula y certificados solicitados"
+  ],
+  "de": [
+   "Hinter dem Dünenstreifen",
+   "Vermessung von 2024 vorhanden",
+   "Grundbuchauszug und Bescheinigungen angefragt"
+  ]
+ },
+ "desc": {
+  "pt": "Terreno plano de solo arenoso em Sibaúma, com cajueiros, vegetação baixa e frente para rua calçada. O esgoto é por fossa séptica, como em toda a vila.\n\nO zoneamento informado pela prefeitura admite uso residencial e pousada pequena, mas altura e recuos devem ser confirmados na prefeitura. Recomendamos sondagem antes do projeto. O corte de árvores depende de licença ambiental. Matrícula e certidões solicitadas; situação conforme os documentos.",
+  "en": "Level, sandy plot in Sibaúma with cashew trees and low vegetation, fronting a paved road. Sewage goes to a septic tank, as everywhere in the village.\n\nThe town hall’s zoning information allows residential use and a small guesthouse, but height limits and setbacks must be confirmed with the town hall. We recommend a soil survey before design work. Cutting down trees requires an environmental license. Matrícula and certificates requested; status as shown in the documents.",
+  "es": "Terreno plano de suelo arenoso en Sibaúma, con cajueiros (anacardos o marañones) y vegetación baja, con frente a calle empedrada. El desagüe es por fosa séptica, como en todo el pueblo.\n\nLa zonificación informada por la municipalidad admite uso residencial y una posada pequeña, pero la altura y los retiros deben confirmarse en la municipalidad. Recomendamos un estudio de suelo antes del proyecto. La tala de árboles depende de una licencia ambiental. Matrícula y certificados solicitados; situación según los documentos.",
+  "de": "Ebenes, sandiges Grundstück in Sibaúma mit Cashewbäumen und niedrigem Bewuchs, zur gepflasterten Straße hin. Das Abwasser läuft über eine Klärgrube, wie im ganzen Dorf.\n\nNach den Angaben der Stadtverwaltung (Prefeitura) sind Wohnnutzung und eine kleine Pousada erlaubt, doch Höhe und Abstände sind bei der Prefeitura zu bestätigen. Wir empfehlen eine Bodenuntersuchung vor der Planung. Für das Fällen von Bäumen braucht man eine Umweltgenehmigung. Grundbuchauszug und Bescheinigungen angefragt; Stand siehe Unterlagen."
+ },
+ "ordem": 8
+}

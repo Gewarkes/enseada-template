@@ -1,0 +1,81 @@
+{
+ "slug": "casa-do-coqueiral",
+ "ref": "EN-1027",
+ "deal": "venda",
+ "type": "casa",
+ "name": "Casa do Coqueiral",
+ "title": {
+  "pt": "Casa térrea de 3 suítes perto do centro de Pipa",
+  "en": "Single-story three-bedroom house near the center of Pipa",
+  "es": "Casa de un piso con 3 suites cerca del centro de Pipa",
+  "de": "Ebenerdiges Haus mit 3 Suiten nahe dem Zentrum von Pipa"
+ },
+ "loc": "Centro de Pipa",
+ "lat": -6.2297,
+ "lng": -35.0489,
+ "price": 2380000,
+ "condo": 0,
+ "iptu": 4900,
+ "beds": 3,
+ "suites": 3,
+ "baths": 3,
+ "parking": 2,
+ "area": 240,
+ "lot": 520,
+ "year": 2018,
+ "beach": 400,
+ "status": "disponivel",
+ "date": "2026-09-18",
+ "imgs": [
+  "05",
+  "23",
+  "15",
+  "47"
+ ],
+ "video": "",
+ "plan": "",
+ "feats": [
+  "pool",
+  "ac",
+  "garage",
+  "garden",
+  "bbq",
+  "fiber",
+  "alarm"
+ ],
+ "dist": {
+  "beach": "6 min",
+  "center": "3 min",
+  "airport": "~1 h 30"
+ },
+ "highlights": {
+  "pt": [
+   "Térrea, sem degraus entre os ambientes",
+   "Coqueiros adultos no lote",
+   "Piscina de raia com 12 m"
+  ],
+  "en": [
+   "Single story, no steps between rooms",
+   "Mature coconut palms on the plot",
+   "Lap pool, 12 m long"
+  ],
+  "es": [
+   "De un solo piso, sin escalones entre ambientes",
+   "Cocoteros adultos en el lote",
+   "Piscina de 12 m para nadar largos"
+  ],
+  "de": [
+   "Ebenerdig, keine Stufen zwischen den Räumen",
+   "Ausgewachsene Kokospalmen auf dem Grundstück",
+   "Bahnenpool mit 12 m Länge"
+  ]
+ },
+ "desc": {
+  "pt": "Casa numa rua residencial perto do centro de Pipa. O lote é plano e murado; muro e vegetação protegem a casa da vista da rua.\n\nMatrícula e certidões solicitadas; situação conforme os documentos. O telhado foi revisado em 2025 e a casa está pronta para morar. Os móveis não entram no preço, mas podem ser negociados à parte.",
+  "en": "House on a residential street near the center of Pipa. The plot is level and walled, and the wall and plants screen it from the street.\n\nMatrícula and certificates requested; status as shown in the documents. The roof was serviced in 2025 and the house is move-in ready. Furniture is not included in the price but can be negotiated separately.",
+  "es": "Casa en una calle residencial cerca del centro de Pipa. El lote es plano y cercado; el muro y la vegetación impiden ver hacia adentro desde la calle.\n\nMatrícula y certificados solicitados; situación según los documentos. El techo fue revisado en 2025 y la casa está lista para habitar. Los muebles no están incluidos en el precio, pero pueden negociarse aparte.",
+  "de": "Haus an einer Wohnstraße nahe dem Zentrum von Pipa. Das Grundstück ist eben und ummauert; Mauer und Bepflanzung schützen vor Blicken von der Straße.\n\nGrundbuchauszug (Matrícula) und Bescheinigungen sind angefragt; der Stand steht bei den Unterlagen. Das Dach wurde 2025 überprüft, das Haus ist bezugsfertig. Die Möbel sind nicht im Preis enthalten, können aber separat verhandelt werden."
+ },
+ "ordem": 2,
+ "priceBefore": 2580000
+}

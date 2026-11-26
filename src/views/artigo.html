@@ -1,0 +1,87 @@
+<style>
+/* Artikel: Kopf + Titelbild · Lesespalte 800 · Autorenblock · drei weitere Artikel */
+.v-artigo .head{padding:90px 0 56px;text-align:center}
+.v-artigo .head__c{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500}
+.v-artigo .head__c i{width:6px;height:6px;background:var(--sea)}
+.v-artigo .head__t{max-width:980px;margin:18px auto 0;font-size:clamp(34px,4.5vw,64px);line-height:1.05;font-weight:600;letter-spacing:-.035em;text-wrap:balance}
+.v-artigo .head__m{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;margin-top:22px;color:var(--mute)}
+.v-artigo .head__m b{font-weight:600;color:var(--text)}
+.v-artigo .cover{aspect-ratio:1280/620;border-radius:var(--r);overflow:hidden;background:var(--stone)}
+.v-artigo .cover img{width:100%;height:100%;object-fit:cover}
+
+.v-artigo .body{max-width:calc(800px + 2*var(--gut));margin:0 auto;padding:72px var(--gut) 0}
+.v-artigo .body p{font-size:17px;line-height:1.65;text-wrap:pretty}
+.v-artigo .body p+p{margin-top:18px}
+.v-artigo .body h2{font-size:clamp(26px,2.8vw,40px);line-height:1.2;font-weight:600;letter-spacing:-.03em;margin:44px 0 16px;text-wrap:balance}
+.v-artigo .by{display:flex;align-items:center;gap:18px;margin-top:64px;padding-top:28px;border-top:1px solid var(--line)}
+.v-artigo .by__ini{flex:none;width:56px;height:56px;border-radius:50%;background:var(--ink-2);color:#eef0ee;display:grid;place-items:center;font-size:19px;font-weight:300}
+.v-artigo .by__n{font-weight:600;line-height:1.3}
+.v-artigo .by__r{font-size:14px;line-height:1.4;color:var(--mute)}
+.v-artigo .by .btn{margin-left:auto}
+.v-artigo .by .btn svg{width:18px;height:18px;fill:currentColor}
+
+.v-artigo .more{padding:120px 0}
+.v-artigo .more__h{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+.v-artigo .more__h .link{min-height:44px;padding-top:10px}
+.v-artigo .more__g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.v-artigo .mc{display:block;background:var(--stone);border-radius:var(--r);padding:20px 20px 24px}
+.v-artigo .mc__ph{aspect-ratio:327/191;border-radius:calc(var(--r) - 2px);overflow:hidden}
+.v-artigo .mc__ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.v-artigo .mc:hover .mc__ph img{transform:scale(1.03)}
+.v-artigo .mc__m{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:16px;font-size:13px;color:var(--mute)}
+.v-artigo .mc__m span{background:var(--white);color:var(--text);font-weight:500;padding:3px 9px;border-radius:12px}
+.v-artigo .mc__t{margin-top:12px;font-size:22px;line-height:1.12;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+
+.v-artigo .nf{padding:120px 0 160px;text-align:center}
+.v-artigo .nf p{margin:16px auto 28px;max-width:440px;color:var(--mute)}
+
+@media (max-width:860px){
+  .v-artigo .head{padding:44px 0 36px}
+  .v-artigo .cover{aspect-ratio:4/3}
+  .v-artigo .body{padding-top:44px}
+  .v-artigo .body h2{margin-top:36px}
+  .v-artigo .by{flex-wrap:wrap;margin-top:48px}
+  .v-artigo .by .btn{margin-left:0;width:100%}
+  .v-artigo .more{padding:76px 0}
+  .v-artigo .more__g{grid-template-columns:1fr;gap:12px}
+  .v-artigo .nf{padding:76px 0 100px}
+}
+</style>
+<script>
+addDict({
+pt:{ar_read:'min de leitura',ar_wa:'Perguntar no WhatsApp',ar_more:'Outros artigos',ar_all:'Ver todos os artigos',ar_nf:'Artigo não encontrado',ar_nfp:'O endereço pode ter mudado ou o artigo foi retirado.',ar_back:'Voltar ao blog'},
+en:{ar_read:'min read',ar_wa:'Ask on WhatsApp',ar_more:'Other articles',ar_all:'View all articles',ar_nf:'Article not found',ar_nfp:'The address may have changed or the article was removed.',ar_back:'Back to the blog'},
+de:{ar_read:'Min. Lesezeit',ar_wa:'Per WhatsApp fragen',ar_more:'Weitere Artikel',ar_all:'Alle Artikel ansehen',ar_nf:'Artikel nicht gefunden',ar_nfp:'Die Adresse hat sich möglicherweise geändert oder der Artikel wurde entfernt.',ar_back:'Zurück zum Blog'}});
+
+VIEWS.artigo={
+  post(slug){return SITE.posts.find(p=>p.slug===slug)},
+  title(slug){const p=this.post(slug);return p?L(p.title):tr('ar_nf')},
+  render(slug){
+    const p=this.post(slug);
+    if(!p)return `<div class="v-artigo"><section class="nf"><div class="wrap"><h1 class="h2">${tr('ar_nf')}</h1><p>${tr('ar_nfp')}</p><a class="btn" href="#blog">${tr('ar_back')}</a></div></section></div>`;
+    const a=SITE.agent,body=L(p.body)||[];
+    const mins=Math.max(1,Math.round(body.join(' ').split(/\s+/).length/200));
+    const txt=body.map(x=>x.startsWith('## ')?`<h2>${esc(x.slice(3))}</h2>`:`<p>${esc(x)}</p>`).join('');
+    const card=o=>`<a class="mc" href="#artigo-${o.slug}"><div class="mc__ph"><img ${srcW(o.img)} alt="${esc(L(o.title))}" loading="lazy"></div>
+      <div class="mc__m"><span>${esc(L(o.cat))}</span><time datetime="${o.date}">${fdate(o.date)}</time></div><h3 class="mc__t">${esc(L(o.title))}</h3></a>`;
+    return `<div class="v-artigo">
+<article>
+  <header class="head"><div class="wrap">
+    <div class="head__c"><i></i>${esc(L(p.cat))}</div>
+    <h1 class="head__t">${esc(L(p.title))}</h1>
+    <div class="head__m"><time datetime="${p.date}">${fdate(p.date)}</time><span>${mins} ${tr('ar_read')}</span><b>${esc(a.name)}</b></div>
+  </div></header>
+  <div class="wide"><div class="cover"><img ${srcW(p.img)} alt="${esc(L(p.title))}"></div></div>
+  <div class="body">${txt}
+    <div class="by"><span class="by__ini" aria-hidden="true">${esc(a.initials)}</span>
+      <div><div class="by__n">${esc(a.name)}</div><div class="by__r">${esc(L(a.role))} · ${esc(a.creci)}</div></div>
+      <a class="btn btn--wa" href="${waLink()}" target="_blank" rel="noopener">${WA_SVG}${tr('ar_wa')}</a></div>
+  </div>
+</article>
+<section class="more"><div class="wrap">
+  <div class="more__h"><h2 class="h3">${tr('ar_more')}</h2><a class="link" href="#blog">${tr('ar_all')}${icon('arrow')}</a></div>
+  <div class="more__g">${SITE.posts.filter(o=>o!==p).slice(0,3).map(card).join('')}</div>
+</div></section>
+</div>`}
+};
+</script>

@@ -1,0 +1,324 @@
+<style>
+.v-imovel .top{padding:28px 0 0}
+.v-imovel .bc{display:flex;flex-wrap:wrap;align-items:center;gap:8px;min-height:44px;font-size:14px;color:var(--mute);margin-bottom:8px}
+.v-imovel .bc a{display:inline-flex;align-items:center;min-height:44px}
+.v-imovel .bc a:hover{color:var(--text)}
+.v-imovel .bc b{color:var(--text);font-weight:500}
+
+/* Detail-1 Galerie-Mosaik (Homes): 1 groß + 4 klein als ein Block */
+.v-imovel .galw{position:relative}
+.v-imovel .gal{display:grid;grid-template-columns:669fr 234fr 234fr;grid-template-rows:1fr 1fr;gap:8px;aspect-ratio:1140/475;border-radius:var(--r);overflow:hidden}
+.v-imovel .gal button{position:relative;min-width:0;min-height:0;padding:0;border:0;background:var(--stone);overflow:hidden;cursor:zoom-in}
+.v-imovel .gal button:first-child{grid-row:1/3}
+.v-imovel .gal button:nth-child(n+6){display:none}
+.v-imovel .gal.g3 button:nth-child(n+2),.v-imovel .gal.g4 button:nth-child(2){grid-column:2/4}
+.v-imovel .gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.v-imovel .gal button:hover img{transform:scale(1.03)}
+.v-imovel .gal button:focus-visible{outline-offset:-4px;z-index:1}
+.v-imovel .galall{position:absolute;right:16px;bottom:16px;height:44px;padding:0 16px;border:0;border-radius:12px;background:var(--white);color:var(--fg);font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
+.v-imovel .galall:hover{background:var(--stone)}
+
+/* Vollbild-Galerie */
+.v-imovel .lb{position:fixed;inset:0;z-index:100;display:grid;grid-template-rows:auto 1fr;background:#0b0f0e;color:#eef0ee}
+.v-imovel .lb[hidden]{display:none}
+.v-imovel .lb__bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;font-size:15px}
+.v-imovel .lb__bar b{font-weight:600}
+.v-imovel .lb__cnt{color:var(--mute-d);margin-left:14px}
+.v-imovel .lb button{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--line-d);border-radius:12px;background:#0b0f0e;color:#fff;transition:background .2s,color .2s}
+.v-imovel .lb button:hover{background:var(--white);color:var(--fg)}
+.v-imovel .lb button:focus-visible{outline-color:#fff}
+.v-imovel .lb button .ico{width:22px;height:22px}
+.v-imovel .lb__stage{position:relative;min-height:0;display:grid;place-items:center;padding:0 88px 28px}
+.v-imovel .lb__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:var(--r);min-height:0}
+.v-imovel .lb__prev,.v-imovel .lb__next{position:absolute;top:50%;margin-top:-38px}
+.v-imovel .lb__prev{left:20px}.v-imovel .lb__next{right:20px}
+.v-imovel .lb__prev .ico{transform:rotate(180deg)}
+
+/* Detail-2 Kopfzeile (Avery) */
+.v-imovel .hd{display:grid;grid-template-columns:753fr 377fr;gap:10px;align-items:end;padding:48px 0 44px;border-bottom:1px solid var(--line)}
+.v-imovel .hd__t{font-size:clamp(40px,4.9vw,70px);line-height:1.06;font-weight:600;letter-spacing:-.035em;text-wrap:balance}
+.v-imovel .hd__d{display:flex;flex-wrap:wrap;gap:8px 0;margin-top:16px;font-size:16px;color:var(--mute)}
+.v-imovel .hd__d>span{display:inline-flex;align-items:center;gap:8px;padding:0 16px;border-left:1px solid var(--line)}
+.v-imovel .hd__d>span:first-child{padding-left:0;border-left:0}
+.v-imovel .hd__d b{color:var(--text);font-weight:600}
+.v-imovel .hd__r{text-align:right}
+.v-imovel .hd__st{font-size:14px;color:var(--mute)}
+.v-imovel .hd__p{font-size:clamp(32px,2.95vw,42px);line-height:1.1;font-weight:600;letter-spacing:-.03em}
+.v-imovel .hd__alt{font-size:14px;color:var(--mute);margin-top:4px}
+.v-imovel .hd__b{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.v-imovel .wai{display:inline-flex}
+.v-imovel .wai svg{width:18px;height:18px;fill:currentColor}
+
+/* Hauptteil 720 / 360 */
+.v-imovel .body{display:grid;grid-template-columns:720fr 360fr;gap:60px;align-items:start;padding:56px 0 var(--sec)}
+.v-imovel .sub{font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.018em;margin:56px 0 18px}
+.v-imovel .main>.sub:first-child{font-size:28px;margin-top:0}
+.v-imovel .desc{font-size:18px;line-height:1.6;color:var(--mute);max-width:66ch;text-wrap:pretty}
+.v-imovel .ck{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+.v-imovel .ck li{display:flex;align-items:center;gap:10px;min-height:43px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.3}
+.v-imovel .ck .ico{color:var(--sea);width:18px;height:18px}
+.v-imovel .lc{padding:30px;border-radius:var(--r)}
+.v-imovel .lc__h{display:flex;align-items:center;gap:16px}
+.v-imovel .lc__i{display:grid;place-items:center;width:50px;height:50px;border-radius:var(--r);background:var(--ink-2);flex:none}
+.v-imovel .lc__i .ico{width:22px;height:22px}
+.v-imovel .lc__n{font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.018em}
+.v-imovel .lc__s{font-size:14px;color:var(--mute-d)}
+.v-imovel .lc__p{margin-top:18px;font-size:15px;color:var(--mute-d);max-width:44ch}
+.v-imovel .lc__v{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;padding-top:22px;border-top:1px solid var(--line-d)}
+.v-imovel .lc__v b{display:block;font-size:20px;line-height:1.2;font-weight:500}
+.v-imovel .lc__v span{display:block;margin-top:4px;font-size:13px;line-height:1.35;color:var(--mute-d)}
+.v-imovel .map{display:grid;place-items:center;align-content:center;gap:6px;margin-top:16px;aspect-ratio:720/300;border:1px dashed rgba(16,21,20,.3);border-radius:var(--r);background:var(--stone);text-align:center;padding:20px}
+.v-imovel .map .ico{width:26px;height:26px;color:var(--mute)}
+.v-imovel .map b{font-size:18px;font-weight:600}
+.v-imovel .map code{font:500 13px/1.4 ui-monospace,Menlo,Consolas,monospace;color:var(--mute)}
+
+/* Seitenleiste */
+.v-imovel .side{position:sticky;top:24px;display:grid;gap:20px}
+.v-imovel .ag{padding:30px;border-radius:var(--r);background:var(--white)}
+.v-imovel .ag__h{display:flex;align-items:center;gap:14px}
+.v-imovel .ag__ph{display:grid;place-items:center;width:64px;height:64px;border-radius:var(--r);background:var(--ink-2);color:#eef0ee;font-size:24px;font-weight:300;flex:none}
+.v-imovel .ag__n{font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.018em}
+.v-imovel .ag__r{font-size:14px;color:var(--mute)}
+.v-imovel .ag__l{margin:18px 0 20px;font-size:14px;color:var(--mute)}
+.v-imovel .ag__l li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line)}
+.v-imovel .ag__l b{color:var(--text);font-weight:500;text-align:right}
+.v-imovel .ag .btn{width:100%}
+.v-imovel .kd{padding:14px 30px 16px;border-radius:var(--r);background:var(--stone)}
+.v-imovel .kd div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-top:1px solid var(--line);font-size:15px}
+.v-imovel .kd div:first-child{border-top:0}
+.v-imovel .kd dt{color:var(--mute)}
+.v-imovel .kd dd{margin:0;font-weight:600;text-align:right}
+.v-imovel .nt{display:flex;gap:14px;padding:24px 30px;border-radius:var(--r);background:var(--stone)}
+.v-imovel .nt .ico{width:22px;height:22px;margin-top:2px}
+.v-imovel .nt b{display:block;font-weight:600}
+.v-imovel .nt p{font-size:14px;line-height:1.45;color:var(--mute);margin-top:2px}
+
+/* Detail-3 Ausstattung komplett (Avenlo) + Detail-4 Rechner (Avenlo) */
+.v-imovel .band{background:var(--white);padding:var(--sec) 0}
+.v-imovel .h2s{font-size:clamp(30px,2.8vw,40px);line-height:1.15;font-weight:600;letter-spacing:-.03em;margin-bottom:40px}
+.v-imovel .am{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.v-imovel .am li{display:flex;align-items:center;gap:14px;min-height:60px;padding:14px 22px;border-radius:var(--r);background:var(--paper);font-size:16px;line-height:1.2}
+.v-imovel .am .ico{width:24px;height:24px}
+.v-imovel .fin{margin-top:var(--sec)}
+:is(.v-imovel,.hx-calc) .calc{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+:is(.v-imovel,.hx-calc) .calc>.ci{padding:32px;border-radius:var(--r);background:var(--paper);align-content:start}
+:is(.v-imovel,.hx-calc) .calc>.co{padding:32px;border-radius:var(--r);background:var(--ink);color:#eef0ee;display:flex;flex-direction:column}
+:is(.v-imovel,.hx-calc) .calc .co__lab{font-size:14px;color:var(--mute-d);margin-bottom:10px}
+:is(.v-imovel,.hx-calc) .calc .co__alt{margin-top:10px;font-size:15px;color:var(--mute-d);font-variant-numeric:tabular-nums}
+:is(.v-imovel,.hx-calc) .calc .co dl{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;margin:36px 0 0;padding-top:32px;border-top:1px solid var(--line-d)}
+:is(.v-imovel,.hx-calc) .calc .co dl div{display:block;padding:0;border:0}
+:is(.v-imovel,.hx-calc) .calc .co dt{font-size:15px;line-height:1.35;color:var(--mute-d)}
+:is(.v-imovel,.hx-calc) .calc .co dd{margin-top:6px;font-size:20px;line-height:27px}
+:is(.v-imovel,.hx-calc) .calc .co__fine{margin-top:auto;padding-top:32px;font-size:13px;line-height:1.5;color:var(--mute-d)}
+:is(.v-imovel,.hx-calc) .calc input[type=range]{height:44px;margin:-12px 0}
+.v-imovel .fx{margin-top:16px;font-size:14px;color:var(--mute)}
+
+/* Detail-5 Kontakt zum Makler (Oriume) */
+.v-imovel .ct{padding:var(--sec) 0 0}
+.v-imovel .ct__w{max-width:856px;margin:0 auto}
+.v-imovel .ct__t{font-size:clamp(38px,5vw,72px);line-height:.98;font-weight:700;letter-spacing:-.04em;text-wrap:balance}
+.v-imovel .ct__i{margin:28px 0 40px;font-size:18px;line-height:1.45;font-weight:300;color:var(--mute)}
+.v-imovel .ct__g{display:grid;grid-template-columns:408fr 408fr;gap:40px;align-items:center}
+.v-imovel .ct__ph{display:grid;place-items:center;align-content:center;gap:10px;aspect-ratio:408/441;background:var(--ink-2);color:#eef0ee}
+.v-imovel .ct__ph b{font-size:112px;line-height:1;font-weight:300;letter-spacing:-.04em}
+.v-imovel .ct__ph span{font-size:13px;color:var(--mute-d)}
+.v-imovel .ct__n{font-size:36px;line-height:40px;font-weight:600;letter-spacing:-.03em}
+.v-imovel .ct__r{font-size:18px;margin-top:8px}
+.v-imovel .ct__p{margin:20px 0 22px;font-size:18px;line-height:26px;font-weight:300;color:var(--mute);text-wrap:pretty}
+.v-imovel .ct__c a{display:flex;align-items:center;gap:14px;min-height:44px;font-size:17px}
+.v-imovel .ct__c a:hover{color:var(--sea)}
+.v-imovel .ct__c .ico{width:22px;height:22px}
+.v-imovel .ct .btn{margin-top:26px;min-width:225px;height:50px}
+
+/* Detail-6 Weitere Objekte (Avery) */
+.v-imovel .more{padding:var(--sec) 0}
+.v-imovel .more__h{display:grid;grid-template-columns:693fr 347fr;gap:100px;align-items:center;margin-bottom:48px}
+.v-imovel .more__h .btn{justify-self:end}
+.v-imovel .more__g{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+.v-imovel .nf{padding:var(--sec) 0;min-height:50vh}
+.v-imovel .nf p{margin:16px 0 28px;color:var(--mute)}
+
+@media (max-width:980px){
+  .v-imovel .body{grid-template-columns:1fr;gap:48px}
+  .v-imovel .side{position:static}
+  .v-imovel .am{grid-template-columns:1fr 1fr}
+  .v-imovel .more__h{gap:24px}
+}
+@media (max-width:860px){
+  .v-imovel .top{padding-top:8px}
+  .v-imovel .gal{display:flex;aspect-ratio:auto;border-radius:0;margin:0 calc(-1*var(--gut));padding:0 var(--gut);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--gut);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .v-imovel .gal::-webkit-scrollbar{display:none}
+  .v-imovel .gal button,.v-imovel .gal button:nth-child(n+6){display:block;flex:0 0 86%;aspect-ratio:4/3;border-radius:var(--r);scroll-snap-align:start}
+  .v-imovel .galall{right:12px;bottom:12px}
+  .v-imovel .lb__stage{padding:0 12px 96px}
+  .v-imovel .lb__prev,.v-imovel .lb__next{top:auto;bottom:24px;margin:0}
+  .v-imovel .lb__prev{left:calc(50% - 56px)}.v-imovel .lb__next{right:calc(50% - 56px)}
+  .v-imovel .hd{grid-template-columns:1fr;gap:28px;padding:28px 0 32px}
+  .v-imovel .hd__d{gap:8px 22px}
+  .v-imovel .hd__d>span{padding:0;border-left:0}
+  .v-imovel .hd__r{text-align:left}
+  .v-imovel .hd__b{justify-content:flex-start}
+  .v-imovel .hd__b .btn{flex:1;padding:0 12px}
+  .v-imovel .body{padding-top:36px}
+  .v-imovel .sub{margin-top:44px}
+  .v-imovel .desc{font-size:17px}
+  .v-imovel .ck li{align-items:flex-start}
+  .v-imovel .ck .ico{margin-top:1px}
+  .v-imovel .lc{padding:24px 20px}
+  .v-imovel .lc__v{gap:12px}
+  .v-imovel .map{aspect-ratio:4/3}
+  .v-imovel .ag,.v-imovel .nt{padding:24px 20px}
+  .v-imovel .kd{padding:10px 20px 12px}
+  .v-imovel .h2s{margin-bottom:28px}
+  .v-imovel .am{gap:8px}
+  .v-imovel .am li{padding:12px 10px;gap:8px;font-size:14.5px;overflow-wrap:anywhere}
+  .v-imovel .am .ico{width:22px;height:22px}
+  :is(.v-imovel,.hx-calc) .calc{grid-template-columns:1fr}
+  :is(.v-imovel,.hx-calc) .calc>.ci,:is(.v-imovel,.hx-calc) .calc>.co{padding:24px 20px}
+  :is(.v-imovel,.hx-calc) .calc .co dl{gap:22px 16px}
+  :is(.v-imovel,.hx-calc) .calc .co dd{font-size:18px;white-space:normal}
+  .v-imovel .ct__g{grid-template-columns:1fr;gap:28px}
+  .v-imovel .ct__ph{aspect-ratio:370/288}
+  .v-imovel .ct__ph b{font-size:88px}
+  .v-imovel .ct__n{font-size:30px;line-height:34px}
+  .v-imovel .ct .btn{width:100%}
+  .v-imovel .more__h{grid-template-columns:1fr;margin-bottom:32px}
+  .v-imovel .more__h .btn{justify-self:start}
+  .v-imovel .more__g{grid-template-columns:1fr;gap:12px}
+}
+</style>
+<script>
+addDict({
+pt:{iv_list:'Imóveis',iv_photos:'Ver as fotos',iv_photo:'Foto',iv_open:'Abrir foto',iv_gal:'Galeria de fotos',iv_close:'Fechar galeria',iv_prev:'Foto anterior',iv_next:'Próxima foto',iv_of:'de',
+ iv_wa:'Falar no WhatsApp',iv_visit:'Agendar visita',iv_about:'Sobre o imóvel',iv_feats:'Destaques',iv_loc:'Localização',
+ iv_region:'Tibau do Sul, Rio Grande do Norte',iv_times:'Tempos aproximados de carro, fora da alta temporada.',iv_d1:'até a praia',iv_d2:'até o centro de Pipa',iv_d3:'até o aeroporto de Natal',iv_map:'mapa: inserir incorporação',
+ iv_creci:'Registro',iv_langs:'Atende em',iv_hours:'Horário',
+ iv_k_price:'Preço',iv_k_rent:'Aluguel',iv_k_type:'Tipo',iv_k_area:'Área construída',iv_k_lot:'Terreno',iv_k_year:'Ano de construção',iv_k_status:'Situação',iv_k_m2:'Preço por m²',iv_k_beach:'Distância da praia',iv_k_lotarea:'Área do terreno',
+ iv_nt_t:'Visitas com hora marcada',iv_nt_p:'A corretora acompanha cada visita, de segunda a sábado. Para quem está fora, mostramos o imóvel por vídeo.',
+ iv_all:'Características do imóvel',iv_a_beach:'m da praia',iv_a_year:'Construção de',
+ iv_fin:'Simulação de financiamento',
+ iv_ct_t:'Fale com a corretora',iv_ct_i:'Dúvidas sobre este imóvel, documentos ou uma visita: a resposta vem de quem conhece a casa.',iv_ct_p:'Mostra o imóvel pessoalmente ou por vídeo e responde em português, inglês ou alemão.',iv_photo_ph:'foto do corretor',
+ iv_more_t:'Outros imóveis',iv_more_s_venda:'à venda',iv_more_s_aluguel:'para alugar',iv_more_s_terrenos:'terrenos',iv_more_b:'Ver todos os imóveis',
+ iv_nf_t:'Imóvel não encontrado',iv_nf_p:'O anúncio pode ter sido vendido ou retirado. A lista mostra o que está disponível hoje.',iv_nf_b:'Ver a lista de imóveis'},
+en:{iv_list:'Property',iv_photos:'View photos',iv_photo:'Photo',iv_open:'Open photo',iv_gal:'Photo gallery',iv_close:'Close gallery',iv_prev:'Previous photo',iv_next:'Next photo',iv_of:'of',
+ iv_wa:'Chat on WhatsApp',iv_visit:'Book a viewing',iv_about:'About the property',iv_feats:'Highlights',iv_loc:'Location',
+ iv_region:'Tibau do Sul, Rio Grande do Norte',iv_times:'Approximate driving times outside high season.',iv_d1:'to the beach',iv_d2:'to Pipa centre',iv_d3:'to Natal airport',iv_map:'mapa: inserir incorporação',
+ iv_creci:'Licence',iv_langs:'Speaks',iv_hours:'Hours',
+ iv_k_price:'Price',iv_k_rent:'Rent',iv_k_type:'Type',iv_k_area:'Built area',iv_k_lot:'Plot',iv_k_year:'Year built',iv_k_status:'Status',iv_k_m2:'Price per m²',iv_k_beach:'Distance to beach',iv_k_lotarea:'Plot area',
+ iv_nt_t:'Viewings by appointment',iv_nt_p:'The broker attends every viewing, Monday to Saturday. If you are abroad, we show the property by video.',
+ iv_all:'Property features',iv_a_beach:'m from the beach',iv_a_year:'Built in',
+ iv_fin:'Financing simulation',
+ iv_ct_t:'Talk to the broker',iv_ct_i:'Questions about this property, the paperwork or a viewing: the answer comes from someone who knows the house.',iv_ct_p:'Shows the property in person or by video and replies in Portuguese, English or German.',iv_photo_ph:'foto do corretor',
+ iv_more_t:'More property',iv_more_s_venda:'for sale',iv_more_s_aluguel:'to rent',iv_more_s_terrenos:'land',iv_more_b:'View all listings',
+ iv_nf_t:'Listing not found',iv_nf_p:'It may have been sold or withdrawn. The list shows what is available today.',iv_nf_b:'View the property list'},
+de:{iv_list:'Immobilien',iv_photos:'Fotos ansehen',iv_photo:'Foto',iv_open:'Foto öffnen',iv_gal:'Fotogalerie',iv_close:'Galerie schließen',iv_prev:'Vorheriges Foto',iv_next:'Nächstes Foto',iv_of:'von',iv_wa:'Per WhatsApp schreiben',iv_visit:'Besichtigung vereinbaren',iv_about:'Über das Objekt',iv_feats:'Besonderheiten',iv_loc:'Lage',iv_region:'Tibau do Sul, Rio Grande do Norte',iv_times:'Ungefähre Fahrzeiten mit dem Auto, außerhalb der Hochsaison.',iv_d1:'zum Strand',iv_d2:'ins Zentrum von Pipa',iv_d3:'zum Flughafen Natal',iv_map:'mapa: inserir incorporação',iv_creci:'Zulassung',iv_langs:'Sprachen',iv_hours:'Bürozeiten',iv_k_price:'Preis',iv_k_rent:'Miete',iv_k_type:'Objektart',iv_k_area:'Wohnfläche',iv_k_lot:'Grundstück',iv_k_year:'Baujahr',iv_k_status:'Status',iv_k_m2:'Preis pro m²',iv_k_beach:'Entfernung zum Strand',iv_k_lotarea:'Grundstücksfläche',iv_nt_t:'Besichtigung nach Termin',iv_nt_p:'Die Maklerin begleitet jede Besichtigung, Montag bis Samstag. Wenn Sie nicht vor Ort sind, zeigen wir Ihnen das Objekt per Video.',iv_all:'Merkmale des Objekts',iv_a_beach:'m zum Strand',iv_a_year:'Baujahr',iv_fin:'Finanzierungsrechner',iv_ct_t:'Sprechen Sie mit der Maklerin',iv_ct_i:'Fragen zum Objekt, zu den Unterlagen oder zu einer Besichtigung beantwortet Ihnen die Person, die das Haus kennt.',iv_ct_p:'Zeigt das Objekt vor Ort oder per Video und antwortet auf Portugiesisch, Englisch oder Deutsch.',iv_photo_ph:'foto do corretor',iv_more_t:'Weitere Angebote',iv_more_s_venda:'zum Kauf',iv_more_s_aluguel:'zur Miete',iv_more_s_terrenos:'Grundstücke',iv_more_b:'Alle Immobilien ansehen',iv_nf_t:'Objekt nicht gefunden',iv_nf_p:'Das Objekt wurde möglicherweise verkauft oder zurückgezogen. Die Liste zeigt, was heute verfügbar ist.',iv_nf_b:'Objektliste ansehen'}});
+
+VIEWS.imovel=(()=>{
+  const kind=l=>l.type==='terreno'?'terrenos':l.deal;
+  const st=slug=>{const s=APP.state.imovel||(APP.state.imovel={slug,lb:null,calc:null});
+    if(s.slug!==slug){s.slug=slug;s.lb=null;s.calc=null}return s};
+  const lbEl=()=>document.querySelector('.v-imovel .lb');
+  function show(i){const s=APP.state.imovel,l=bySlug(s.slug),e=lbEl();if(!l||!e)return;const n=l.imgs.length;s.lb=(i+n)%n;
+    const im=e.querySelector('img');im.src=img(l.imgs[s.lb]);im.alt=`${l.name}, ${tr('iv_photo').toLowerCase()} ${s.lb+1}`;
+    e.querySelector('.lb__cnt').textContent=`${s.lb+1} ${tr('iv_of')} ${n}`;
+    e.hidden=false;document.documentElement.style.overflow='hidden'}
+  function close(){const s=APP.state.imovel,e=lbEl();const i=s?s.lb:null;if(s)s.lb=null;document.documentElement.style.overflow='';if(!e)return;e.hidden=true;
+    const b=document.querySelector(`.v-imovel .gal button[data-i="${i}"]`);if(b&&b.offsetParent)b.focus({preventScroll:true});else{const a=document.querySelector('.v-imovel .galall');if(a)a.focus({preventScroll:true})}}
+  function key(ev){const e=lbEl();if(!e||e.hidden)return;
+    if(ev.key==='Escape'){ev.preventDefault();close()}
+    else if(ev.key==='ArrowRight'){ev.preventDefault();show(APP.state.imovel.lb+1)}
+    else if(ev.key==='ArrowLeft'){ev.preventDefault();show(APP.state.imovel.lb-1)}
+    else if(ev.key==='Tab'){const f=[...e.querySelectorAll('button')],k=f.indexOf(document.activeElement);ev.preventDefault();f[(k+(ev.shiftKey?-1:1)+f.length)%f.length].focus()}}
+  let wired=false;
+  const nf_=()=>`<div class="v-imovel"><section class="nf"><div class="wrap"><h1 class="h2">${tr('iv_nf_t')}</h1><p>${tr('iv_nf_p')}</p><a class="btn" href="#imoveis">${tr('iv_nf_b')}${icon('arrow')}</a></div></section></div>`;
+  return {
+  title(slug){const l=bySlug(slug);return l?`${l.name}, ${l.loc}`:tr('iv_nf_t')},
+  render(slug){const l=bySlug(slug);if(!l){document.documentElement.style.overflow='';return nf_()}
+    const s=st(slug),k=kind(l),land=l.type==='terreno',rent=l.deal==='aluguel',n=l.imgs.length,a=SITE.agent;
+    if(s.lb==null)document.documentElement.style.overflow='';
+    const alt=APP.cur==='BRL'?`≈ ${money(l.price,'USD')} · ${money(l.price,'EUR')}`:`= ${money(l.price,'BRL')}`;
+    const data=(land?[[icon('lot'),nf(l.lot),tr('lotm')]]:[[icon('bed'),l.beds,tr('beds')],[icon('bath'),l.baths,tr('baths')],[icon('area'),nf(l.area),'m²']].concat(l.lot?[[icon('lot'),nf(l.lot),tr('lotm')]]:[]))
+      .map(([i,v,t])=>`<span>${i}<span><b>${v}</b> ${t}</span></span>`).join('');
+    const rows=land?[[tr('iv_k_price'),money(l.price)],[tr('iv_k_type'),tr('t_'+l.type)],[tr('iv_k_lotarea'),nf(l.lot)+' m²'],[tr('iv_k_m2'),money(l.price/l.lot)],[tr('iv_k_beach'),nf(l.beach)+' m'],[tr('iv_k_status'),tagText(l)]]
+      :[[tr(rent?'iv_k_rent':'iv_k_price'),price(l)],[tr('iv_k_type'),tr('t_'+l.type)],[tr('iv_k_area'),nf(l.area)+' m²'],l.lot?[tr('iv_k_lot'),nf(l.lot)+' m²']:[tr('iv_k_beach'),nf(l.beach)+' m'],[tr('iv_k_year'),l.year],[tr('iv_k_status'),tagText(l)]];
+    const facts=(land?[['lot',`${nf(l.lot)} ${tr('lotm')}`]]:[['bed',`${l.beds} ${tr('beds')}`],['bath',`${l.baths} ${tr('baths')}`],['area',`${nf(l.area)} ${tr('built')}`]].concat(l.lot?[['lot',`${nf(l.lot)} ${tr('lotm')}`]]:[]))
+      .concat([['pin',`${nf(l.beach)} ${tr('iv_a_beach')}`]],l.year?[['cal',`${tr('iv_a_year')} ${l.year}`]]:[],l.feats.map(f=>[FEATS[f][0],tr('f_'+f).replace('-','\u2011')]));
+    const same=SITE.listings.filter(x=>x!==l&&kind(x)===k),rest=SITE.listings.filter(x=>x!==l&&kind(x)!==k&&x.deal===l.deal);
+    const more=same.concat(rest).slice(0,2);
+    return `<div class="v-imovel">
+<section class="top"><div class="wrap">
+  <nav class="bc" aria-label="breadcrumb"><a href="#imoveis">${tr('iv_list')}</a><span aria-hidden="true">/</span><a href="#imoveis-${k}">${tr('im_t_'+k)||tr('iv_list')}</a><span aria-hidden="true">/</span><b>${esc(l.loc)}</b></nav>
+  <div class="galw">
+    <div class="gal g${Math.min(n,5)}">${l.imgs.map((x,i)=>`<button type="button" data-i="${i}" aria-label="${tr('iv_open')} ${i+1} ${tr('iv_of')} ${n}"><img ${srcW(x)} alt="${esc(l.name)}, ${tr('iv_photo').toLowerCase()} ${i+1}"${i?' loading="lazy"':' fetchpriority="high"'}></button>`).join('')}</div>
+    <button type="button" class="galall" data-i="0">${tr('iv_photos')} <span class="num">(${n})</span></button>
+  </div>
+  <header class="hd">
+    <div><h1 class="hd__t">${esc(l.name)}</h1>
+      <div class="hd__d num"><span>${icon('pin')}<span><b>${esc(l.loc)}</b></span></span>${data}</div></div>
+    <div class="hd__r"><div class="hd__st">${tagText(l)}</div><div class="hd__p num">${price(l)}</div><div class="hd__alt num">${alt}</div>
+      <div class="hd__b"><a class="btn btn--wa" href="${waLink(l)}" target="_blank" rel="noopener"><span class="wai">${WA_SVG}</span>WhatsApp</a><a class="btn btn--line" href="#contato">${tr('iv_visit')}</a></div></div>
+  </header>
+  <div class="body">
+    <div class="main">
+      <h2 class="sub">${tr('iv_about')}</h2>
+      <p class="desc">${esc(L(l.desc))}</p>
+      <h2 class="sub">${tr('iv_loc')}</h2>
+      <div class="lc dark">
+        <div class="lc__h"><span class="lc__i">${icon('pin')}</span><div><div class="lc__n">${esc(l.loc)}</div><div class="lc__s">${tr('iv_region')}</div></div></div>
+        <p class="lc__p">${tr('iv_times')}</p>
+        <div class="lc__v num"><div><b>${esc(l.dist.beach)}</b><span>${tr('iv_d1')}</span></div><div><b>${esc(l.dist.center)}</b><span>${tr('iv_d2')}</span></div><div><b>${esc(l.dist.airport)}</b><span>${tr('iv_d3')}</span></div></div>
+      </div>
+      <div class="map"><img ${srcW('map')} alt="${tr('iv_region')}" loading="lazy"><span class="map__pin">${icon('pin')}<b>${esc(l.loc)}</b></span><small class="map__c">© OpenStreetMap</small></div>
+    </div>
+    <aside class="side">
+      <div class="ag">
+        <div class="ag__h"><span class="ag__ph" aria-hidden="true">${a.initials}</span><div><div class="ag__n">${esc(a.name)}</div><div class="ag__r">${L(a.role)}</div></div></div>
+        <ul class="ag__l"><li><span>${tr('iv_creci')}</span><b>${esc(a.creci)}</b></li><li><span>${tr('iv_langs')}</span><b>${a.langs}</b></li><li><span>${tr('iv_hours')}</span><b>${L(SITE.hours)}</b></li></ul>
+        <a class="btn" href="#contato">${tr('iv_visit')}</a>
+      </div>
+      <dl class="kd num">${rows.map(([t,v])=>`<div><dt>${t}</dt><dd>${v}</dd></div>`).join('')}</dl>
+      <div class="nt">${icon('cal')}<div><b>${tr('iv_nt_t')}</b><p>${tr('iv_nt_p')}</p></div></div>
+    </aside>
+  </div>
+</div></section>
+<section class="band"><div class="wrap">
+  <h2 class="h2s">${tr('iv_all')}</h2>
+  <ul class="am num">${facts.map(([i,t])=>`<li>${icon(i)}<span>${t}</span></li>`).join('')}</ul>
+  ${l.deal==='venda'?`<div class="fin"><h2 class="h2s">${tr('iv_fin')}</h2><div class="calc">${calcHTML(l.price)}</div><p class="fx num">${fxText()}</p></div>`:''}
+</div></section>
+<section class="ct"><div class="wrap"><div class="ct__w">
+  <h2 class="ct__t">${tr('iv_ct_t')}</h2>
+  <p class="ct__i">${tr('iv_ct_i')}</p>
+  <div class="ct__g">
+    
+    <div><div class="ct__n">${esc(a.name)}</div><div class="ct__r">${L(a.role)}</div>
+      <p class="ct__p">${tr('iv_ct_p')}</p>
+      <div class="ct__c"><a href="tel:${SITE.phone.replace(/[^+\d]/g,'')}">${icon('phone')}<span class="num">${SITE.phone}</span></a><a href="mailto:${SITE.email}">${icon('mail')}<span>${SITE.email}</span></a></div>
+      <a class="btn btn--wa btn--lg" href="${waLink(l)}" target="_blank" rel="noopener"><span class="wai">${WA_SVG}</span>${tr('iv_wa')}</a></div>
+  </div>
+</div></div></section>
+<section class="more"><div class="wrap">
+  <div class="more__h"><h2 class="h2">${tr('iv_more_t')} <span class="mute">${tr('iv_more_s_'+k)}</span></h2><a class="btn btn--line" href="#imoveis-${k}">${tr('iv_more_b')}</a></div>
+  <div class="more__g">${more.map(cardPhoto).join('')}</div>
+</div></section>
+<div class="lb" role="dialog" aria-modal="true" aria-label="${tr('iv_gal')}" hidden>
+  <div class="lb__bar"><div><b>${esc(l.name)}</b><span class="lb__cnt num" aria-live="polite"></span></div><button type="button" class="lb__x" aria-label="${tr('iv_close')}">${icon('close')}</button></div>
+  <div class="lb__stage"><button type="button" class="lb__prev" aria-label="${tr('iv_prev')}">${icon('arrow')}</button><img ${srcW(l.imgs[0])} alt="${esc(l.name)}"><button type="button" class="lb__next" aria-label="${tr('iv_next')}">${icon('arrow')}</button></div>
+</div>
+</div>`},
+  mount(root,slug){const l=bySlug(slug);if(!l)return;const s=st(slug);
+    if(!wired){wired=true;document.addEventListener('keydown',key);addEventListener('hashchange',()=>{document.documentElement.style.overflow='';if(APP.state.imovel)APP.state.imovel.lb=null})}
+    $$('.gal button,.galall',root).forEach(b=>b.onclick=()=>{show(+b.dataset.i);$('.lb__x',root).focus()});
+    $('.lb__x',root).onclick=close;$('.lb__prev',root).onclick=()=>show(s.lb-1);$('.lb__next',root).onclick=()=>show(s.lb+1);
+    const stage=$('.lb__stage',root);let x0=null;
+    stage.addEventListener('click',e=>{if(e.target===stage)close()});
+    stage.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+    stage.addEventListener('touchend',e=>{if(x0==null)return;const d=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(d)>40)show(s.lb+(d<0?1:-1))},{passive:true});
+    if(s.lb!=null){show(s.lb);$('.lb__x',root).focus()}
+    /* Rechner-Eingaben über Sprach-/Währungswechsel hinweg behalten */
+    const ids=['k-val','k-ent','k-anos','k-juros'];
+    ids.forEach(id=>{const e=document.getElementById(id);if(!e)return;if(s.calc&&s.calc[id]!=null)e.value=s.calc[id];
+      e.addEventListener('input',()=>{s.calc=s.calc||{};s.calc[id]=e.value})})}
+  }})();
+</script>

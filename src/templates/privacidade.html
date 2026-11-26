@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="wrap">
+  <ol class="crumbs"><li><a href="{{ url('home') }}">{{ t.navHome }}</a></li><li aria-current="page">{{ t.privH }}</li></ol>
+  <div class="page-head"><h1>{{ t.privH }}</h1><p>{{ t.privLead }}</p></div>
+  <div class="legal">
+    {% if demo %}<p class="notice">{{ t.privDemo }}</p>{% endif %}
+    <h2>{{ t.pv1 }}</h2><p>{{ site.brandFull }} · {{ site.address }} · {{ site.email }}{% if site.agent.creci %} · {{ site.agent.creci }}{% endif %}</p>
+    {% for i in range(2, 7) %}<h2>{{ t['pv' ~ i] }}</h2><p>{{ t['pv' ~ i ~ 'p'] }}</p>{% endfor %}
+  </div>
+</div>
+{% endblock %}
